@@ -152,18 +152,9 @@ After training, it will create/update `best_model.joblib`.
 
 ---
 
-## 🎥 Demo video (add later)
+## 🎥 Demo video 
 
-Drop your demo video link here (GitHub supports video uploads in issues/PRs and gives you a link):
-
-- **Demo video:** <YOUR_DEMO_VIDEO_LINK>
-
-Tip: record a quick 60–90 sec walkthrough:
-1) upload CSV  
-2) show dashboard counts  
-3) filter “High” risk  
-4) open incident detail + explanation  
-5) download predictions
+https://github.com/user-attachments/assets/b49adc74-d1b8-49e3-b63d-4d563a4166a0
 
 ---
 
