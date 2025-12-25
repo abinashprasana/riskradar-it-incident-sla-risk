@@ -1,7 +1,4 @@
-<div align="center">
 
-<!-- You can swap this banner later (Canva / Figma / screenshots) -->
-<img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/riskradar-banner.png" width="900" alt="RiskRadar banner"/>
 
 # 🚦 RiskRadar — IT Incident SLA Breach Risk (Decision Support)
 
