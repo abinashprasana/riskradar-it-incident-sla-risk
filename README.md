@@ -1,5 +1,3 @@
-
-
 # 🚦 RiskRadar — IT Incident SLA Breach Risk (Decision Support)
 
 **ML predicts SLA‑breach risk. Dashboard shows the numbers + visuals. Optional LLM summary is *fact‑grounded* (no guessing).**
@@ -9,10 +7,9 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-ff4b4b?logo=streamlit&logoColor=white)
 ![ML](https://img.shields.io/badge/ML-scikit--learn-f7931e?logo=scikitlearn&logoColor=white)
-![Data](https://img.shields.io/badge/Data-CSV-lightgrey?logo=files&logoColor=white)
+![Accuracy](https://img.shields.io/badge/Accuracy-92%25-2ea44f)
+![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.9684-blue)
 ![Status](https://img.shields.io/badge/Status-Completed-2ea44f)
-
-</div>
 
 ---
 
@@ -27,7 +24,7 @@ You upload an incident event log (**incident_event_log.csv**) → the pipeline b
 - 🧾 **Incident Detail**: one incident, its computed features, risk band + recommended action  
 - 📊 **Visuals**: distributions, top risky groups/categories, calibration plot, and a heatmap
 
-It’s not a “perfect oracle” project. It’s more like: *if you’re triaging 25k tickets, where should you look first?*
+It's not a "perfect oracle" project. It's more like: *if you're triaging 25k tickets, where should you look first?*
 
 ---
 
@@ -49,7 +46,7 @@ It’s not a “perfect oracle” project. It’s more like: *if you’re triagi
 - 🧾 Incident detail view with:
   - computed features for that incident
   - risk + recommended action
-  - optional LLM “short explanation” using only computed facts
+  - optional LLM "short explanation" using only computed facts
 - 📊 Dashboard visuals:
   - risk probability distribution
   - risk band counts
@@ -58,6 +55,51 @@ It’s not a “perfect oracle” project. It’s more like: *if you’re triagi
   - calibration curve (how predicted probs match reality)
   - priority × risk band heatmap (quick triage view)
 - ⬇️ Download predictions as CSV
+
+---
+
+## 📊 Model Performance (Verified)
+
+Two models were trained and compared. Random Forest was selected as the best performer.
+
+| Metric | Logistic Regression | Random Forest |
+|---|---|---|
+| Accuracy | 90.0% | **92.0%** |
+| AUC-ROC | 0.9589 | **0.9684** |
+| F1-Score (SLA Breached) | 0.865 | **0.887** |
+| F1-Score (SLA Met) | — | **0.938** |
+
+**Confusion Matrix — Random Forest** (test set: 4,984 incidents):
+
+```
+                   Predicted Met    Predicted Breached
+Actual Met              3,014               147
+Actual Breached           254             1,569
+```
+
+The model caught **1,569 SLA breaches** while only missing 254 — an **86% breach recall rate**.
+
+---
+
+## 🚦 Risk Band Logic
+
+The model outputs a probability score `p` (0.0 → 1.0) mapped to an actionable risk band:
+
+| Risk Band | Threshold | Recommended Action |
+|---|---|---|
+| 🟢 Low | `p < 0.30` | Normal queue. Keep updates clean, avoid unnecessary reassignment. |
+| 🟡 Medium | `0.30 ≤ p < 0.60` | Monitor. Check missing details and confirm ownership early. |
+| 🔴 High | `p ≥ 0.60` | Escalate now. Assign correctly, reduce reassignment loops, senior review. |
+
+---
+
+## 🗂️ Dataset
+
+- **Source:** `incident_event_log.csv` — UCI ML Repository (Incident management process enriched event log)
+- **Raw event logs:** 141,712 rows
+- **Aggregated incidents:** 24,918 unique tickets (one row per incident)
+- **Train / Test split:** 80% / 20%, stratified by target, random seed 42
+- **Target variable:** `sla_breached` — derived from `made_sla` column (0 = Met, 1 = Breached)
 
 ---
 
@@ -80,7 +122,7 @@ Think of it like a simple pipeline:
 
 5) **llm_explainer.py** (optional)  
    Generates a short explanation text. It only uses computed facts from the incident row.  
-   If you don’t add an API key, the app still works (it falls back to a non-LLM explanation).
+   If you don't add an API key, the app still works (it falls back to a non-LLM explanation).
 
 6) **app.py**  
    Streamlit UI that ties everything together.
@@ -160,19 +202,17 @@ https://github.com/user-attachments/assets/b49adc74-d1b8-49e3-b63d-4d563a4166a0
 
 ## 📊 About the visuals (what each one means)
 
-These small notes are here because otherwise people see graphs and go “ok…but why” 😅
-
 - **Risk probability distribution**: shows how the model spreads predictions (lots of low, some high, etc.).  
 - **Risk band counts**: quick count of Low/Medium/High based on your thresholds.  
 - **Top risky assignment groups / categories**: average predicted risk by group/category (helps spot patterns).  
-- **Calibration curve**: checks if predicted probabilities are realistic (e.g., “0.8 means ~80% breach”).  
+- **Calibration curve**: checks if predicted probabilities are realistic (e.g., "0.8 means ~80% breach").  
 - **Priority × Risk heatmap**: where risk is concentrated across priority labels (fast triage view).
 
 ---
 
 ## 🧠 Optional LLM explanations (how to enable)
 
-By default, the app can show a **non‑LLM explanation** (template-based) so it works anywhere.
+By default, the app shows a **non‑LLM explanation** (template-based) so it works anywhere.
 
 If you want the LLM version:
 1) pick a provider (OpenAI / Azure OpenAI / etc.)
@@ -189,7 +229,7 @@ streamlit run app.py
 ```
 
 > Note: the LLM is only used to *summarise computed facts* (counts, durations, band, etc.).  
-> It should not invent incident details that aren’t in the CSV.
+> It should not invent incident details that aren't in the CSV.
 
 ---
 
@@ -207,7 +247,8 @@ License: CC BY 4.0 (as listed on the dataset page).
 ## 🧪 Notes / limitations (keeping it honest)
 
 - This is a **prototype**. Real incident systems need access control, monitoring, audit logs, and careful evaluation.
-- Labels/features depend on what the dataset provides. If a company tracks different fields, you’d adapt feature engineering.
+- The dataset comes from a single organisation, generalisation to other environments would need retraining.
+- Labels/features depend on what the dataset provides. If a company tracks different fields, you'd adapt feature engineering.
 - If you retrain, results can change slightly (random splits / model settings).
 
 ---
@@ -215,7 +256,6 @@ License: CC BY 4.0 (as listed on the dataset page).
 ## 🙋 Author
 
 **Abinash Prasana Selvanathan**  
-(Feel free to add LinkedIn/GitHub links here)
 
 ---
 
