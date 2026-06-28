@@ -1,263 +1,306 @@
-# 🚦 RiskRadar — IT Incident SLA Breach Risk (Decision Support)
+<div align="center">
 
-**ML predicts SLA‑breach risk. Dashboard shows the numbers + visuals. Optional LLM summary is *fact‑grounded* (no guessing).**
+# 🚦 RiskRadar — IT Incident SLA Breach Risk
+
+**A machine learning decision support tool that predicts SLA breach risk across an entire incident backlog, built from scratch on real ITSM event data.**
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
+[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Accuracy](https://img.shields.io/badge/Accuracy-92%25-2ea44f?style=for-the-badge)](.)
+[![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.9684-1d6fa5?style=for-the-badge)](.)
+[![Deploy](https://img.shields.io/badge/Deploy-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/cloud)
 
 <br/>
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/UI-Streamlit-ff4b4b?logo=streamlit&logoColor=white)
-![ML](https://img.shields.io/badge/ML-scikit--learn-f7931e?logo=scikitlearn&logoColor=white)
-![Accuracy](https://img.shields.io/badge/Accuracy-92%25-2ea44f)
-![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.9684-blue)
-![Status](https://img.shields.io/badge/Status-Completed-2ea44f)
+*UCI ML Repository · 141,713 Event Rows · 24,918 Incidents · Random Forest · Built on CPU*
+
+</div>
 
 ---
 
-## 🔎 What this is
+## 📖 What This Project Is
 
-RiskRadar is a small **decision-support app** for IT incident teams.
+When an IT team is staring down 25,000 open tickets, the real challenge is not resolving them. It is knowing which ones to look at first. RiskRadar was built to answer that question. It takes a raw incident event log, aggregates it into incident-level features, and uses a trained Random Forest classifier to assign each ticket an SLA breach probability between 0 and 1. That probability is then mapped to a risk band with a plain-English recommended action so even a non-technical manager can act on it immediately.
 
-You upload an incident event log (**incident_event_log.csv**) → the pipeline builds **incident-level features** → a trained model outputs an **SLA breach probability** for each incident → the UI shows:
+The model was trained on the UCI Machine Learning Repository's incident management event log from a real organisation, covering 141,713 event records across 24,918 unique tickets. Everything runs locally with no external APIs required, and the optional LLM explanation layer only summarises facts that are already computed. It cannot invent details.
 
-- ✅ **Overview**: total incidents, average risk, counts by risk band  
-- 📋 **Incident List**: searchable / sortable risk table  
-- 🧾 **Incident Detail**: one incident, its computed features, risk band + recommended action  
-- 📊 **Visuals**: distributions, top risky groups/categories, calibration plot, and a heatmap
-
-It's not a "perfect oracle" project. It's more like: *if you're triaging 25k tickets, where should you look first?*
+The project ships with a four-tab Streamlit dashboard where you can filter the full incident list by risk band, drill into any single ticket, explore patterns by assignment group and category, and tune the classification threshold interactively to see how precision and recall trade off.
 
 ---
 
-## ✅ Why this is useful (in real life)
+## ⚡ Quick Stats
 
-- ⚡ **Faster triage**: you can filter to High risk tickets quickly
-- 🧠 **Consistency**: the risk score is based on the same feature rules every time
-- 📈 **Ops insights**: you can see risky assignment groups / categories (patterns show up fast)
-- 🧾 **Explainable enough**: explanations are built from computed facts (counts, durations, etc.)
+<div align="center">
 
----
+| | 🎯 Accuracy | 📈 AUC-ROC | ⚡ F1 (Breach) | 🔢 Incidents | 🌲 Trees |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Score** | **92.0%** | **0.9684** | **0.887** | **24,918** | **300** |
 
-## ✨ Features
-
-- 📤 Upload a CSV event log (ServiceNow-like incident event data)
-- 🧱 Incident summary builder (event log → incident level table)
-- 🤖 SLA breach risk prediction (probability + risk band: Low / Medium / High)
-- 🗂️ Sortable / filterable incident list + search by INC number
-- 🧾 Incident detail view with:
-  - computed features for that incident
-  - risk + recommended action
-  - optional LLM "short explanation" using only computed facts
-- 📊 Dashboard visuals:
-  - risk probability distribution
-  - risk band counts
-  - top risky assignment groups (avg probability)
-  - top risky categories (avg probability)
-  - calibration curve (how predicted probs match reality)
-  - priority × risk band heatmap (quick triage view)
-- ⬇️ Download predictions as CSV
+</div>
 
 ---
 
-## 📊 Model Performance (Verified)
+## 🗃️ Dataset
 
-Two models were trained and compared. Random Forest was selected as the best performer.
+<div align="center">
+
+| Detail | Value |
+|:---|:---|
+| 📚 Name | Incident Management Process Enriched Event Log |
+| 🌐 Source | UCI Machine Learning Repository |
+| 📦 Raw event rows | 141,713 |
+| 🎫 Unique incidents | 24,918 |
+| 🎯 Target variable | `sla_breached` (derived from `made_sla`) |
+| ✂️ Train / Test split | 80% / 20% stratified, seed 42 |
+| 🧪 Test set size | 4,984 incidents |
+
+</div>
+
+The raw data is event-level, meaning each row represents a state change on an incident rather than the incident itself. The pipeline aggregates these into one row per ticket, computing counts, durations, and reassignment signals before any modelling happens.
+
+> **Citation:** Amaral, C., Fantinato, M., & Peres, S. (2018). *Incident management process enriched event log* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C57S4H
+
+---
+
+## 🧠 System Architecture
+
+```mermaid
+flowchart TD
+    classDef io      fill:#1d4ed8,color:#fff,stroke:#1e40af,rx:8
+    classDef proc    fill:#4f46e5,color:#fff,stroke:#4338ca,rx:8
+    classDef feat    fill:#7c3aed,color:#fff,stroke:#6d28d9,rx:8
+    classDef model   fill:#065f46,color:#fff,stroke:#064e3b,rx:8
+    classDef ui      fill:#b45309,color:#fff,stroke:#92400e,rx:8
+    classDef llm     fill:#be185d,color:#fff,stroke:#9d174d,rx:8
+
+    A["📄 Raw Event Log\n141,713 rows · 36 columns"]:::io
+    B["Data Processing\nparse dates · normalise booleans"]:::proc
+    C["Feature Engineering\naggregate to 24,918 incidents\ncount · duration · reassignment signals"]:::feat
+    D["Preprocessing Pipeline\nmedian impute · mode impute · one-hot encode"]:::feat
+    E["🌲 Random Forest Classifier\n300 trees · balanced_subsample · all CPU cores"]:::model
+    F["Breach Probability\n0.0 → 1.0 per incident"]:::model
+    G["Risk Band + Action\nLow · Medium · High"]:::model
+    H["📊 Streamlit Dashboard\n4 tabs · charts · calibration · CSV export"]:::ui
+    I["💬 LLM Explainer\nfact-grounded · offline fallback"]:::llm
+
+    A --> B --> C --> D --> E --> F --> G
+    G --> H
+    G --> I
+```
+
+---
+
+## ⚙️ Model Details
+
+<div align="center">
+
+| Component | Value |
+|:---|:---|
+| 🏗️ Model type | Random Forest Classifier |
+| 🌲 Number of trees | 300 |
+| ⚖️ Class balancing | `balanced_subsample` (per-tree rebalancing) |
+| 📊 Baseline compared | Logistic Regression (accuracy 90.0%, AUC 0.9589) |
+| ✅ Selection criterion | Highest AUC-ROC on held-out test set |
+
+</div>
+
+The pipeline computes five numeric signals per incident (event count, reassignment count, reopen count, resolution hours, and modification count) plus six categorical fields (category, subcategory, priority, assignment group, caller, and location). Missing values are filled before encoding so the model always receives a complete feature vector.
+
+---
+
+## 📊 Evaluation Results
+
+<div align="center">
 
 | Metric | Logistic Regression | Random Forest |
-|---|---|---|
-| Accuracy | 90.0% | **92.0%** |
-| AUC-ROC | 0.9589 | **0.9684** |
-| F1-Score (SLA Breached) | 0.865 | **0.887** |
-| F1-Score (SLA Met) | — | **0.938** |
+|:---|:---:|:---:|
+| 🎯 Accuracy | 90.0% | **92.0%** |
+| 📈 AUC-ROC | 0.9589 | **0.9684** |
+| ⚡ F1-Score (SLA Breached) | 0.865 | **0.887** |
+| ✅ F1-Score (SLA Met) | — | **0.938** |
+| 🔍 Precision (Breach) | — | **91.4%** |
+| 🔔 Recall (Breach) | — | **86.1%** |
 
-**Confusion Matrix — Random Forest** (test set: 4,984 incidents):
+</div>
 
-```
-                   Predicted Met    Predicted Breached
-Actual Met              3,014               147
-Actual Breached           254             1,569
-```
+**Confusion Matrix — Random Forest** (test set: 4,984 incidents)
 
-The model caught **1,569 SLA breaches** while only missing 254 — an **86% breach recall rate**.
+<div align="center">
+
+| | Predicted Met | Predicted Breached |
+|:---:|:---:|:---:|
+| **Actual Met** | 3,014 ✅ | 147 ❌ |
+| **Actual Breached** | 254 ❌ | 1,569 ✅ |
+
+</div>
+
+The model caught **1,569 out of 1,823 actual SLA breaches**, which works out to an **86% breach recall rate** on unseen data. Only 147 non-breaching incidents were falsely flagged, keeping the false alarm rate low enough to be operationally useful.
 
 ---
 
 ## 🚦 Risk Band Logic
 
-The model outputs a probability score `p` (0.0 → 1.0) mapped to an actionable risk band:
+The model outputs a continuous probability score that gets mapped to three actionable bands. The thresholds were chosen to reflect operational priority levels rather than to maximise any single metric.
 
-| Risk Band | Threshold | Recommended Action |
-|---|---|---|
-| 🟢 Low | `p < 0.30` | Normal queue. Keep updates clean, avoid unnecessary reassignment. |
-| 🟡 Medium | `0.30 ≤ p < 0.60` | Monitor. Check missing details and confirm ownership early. |
-| 🔴 High | `p ≥ 0.60` | Escalate now. Assign correctly, reduce reassignment loops, senior review. |
+<div align="center">
 
----
+| Risk Band | Probability Range | Recommended Action |
+|:---:|:---:|:---|
+| 🟢 Low | p < 0.30 | Normal queue. Keep updates clean and avoid unnecessary reassignment. |
+| 🟡 Medium | 0.30 ≤ p < 0.60 | Monitor closely. Check for missing details and confirm ownership early. |
+| 🔴 High | p ≥ 0.60 | Escalate now. Assign to the right team, reduce reassignment loops, request a senior review. |
 
-## 🗂️ Dataset
-
-- **Source:** `incident_event_log.csv` — UCI ML Repository (Incident management process enriched event log)
-- **Raw event logs:** 141,712 rows
-- **Aggregated incidents:** 24,918 unique tickets (one row per incident)
-- **Train / Test split:** 80% / 20%, stratified by target, random seed 42
-- **Target variable:** `sla_breached` — derived from `made_sla` column (0 = Met, 1 = Breached)
+</div>
 
 ---
 
-## 🧩 How the files connect (big picture)
+## 💻 Dashboard Features
 
-Think of it like a simple pipeline:
+The Streamlit app organises everything into four tabs so different team members can go straight to what they need.
 
-1) **data_processing.py**  
-   Reads the raw event log CSV and does basic cleanup (dates, missing values, column sanity).
+**Tab 1 — Overview (📊)**
 
-2) **feature_engineering.py**  
-   Turns event-level rows into **incident-level features** (counts, reassignments, reopen count, time-based stats, etc.).
+Six charts load automatically when the data is ready: a histogram of the full probability distribution, a bar chart and donut showing Low/Medium/High counts and share, a heatmap of priority versus risk band, bar charts of the top 10 riskiest assignment groups and categories by average predicted probability, and a calibration plot comparing predicted probabilities against actual breach rates to verify model reliability. A one-click CSV download exports the full scored incident list.
 
-3) **model_training.py** + **run_train.py**  
-   Trains the model and saves it as `best_model.joblib`.  
-   (You run training once. After that, you just load the model.)
+**Tab 2 — Incident List (📋)**
 
-4) **decision_logic.py**  
-   Converts probability → **risk band** + **recommended action** (simple rules, easy to explain).
+A filterable and sortable table of all 24,918 incidents. You can filter by risk band, set a minimum probability threshold, search by incident number, sort by probability or reassignment count or reopen count, and control how many rows to show. Every row links through to the detail view.
 
-5) **llm_explainer.py** (optional)  
-   Generates a short explanation text. It only uses computed facts from the incident row.  
-   If you don't add an API key, the app still works (it falls back to a non-LLM explanation).
+**Tab 3 — Incident Detail (🧾)**
 
-6) **app.py**  
-   Streamlit UI that ties everything together.
+Select any incident by number and see its breach probability, risk band, recommended action, and up to six computed risk drivers compared against the dataset median and 75th percentile. The optional LLM panel generates a short plain-English explanation using only the facts that are already computed. It cannot invent anything that is not in the row.
+
+**Tab 4 — Model Evaluation (✅)**
+
+An interactive threshold slider from 0.05 to 0.95 recalculates precision, recall, F1, and AUC-ROC live. The confusion matrix updates in step with the slider so you can see exactly what the trade-off looks like at any operating point.
 
 ---
 
-## 🗂️ Project structure
+## 📁 Project Structure
 
-```text
-riskradar-it-incident-sla-risk/
-├─ app.py
-├─ data_processing.py
-├─ feature_engineering.py
-├─ model_training.py
-├─ run_train.py
-├─ decision_logic.py
-├─ llm_explainer.py
-├─ requirements.txt
-├─ incident_event_log.csv              # (optional) local copy (large)
-├─ best_model.joblib                   # trained model (generated after training)
-└─ RiskRadar_Report.ipynb              # your notebook report (optional)
+```
+riskradar/
+├── 📄 app.py                    Streamlit dashboard — all four tabs and sidebar controls
+├── 📄 data_processing.py        Loads the event log CSV, parses dates, normalises boolean fields
+├── 📄 feature_engineering.py    Aggregates event-level rows to one row per incident, builds train/test split
+├── 📄 model_training.py         Trains Logistic Regression and Random Forest, computes all metrics
+├── 📄 run_train.py              Single entry point — runs the full training pipeline end to end
+├── 📄 decision_logic.py         Maps probability to risk band and recommended action text
+├── 📄 llm_explainer.py          Generates fact-grounded explanation via OpenAI, with offline fallback
+├── 📄 requirements.txt          Python dependencies
+├── 📄 RiskRadar_Report.ipynb    Notebook with design rationale and architecture walkthrough
+├── 📦 incident_event_log.csv    Raw event log from UCI repository (45 MB, 141,713 rows)
+└── 📦 best_model.joblib         Serialized trained pipeline — preprocessor and Random Forest (225 MB)
 ```
 
 ---
 
-## 🛠️ Setup
+## ⚙️ How to Run
 
-### 1) Create a venv (recommended)
+**1. Clone the repository**
+```bash
+git clone https://github.com/abinashprasana/riskradar-it-incident-sla-risk.git
+cd riskradar-it-incident-sla-risk
+```
 
+**2. Create a virtual environment**
 ```bash
 python -m venv .venv
 ```
 
-**Windows (PowerShell):**
+Windows:
 ```bash
 .venv\Scripts\Activate.ps1
 ```
 
-**Mac/Linux:**
+Mac / Linux:
 ```bash
 source .venv/bin/activate
 ```
 
-### 2) Install dependencies
-
+**3. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 🚀 How to run
-
-### Option A: Run the app (normal)
-
+**4. Launch the dashboard**
 ```bash
 streamlit run app.py
 ```
 
-Open the URL shown in the terminal (usually `http://localhost:8501`).
+Open `http://localhost:8501` in your browser. If `incident_event_log.csv` and `best_model.joblib` are in the project folder, the app loads them automatically. Otherwise use the sidebar upload to bring in your own CSV.
 
-### Option B: Train the model (only if you want to retrain)
+<details>
+<summary>⚙️ Retrain the model from scratch</summary>
+
+If you want to reproduce the training run or experiment with different hyperparameters:
 
 ```bash
 python run_train.py
 ```
 
-After training, it will create/update `best_model.joblib`.
+This runs data loading, feature engineering, training both models, evaluation, and saves the winner to `best_model.joblib`. The existing file will be overwritten.
+
+</details>
+
+<details>
+<summary>🔑 Enable LLM explanations</summary>
+
+By default the Incident Detail tab shows a template-based explanation that works without any API key. To enable the GPT-powered version:
+
+```bash
+# Windows
+setx OPENAI_API_KEY "your_key_here"
+
+# Mac / Linux
+export OPENAI_API_KEY="your_key_here"
+```
+
+Then restart the terminal and run `streamlit run app.py` again. The LLM only summarises facts already in the incident row. It cannot hallucinate incident details.
+
+</details>
 
 ---
 
-## 🎥 Demo video 
+## 🌐 Live App
+
+The app is deployed on Streamlit Cloud and loads the full dataset automatically. No setup required. Just open the link and start exploring.
+
+> **Live link:** *(coming soon — link will be added after deployment)*
+
+The app detects the pre-loaded dataset on startup and runs immediately. There is also an optional upload mode in the sidebar for anyone who wants to test it with a different event log.
+
+---
+
+## 🎥 Demo
 
 https://github.com/user-attachments/assets/b49adc74-d1b8-49e3-b63d-4d563a4166a0
 
 ---
 
-## 📊 About the visuals (what each one means)
+## ⚠️ Limitations
 
-- **Risk probability distribution**: shows how the model spreads predictions (lots of low, some high, etc.).  
-- **Risk band counts**: quick count of Low/Medium/High based on your thresholds.  
-- **Top risky assignment groups / categories**: average predicted risk by group/category (helps spot patterns).  
-- **Calibration curve**: checks if predicted probabilities are realistic (e.g., "0.8 means ~80% breach").  
-- **Priority × Risk heatmap**: where risk is concentrated across priority labels (fast triage view).
+This is a prototype decision support tool, not a production-hardened system. A few things are worth knowing before drawing conclusions from the outputs.
 
----
+The model was trained on data from a single organisation, so predictions on a different organisation's incidents would require retraining on that environment's history. The features rely on specific column names from the UCI dataset schema, so adapting the pipeline to a different ITSM export means updating the feature engineering step. Retraining will produce slightly different results because of random splits and tree construction, though AUC-ROC should remain in a similar range. A real deployment would also need access controls, audit logging, and ongoing monitoring to catch data drift.
 
-## 🧠 Optional LLM explanations (how to enable)
+<div align="center">
 
-By default, the app shows a **non‑LLM explanation** (template-based) so it works anywhere.
+| 🔧 Possible Improvement | 📈 Expected Effect |
+|:---|:---|
+| Gradient boosting (XGBoost or LightGBM) | Typically gains 1 to 2 percentage points on AUC over Random Forest |
+| Hyperparameter search (GridSearchCV) | Better optimised tree depth and feature count |
+| Time-aware train/test split | More realistic evaluation that respects temporal order |
+| Feature importance explanations in UI | Shows which features drove each individual prediction |
+| REST API wrapper | Enables real-time scoring from a ServiceNow webhook |
 
-If you want the LLM version:
-1) pick a provider (OpenAI / Azure OpenAI / etc.)
-2) set an env var (example below)
-
-**Example (OpenAI):**
-```bash
-setx OPENAI_API_KEY "your_key_here"
-```
-
-Then re-open your terminal and run:
-```bash
-streamlit run app.py
-```
-
-> Note: the LLM is only used to *summarise computed facts* (counts, durations, band, etc.).  
-> It should not invent incident details that aren't in the CSV.
+</div>
 
 ---
 
-## 📌 Dataset source & credits
+## 👤 Author
 
-This project uses the **Incident management process enriched event log** dataset from the UCI Machine Learning Repository.
+**Abinash Prasana Selvanathan**
 
-**Citation (APA):**  
-Amaral, C., Fantinato, M., & Peres, S. (2018). *Incident management process enriched event log* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C57S4H
-
-License: CC BY 4.0 (as listed on the dataset page).
-
----
-
-## 🧪 Notes / limitations (keeping it honest)
-
-- This is a **prototype**. Real incident systems need access control, monitoring, audit logs, and careful evaluation.
-- The dataset comes from a single organisation, generalisation to other environments would need retraining.
-- Labels/features depend on what the dataset provides. If a company tracks different fields, you'd adapt feature engineering.
-- If you retrain, results can change slightly (random splits / model settings).
-
----
-
-## 🙋 Author
-
-**Abinash Prasana Selvanathan**  
-
----
-
-### ⭐ If you like it
-If you found it useful, feel free to star the repo — it helps.
+*If you found this useful, feel free to star the repo.*

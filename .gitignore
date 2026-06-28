@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large files / binary models
+*.joblib
+*.pkl
+
+# Datasets
+*.csv
+
+# Streamlit config / secrets
+.streamlit/
