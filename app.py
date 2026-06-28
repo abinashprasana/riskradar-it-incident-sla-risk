@@ -1,5 +1,4 @@
 import os
-import time
 import pathlib
 import joblib
 import pandas as pd
@@ -256,11 +255,6 @@ st.markdown(f"""
 
 
 # ── Cache helpers ─────────────────────────────────────────────────────────────
-@st.cache_resource
-def load_model(path: str):
-    return joblib.load(path)
-
-
 @st.cache_data
 def build_from_path(path: str) -> pd.DataFrame:
     return build_incident_summary(load_event_log(path))
@@ -272,27 +266,21 @@ def build_from_upload(file) -> pd.DataFrame:
 
 
 @st.cache_resource(show_spinner=False)
-def train_fresh_model(csv_path: str):
-    """Retrain from the CSV when the saved model is incompatible with the runtime."""
+def get_model(csv_path: str):
     from feature_engineering import make_train_test, build_preprocess_pipeline
     from sklearn.pipeline import Pipeline
     from sklearn.ensemble import RandomForestClassifier
-    df_events = load_event_log(csv_path)
-    df_inc    = build_incident_summary(df_events)
+    df_inc = build_incident_summary(load_event_log(csv_path))
     X_train, _, y_train, _ = make_train_test(df_inc)
     pre  = build_preprocess_pipeline(X_train)
     pipe = Pipeline([
         ("preprocess", pre),
         ("model", RandomForestClassifier(
-            n_estimators=150, random_state=42,
+            n_estimators=100, random_state=42,
             class_weight="balanced_subsample", n_jobs=-1,
         )),
     ])
     pipe.fit(X_train, y_train)
-    try:
-        joblib.dump(pipe, DEFAULT_MODEL, compress=3)
-    except Exception:
-        pass
     return pipe
 
 
@@ -482,8 +470,7 @@ def get_risk_drivers(row: pd.Series, df: pd.DataFrame) -> list[str]:
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
-auto_csv   = os.path.exists(DEFAULT_CSV)
-auto_model = os.path.exists(DEFAULT_MODEL)
+auto_csv = os.path.exists(DEFAULT_CSV)
 
 with st.sidebar:
     st.markdown(f"""
@@ -501,7 +488,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown('<div class="sidebar-section">📁 Data Source</div>', unsafe_allow_html=True)
 
-    if auto_csv and auto_model:
+    if auto_csv:
         data_mode = st.radio(
             "data_mode",
             ["Pre-loaded dataset", "Upload your own"],
@@ -509,15 +496,12 @@ with st.sidebar:
         )
         if data_mode == "Pre-loaded dataset":
             st.success("✅ Demo dataset ready")
-            uploaded   = None
-            model_path = DEFAULT_MODEL
+            uploaded = None
         else:
-            uploaded   = st.file_uploader("Upload incident_event_log.csv", type=["csv"])
-            model_path = st.text_input("Model path", value=DEFAULT_MODEL)
+            uploaded = st.file_uploader("Upload incident_event_log.csv", type=["csv"])
     else:
-        data_mode  = "Upload your own"
-        uploaded   = st.file_uploader("Upload incident_event_log.csv", type=["csv"])
-        model_path = st.text_input("Model path", value=DEFAULT_MODEL)
+        data_mode = "Upload your own"
+        uploaded  = st.file_uploader("Upload incident_event_log.csv", type=["csv"])
 
     st.markdown("---")
     st.markdown('<div class="sidebar-section">🔍 Filters</div>', unsafe_allow_html=True)
@@ -540,20 +524,14 @@ with st.sidebar:
 
 # ── Load data and model ────────────────────────────────────────────────────────
 if data_mode == "Pre-loaded dataset":
-    with st.spinner("Loading dataset and model..."):
+    with st.spinner("Loading data and training model... (first visit takes about a minute)"):
         df_inc = build_from_path(DEFAULT_CSV)
-        try:
-            model = load_model(model_path)
-        except Exception:
-            model = train_fresh_model(DEFAULT_CSV)
+        model  = get_model(DEFAULT_CSV)
 
 elif uploaded is not None:
     with st.spinner("Processing your dataset..."):
         df_inc = build_from_upload(uploaded)
-        try:
-            model = load_model(model_path)
-        except Exception:
-            model = train_fresh_model(DEFAULT_CSV)
+        model  = get_model(DEFAULT_CSV)
 
 else:
     st.markdown(f"""
@@ -591,15 +569,11 @@ with st.sidebar:
     st.markdown("---")
     st.markdown('<div class="sidebar-section">ℹ️ Model Info</div>', unsafe_allow_html=True)
     n_features = st.session_state.get("n_features", None)
-    try:
-        updated = time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(model_path)))
-    except Exception:
-        updated = "unknown"
-    feat_str = f"{n_features:,}" if isinstance(n_features, int) else "—"
+    feat_str   = f"{n_features:,}" if isinstance(n_features, int) else "—"
     st.markdown(
         f"**Type:** {clf_name}  \n"
         f"**Features:** {feat_str}  \n"
-        f"**Updated:** {updated}"
+        f"**Trees:** 100"
     )
     st.markdown("---")
     st.markdown(
