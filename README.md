@@ -4,18 +4,32 @@
 
 **A machine learning decision support tool that predicts SLA breach risk across an entire incident backlog, built from scratch on real ITSM event data.**
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
 [![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![Accuracy](https://img.shields.io/badge/Accuracy-92%25-2ea44f?style=for-the-badge)](.)
-[![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.9684-1d6fa5?style=for-the-badge)](.)
-[![Deploy](https://img.shields.io/badge/Deploy-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/cloud)
+[![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.9674-1d6fa5?style=for-the-badge)](.)
+[![Live App](https://img.shields.io/badge/Live%20App-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://abinashprasana-riskradar-it-incident-sla-risk-app-bvwccq.streamlit.app/)
 
 <br/>
 
 *UCI ML Repository · 141,713 Event Rows · 24,918 Incidents · Random Forest · Built on CPU*
 
 </div>
+
+---
+
+## 🌐 Live App
+
+<div align="center">
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://abinashprasana-riskradar-it-incident-sla-risk-app-bvwccq.streamlit.app/)
+
+</div>
+
+The app is deployed on Streamlit Cloud. It loads the full 24,918-incident dataset and trains the model automatically on startup. No account or setup needed.
+
+On first load the model trains in the background, which takes about a minute. After that the dashboard is fully interactive. There is also a sidebar option to score a different event log if needed.
 
 ---
 
@@ -35,7 +49,7 @@ The project ships with a four-tab Streamlit dashboard where you can filter the f
 
 | | 🎯 Accuracy | 📈 AUC-ROC | ⚡ F1 (Breach) | 🔢 Incidents | 🌲 Trees |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **Score** | **92.0%** | **0.9684** | **0.887** | **24,918** | **300** |
+| **Score** | **92.0%** | **0.9674** | **0.886** | **24,918** | **100** |
 
 </div>
 
@@ -78,7 +92,7 @@ flowchart TD
     B["Data Processing\nparse dates · normalise booleans"]:::proc
     C["Feature Engineering\naggregate to 24,918 incidents\ncount · duration · reassignment signals"]:::feat
     D["Preprocessing Pipeline\nmedian impute · mode impute · one-hot encode"]:::feat
-    E["🌲 Random Forest Classifier\n300 trees · balanced_subsample · all CPU cores"]:::model
+    E["🌲 Random Forest Classifier\n100 trees · balanced_subsample · all CPU cores"]:::model
     F["Breach Probability\n0.0 → 1.0 per incident"]:::model
     G["Risk Band + Action\nLow · Medium · High"]:::model
     H["📊 Streamlit Dashboard\n4 tabs · charts · calibration · CSV export"]:::ui
@@ -98,7 +112,7 @@ flowchart TD
 | Component | Value |
 |:---|:---|
 | 🏗️ Model type | Random Forest Classifier |
-| 🌲 Number of trees | 300 |
+| 🌲 Number of trees | 100 |
 | ⚖️ Class balancing | `balanced_subsample` (per-tree rebalancing) |
 | 📊 Baseline compared | Logistic Regression (accuracy 90.0%, AUC 0.9589) |
 | ✅ Selection criterion | Highest AUC-ROC on held-out test set |
@@ -116,11 +130,11 @@ The pipeline computes five numeric signals per incident (event count, reassignme
 | Metric | Logistic Regression | Random Forest |
 |:---|:---:|:---:|
 | 🎯 Accuracy | 90.0% | **92.0%** |
-| 📈 AUC-ROC | 0.9589 | **0.9684** |
-| ⚡ F1-Score (SLA Breached) | 0.865 | **0.887** |
+| 📈 AUC-ROC | 0.9589 | **0.9674** |
+| ⚡ F1-Score (SLA Breached) | 0.865 | **0.886** |
 | ✅ F1-Score (SLA Met) | — | **0.938** |
-| 🔍 Precision (Breach) | — | **91.4%** |
-| 🔔 Recall (Breach) | — | **86.1%** |
+| 🔍 Precision (Breach) | — | **92.2%** |
+| 🔔 Recall (Breach) | — | **85.3%** |
 
 </div>
 
@@ -130,12 +144,12 @@ The pipeline computes five numeric signals per incident (event count, reassignme
 
 | | Predicted Met | Predicted Breached |
 |:---:|:---:|:---:|
-| **Actual Met** | 3,014 ✅ | 147 ❌ |
-| **Actual Breached** | 254 ❌ | 1,569 ✅ |
+| **Actual Met** | 3,030 ✅ | 131 ❌ |
+| **Actual Breached** | 268 ❌ | 1,555 ✅ |
 
 </div>
 
-The model caught **1,569 out of 1,823 actual SLA breaches**, which works out to an **86% breach recall rate** on unseen data. Only 147 non-breaching incidents were falsely flagged, keeping the false alarm rate low enough to be operationally useful.
+The model caught **1,555 out of 1,823 actual SLA breaches**, which works out to an **85% breach recall rate** on unseen data. Only 131 non-breaching incidents were falsely flagged, keeping the false alarm rate low enough to be operationally useful.
 
 ---
 
@@ -189,9 +203,9 @@ riskradar/
 ├── 📄 decision_logic.py         Maps probability to risk band and recommended action text
 ├── 📄 llm_explainer.py          Generates fact-grounded explanation via OpenAI, with offline fallback
 ├── 📄 requirements.txt          Python dependencies
+├── 📄 runtime.txt               Pins Python 3.11 for Streamlit Cloud deployment
 ├── 📄 RiskRadar_Report.ipynb    Notebook with design rationale and architecture walkthrough
-├── 📦 incident_event_log.csv    Raw event log from UCI repository (45 MB, 141,713 rows)
-└── 📦 best_model.joblib         Serialized trained pipeline — preprocessor and Random Forest (225 MB)
+└── 📦 incident_event_log.csv    Raw event log from UCI repository (45 MB, 141,713 rows)
 ```
 
 ---
@@ -229,7 +243,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Open `http://localhost:8501` in your browser. The dataset and model load automatically on startup. If the saved model is incompatible with your environment, the app retrains from the CSV in the background and continues normally.
+Open `http://localhost:8501` in your browser. The dataset loads automatically and the model trains on first launch (takes about a minute). Subsequent visits are instant.
 
 There is also a sidebar option to upload a different event log CSV if you want to score your own dataset.
 
@@ -262,16 +276,6 @@ export OPENAI_API_KEY="your_key_here"
 Then restart the terminal and run `streamlit run app.py` again. The LLM only summarises facts already in the incident row. It cannot hallucinate incident details.
 
 </details>
-
----
-
-## 🌐 Live App
-
-The app is deployed on Streamlit Cloud. It loads the full 24,918-incident dataset and model automatically on startup. No account or setup needed.
-
-> **Live link:** *(coming soon — link will be added after deployment)*
-
-On first load the model initialises in the background, which takes about a minute. After that the dashboard is fully interactive. There is also a sidebar option to score a different event log if needed.
 
 ---
 
