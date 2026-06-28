@@ -229,18 +229,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Open `http://localhost:8501` in your browser. If `incident_event_log.csv` and `best_model.joblib` are in the project folder, the app loads them automatically. Otherwise use the sidebar upload to bring in your own CSV.
+Open `http://localhost:8501` in your browser. The dataset and model load automatically on startup. If the saved model is incompatible with your environment, the app retrains from the CSV in the background and continues normally.
+
+There is also a sidebar option to upload a different event log CSV if you want to score your own dataset.
 
 <details>
 <summary>⚙️ Retrain the model from scratch</summary>
 
-If you want to reproduce the training run or experiment with different hyperparameters:
+To reproduce the full training run or experiment with different hyperparameters:
 
 ```bash
 python run_train.py
 ```
 
-This runs data loading, feature engineering, training both models, evaluation, and saves the winner to `best_model.joblib`. The existing file will be overwritten.
+This loads the event log, runs feature engineering, trains both Logistic Regression and Random Forest, evaluates both, and saves the better model to `best_model.joblib`.
 
 </details>
 
@@ -265,11 +267,11 @@ Then restart the terminal and run `streamlit run app.py` again. The LLM only sum
 
 ## 🌐 Live App
 
-The app is deployed on Streamlit Cloud and loads the full dataset automatically. No setup required. Just open the link and start exploring.
+The app is deployed on Streamlit Cloud. It loads the full 24,918-incident dataset and model automatically on startup. No account or setup needed.
 
 > **Live link:** *(coming soon — link will be added after deployment)*
 
-The app detects the pre-loaded dataset on startup and runs immediately. There is also an optional upload mode in the sidebar for anyone who wants to test it with a different event log.
+On first load the model initialises in the background, which takes about a minute. After that the dashboard is fully interactive. There is also a sidebar option to score a different event log if needed.
 
 ---
 

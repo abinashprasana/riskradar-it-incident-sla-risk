@@ -271,6 +271,31 @@ def build_from_upload(file) -> pd.DataFrame:
     return build_incident_summary(load_event_log(file))
 
 
+@st.cache_resource(show_spinner=False)
+def train_fresh_model(csv_path: str):
+    """Retrain from the CSV when the saved model is incompatible with the runtime."""
+    from feature_engineering import make_train_test, build_preprocess_pipeline
+    from sklearn.pipeline import Pipeline
+    from sklearn.ensemble import RandomForestClassifier
+    df_events = load_event_log(csv_path)
+    df_inc    = build_incident_summary(df_events)
+    X_train, _, y_train, _ = make_train_test(df_inc)
+    pre  = build_preprocess_pipeline(X_train)
+    pipe = Pipeline([
+        ("preprocess", pre),
+        ("model", RandomForestClassifier(
+            n_estimators=150, random_state=42,
+            class_weight="balanced_subsample", n_jobs=-1,
+        )),
+    ])
+    pipe.fit(X_train, y_train)
+    try:
+        joblib.dump(pipe, DEFAULT_MODEL, compress=3)
+    except Exception:
+        pass
+    return pipe
+
+
 def score_incidents(model, df: pd.DataFrame) -> pd.DataFrame:
     df   = df.copy()
     drop = [c for c in ["number", "sla_breached", "made_sla", "opened_at_min", "resolved_at_max"]
@@ -513,11 +538,23 @@ with st.sidebar:
     sort_desc = st.checkbox("Descending", value=True)
 
 
-# ── Load data ──────────────────────────────────────────────────────────────────
+# ── Load data and model ────────────────────────────────────────────────────────
 if data_mode == "Pre-loaded dataset":
-    df_inc = build_from_path(DEFAULT_CSV)
+    with st.spinner("Loading dataset and model..."):
+        df_inc = build_from_path(DEFAULT_CSV)
+        try:
+            model = load_model(model_path)
+        except Exception:
+            model = train_fresh_model(DEFAULT_CSV)
+
 elif uploaded is not None:
-    df_inc = build_from_upload(uploaded)
+    with st.spinner("Processing your dataset..."):
+        df_inc = build_from_upload(uploaded)
+        try:
+            model = load_model(model_path)
+        except Exception:
+            model = train_fresh_model(DEFAULT_CSV)
+
 else:
     st.markdown(f"""
     <div style="
@@ -540,12 +577,6 @@ else:
 
 if "sla_breached" not in df_inc.columns:
     st.error("Could not find 'sla_breached'. The CSV needs a 'made_sla' column.")
-    st.stop()
-
-try:
-    model = load_model(model_path)
-except Exception as e:
-    st.error(f"Model load failed: {e}")
     st.stop()
 
 df_scored = score_incidents(model, df_inc)
