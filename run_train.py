@@ -33,7 +33,7 @@ def main():
     best = pick_best(results)
     print(f"\nBest: {best.name} | AUC: {best.roc_auc:.4f}")
 
-    joblib.dump(best.pipeline, MODEL_OUT)
+    joblib.dump(best.pipeline, MODEL_OUT, compress=3)
     print(f"Saved to {MODEL_OUT}")
 
 

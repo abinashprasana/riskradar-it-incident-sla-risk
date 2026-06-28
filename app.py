@@ -1,5 +1,6 @@
 import os
 import time
+import pathlib
 import joblib
 import pandas as pd
 import streamlit as st
@@ -14,8 +15,9 @@ from data_processing import load_event_log, build_incident_summary
 from decision_logic import risk_band, recommended_action
 from llm_explainer import explain
 
-DEFAULT_CSV   = "incident_event_log.csv"
-DEFAULT_MODEL = "best_model.joblib"
+_HERE         = pathlib.Path(__file__).parent
+DEFAULT_CSV   = str(_HERE / "incident_event_log.csv")
+DEFAULT_MODEL = str(_HERE / "best_model.joblib")
 
 st.set_page_config(page_title="RiskRadar", layout="wide", page_icon="🚦")
 
