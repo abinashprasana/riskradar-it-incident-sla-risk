@@ -18,8 +18,8 @@ def make_train_test(df: pd.DataFrame, target_col: str = "sla_breached", test_siz
 
 
 def build_preprocess_pipeline(X: pd.DataFrame) -> ColumnTransformer:
-    cat_cols = [c for c in X.columns if X[c].dtype == "object"]
-    num_cols = [c for c in X.columns if c not in cat_cols]
+    num_cols = [c for c in X.columns if pd.api.types.is_numeric_dtype(X[c])]
+    cat_cols = [c for c in X.columns if c not in num_cols]
 
     return ColumnTransformer(
         transformers=[
