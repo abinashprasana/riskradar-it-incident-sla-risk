@@ -21,11 +21,7 @@
 
 ## 🌐 Live App
 
-<div align="center">
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://abinashprasana-riskradar-it-incident-sla-risk-app-bvwccq.streamlit.app/)
-
-</div>
+[![🚀 Launch Live App](https://img.shields.io/badge/🚀%20Launch%20Live%20App-Open%20Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://abinashprasana-riskradar-it-incident-sla-risk-app-bvwccq.streamlit.app/)
 
 The app is deployed on Streamlit Cloud. It loads the full 24,918-incident dataset and trains the model automatically on startup. No account or setup needed.
 
