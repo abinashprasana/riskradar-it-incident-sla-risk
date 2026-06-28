@@ -9,6 +9,7 @@ __pycache__/
 
 # Datasets
 *.csv
+!incident_event_log.csv
 
 # Streamlit config / secrets
 .streamlit/
