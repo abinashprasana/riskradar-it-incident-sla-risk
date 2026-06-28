@@ -590,14 +590,15 @@ except Exception:
 with st.sidebar:
     st.markdown("---")
     st.markdown('<div class="sidebar-section">ℹ️ Model Info</div>', unsafe_allow_html=True)
-    n_features = st.session_state.get("n_features", "?")
+    n_features = st.session_state.get("n_features", None)
     try:
         updated = time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(model_path)))
     except Exception:
         updated = "unknown"
+    feat_str = f"{n_features:,}" if isinstance(n_features, int) else "—"
     st.markdown(
         f"**Type:** {clf_name}  \n"
-        f"**Features:** {n_features:,}  \n"
+        f"**Features:** {feat_str}  \n"
         f"**Updated:** {updated}"
     )
     st.markdown("---")

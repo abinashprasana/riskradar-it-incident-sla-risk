@@ -1,6 +1,6 @@
 pandas
 numpy
-scikit-learn==1.7.1
+scikit-learn
 streamlit
 python-dotenv
 joblib
