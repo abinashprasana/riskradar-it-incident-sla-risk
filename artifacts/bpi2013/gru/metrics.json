@@ -1,0 +1,18 @@
+{
+  "log": "bpi2013",
+  "model": "PrefixGRU",
+  "n_parameters": 39724,
+  "seeds": 5,
+  "val_auc_mean": 0.7588693441679025,
+  "val_auc_std": 0.006076420945257956,
+  "test_auc_mean": 0.7726227013139844,
+  "test_auc_std": 0.005273328126115219,
+  "test_auc_ensemble": 0.7951032850241371,
+  "comparison": {
+    "baseline": "agg_tuned",
+    "gru_minus_baseline_mean": -0.14838015043931738,
+    "inside_baseline_ci_at_all_k": false,
+    "n_k_inside": 0,
+    "n_k_total": 12
+  }
+}

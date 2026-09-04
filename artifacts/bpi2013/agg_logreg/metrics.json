@@ -1,0 +1,63 @@
+{
+  "run_id": "bb700971fe",
+  "run_at": "2026-09-04T19:12:41",
+  "log": "bpi2013",
+  "encoding": "agg",
+  "learner_forced": "logreg",
+  "selected_model": "logreg",
+  "val_auc_by_model": {
+    "logreg": 0.8785997437630415
+  },
+  "bucketing": "single",
+  "imbalance": "balanced",
+  "k_max": 12,
+  "n_cases_total": 7545,
+  "n_cases_dense_window": 7545,
+  "n_cases_dropped_all_terminal": 1,
+  "breach_rate_dropped_cases": null,
+  "breach_rate_kept_cases": null,
+  "split_mode": "random_case",
+  "split": {
+    "n_train_cases": 3772,
+    "n_val_cases": 1131,
+    "n_calib_cases": 754,
+    "n_test_cases": 1888,
+    "test_boundary": "NaT",
+    "calib_mode": "random_case_split(seed=42)",
+    "n_dropped_straddling": {
+      "modelling_period": 0
+    }
+  },
+  "label_construction": {
+    "n_cases_full": 7546,
+    "n_cases_censored_dropped": 8,
+    "n_cases_dropped_all_terminal": 1,
+    "spec_name": "bpi2013",
+    "deadline_hours": 240.0,
+    "source": "fixed policy constant, not fitted"
+  },
+  "test_prefixes_already_past_deadline": 0.03743823641201064,
+  "base_rate_by_fold": {
+    "train": 0.48347399688811354,
+    "val": 0.47051302541153905,
+    "calib": 0.4949731119943886,
+    "test": 0.48166096541239073
+  },
+  "test_variable_cohort": {
+    "prefix_weighted_auc": 0.8850714383507066,
+    "prefix_weighted_ap": 0.8803509873658378,
+    "n_prefix_rows": 10130
+  },
+  "test_fixed_cohort": {
+    "prefix_weighted_auc": 0.8775913072891827,
+    "prefix_weighted_ap": 0.9484917768702185,
+    "n_prefix_rows": 3502
+  },
+  "test_case_level_at_k1": {
+    "at_k": 1,
+    "n_cases": 1888,
+    "base_rate": 0.3045550847457627,
+    "auc": 0.9005424020662937,
+    "ap": 0.8505173054769111
+  }
+}

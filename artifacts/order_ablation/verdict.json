@@ -1,0 +1,21 @@
+{
+  "bpi2013": {
+    "mean_delta": 0.005801854945241277,
+    "max_abs_delta": 0.04625908742191209,
+    "mean_insample_delta": 0.06158852100507891,
+    "k_with_ci_excluding_zero": [
+      6,
+      12
+    ],
+    "order_carries_signal": false
+  },
+  "uci_servicenow": {
+    "mean_delta": 9.554636534062078e-05,
+    "max_abs_delta": 0.004539199910251979,
+    "mean_insample_delta": 0.011232074011906817,
+    "k_with_ci_excluding_zero": [
+      3
+    ],
+    "order_carries_signal": false
+  }
+}

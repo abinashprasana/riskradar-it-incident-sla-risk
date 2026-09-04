@@ -1,0 +1,5 @@
+group,n,share,breach_rate,median_trace_len,median_elapsed_h_at_k1,median_distinct_resources,top_priority
+flipped_to_right,250,0.5230125523012552,0.972,10.0,0.025,1.0,3 - Moderate
+stayed_right,141,0.29497907949790797,0.41843971631205673,9.0,0.08333333333333333,1.0,3 - Moderate
+stayed_wrong,57,0.1192468619246862,0.8245614035087719,12.0,0.08333333333333333,1.0,3 - Moderate
+flipped_to_wrong,30,0.06276150627615062,0.0,9.0,0.0,1.0,3 - Moderate

@@ -1,0 +1,96 @@
+{
+  "run_id": "61d5e1c56a",
+  "run_at": "2026-09-04T19:28:35",
+  "log": "uci_servicenow",
+  "encoding": "agg",
+  "learner_forced": null,
+  "selected_model": "xgboost",
+  "tuned": true,
+  "n_trials_per_learner": 60,
+  "search": {
+    "logreg": {
+      "learner": "logreg",
+      "n_trials": 60,
+      "best_val_auc": 0.8618366589454473,
+      "worst_val_auc": 0.8290960685558255,
+      "median_val_auc": 0.8573929408501697,
+      "best_params": {
+        "C": 0.05924201757553765,
+        "class_weight": null,
+        "solver": "lbfgs",
+        "max_iter": 2000
+      },
+      "seconds": 100.0
+    },
+    "xgboost": {
+      "learner": "xgboost",
+      "n_trials": 60,
+      "best_val_auc": 0.9112257902322558,
+      "worst_val_auc": 0.8732476249556436,
+      "median_val_auc": 0.9050328674027965,
+      "best_params": {
+        "max_depth": 7,
+        "learning_rate": 0.03441660179285967,
+        "n_estimators": 542,
+        "min_child_weight": 3,
+        "subsample": 0.770352834549404,
+        "colsample_bytree": 0.8607724102319896,
+        "reg_lambda": 14.747777588509058,
+        "scale_pos_weight": 1.0
+      },
+      "seconds": 131.1
+    }
+  },
+  "bucketing": "single",
+  "imbalance": "balanced",
+  "k_max": 8,
+  "n_cases_total": 23102,
+  "n_cases_dense_window": 22828,
+  "n_cases_dropped_all_terminal": 1816,
+  "breach_rate_dropped_cases": 0.16299559471365638,
+  "breach_rate_kept_cases": 0.38174184053328714,
+  "split_mode": "temporal",
+  "split": {
+    "n_train_cases": 9602,
+    "n_val_cases": 2881,
+    "n_calib_cases": 1920,
+    "n_test_cases": 5707,
+    "test_boundary": "2016-05-05 15:00:15",
+    "calib_mode": "random",
+    "n_dropped_straddling": {
+      "modelling_period": 2718
+    }
+  },
+  "label_construction": {
+    "n_sentinel_events_dropped": 5,
+    "n_cases_full": 24918,
+    "n_cases_dropped_all_terminal": 1816,
+    "breach_rate_dropped": 0.16299559471365638,
+    "breach_rate_kept": 0.38174184053328714,
+    "spec_name": "uci_servicenow"
+  },
+  "test_prefixes_already_past_deadline": null,
+  "base_rate_by_fold": {
+    "train": 0.5635882234437506,
+    "val": 0.5761728042630127,
+    "calib": 0.5831530362036637,
+    "test": 0.39607430774623203
+  },
+  "test_variable_cohort": {
+    "prefix_weighted_auc": 0.7676694064160644,
+    "prefix_weighted_ap": 0.6821397660409594,
+    "n_prefix_rows": 17118
+  },
+  "test_fixed_cohort": {
+    "prefix_weighted_auc": 0.752157326580929,
+    "prefix_weighted_ap": 0.8882372026987531,
+    "n_prefix_rows": 3824
+  },
+  "test_case_level_at_k1": {
+    "at_k": 1,
+    "n_cases": 5707,
+    "base_rate": 0.23199579463816367,
+    "auc": 0.746491008586457,
+    "ap": 0.48514907732369195
+  }
+}

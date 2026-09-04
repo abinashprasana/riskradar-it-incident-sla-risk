@@ -1,0 +1,18 @@
+{
+  "log": "uci_servicenow",
+  "model": "PrefixGRU",
+  "n_parameters": 31526,
+  "seeds": 5,
+  "val_auc_mean": 0.8349476342626361,
+  "val_auc_std": 0.002949152545863234,
+  "test_auc_mean": 0.7881341926084194,
+  "test_auc_std": 0.008361679868473772,
+  "test_auc_ensemble": 0.802827840809546,
+  "comparison": {
+    "baseline": "agg_tuned",
+    "gru_minus_baseline_mean": -0.03538626418782351,
+    "inside_baseline_ci_at_all_k": false,
+    "n_k_inside": 6,
+    "n_k_total": 8
+  }
+}

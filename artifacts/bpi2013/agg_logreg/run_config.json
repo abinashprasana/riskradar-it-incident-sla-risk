@@ -1,0 +1,22 @@
+{
+  "argv": {
+    "log": "bpi2013",
+    "path": null,
+    "encoding": "agg",
+    "k_max": null,
+    "train_frac": 0.5,
+    "val_frac": 0.15,
+    "calib_frac": 0.1,
+    "split_mode": null,
+    "learner": "logreg",
+    "dump_scored": false,
+    "imbalance": "balanced",
+    "seed": 42,
+    "out": "artifacts/bpi2013/agg_logreg"
+  },
+  "python": "3.13.3",
+  "pandas": "2.3.2",
+  "numpy": "2.3.2",
+  "n_sentinel_events_dropped": null,
+  "dense_window": null
+}

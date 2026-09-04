@@ -1,0 +1,27 @@
+{
+  "reference": {
+    "tau_star": 0.5,
+    "cost_model": {
+      "c_intervene": 1.0,
+      "c_breach": 10.0,
+      "effectiveness": 0.5
+    },
+    "threshold": 0.5,
+    "n_cases": 5707,
+    "alarm_rate": 0.2957771158226739,
+    "mean_cost": 1.6607674785351323,
+    "mean_alarm_k": 2.688388625592417,
+    "recall": 0.823262839879154,
+    "precision": 0.6457345971563981,
+    "never_alarm": 2.3199579463816367,
+    "always_alarm_at_k1": 2.1599789731908183,
+    "prevalence": 0.23199579463816367
+  },
+  "sweep_cells": 24,
+  "cells_beating_trivial": 17,
+  "tau_range": [
+    0.1,
+    0.98
+  ],
+  "median_saving": 0.0802608010387379
+}

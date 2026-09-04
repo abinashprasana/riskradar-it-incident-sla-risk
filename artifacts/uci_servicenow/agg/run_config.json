@@ -1,0 +1,26 @@
+{
+  "argv": {
+    "log": "uci_servicenow",
+    "path": null,
+    "encoding": "agg",
+    "k_max": null,
+    "train_frac": 0.5,
+    "val_frac": 0.15,
+    "calib_frac": 0.1,
+    "split_mode": null,
+    "learner": null,
+    "dump_scored": true,
+    "imbalance": "balanced",
+    "tune": 0,
+    "seed": 42,
+    "out": "artifacts/uci_servicenow/agg"
+  },
+  "python": "3.13.3",
+  "pandas": "2.3.2",
+  "numpy": "2.3.2",
+  "n_sentinel_events_dropped": 5,
+  "dense_window": [
+    "2016-02-01",
+    "2016-06-01"
+  ]
+}

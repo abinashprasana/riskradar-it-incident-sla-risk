@@ -1,0 +1,13 @@
+{
+  "arm": "leaky_baseline_as_shipped",
+  "n_incidents": 24918,
+  "n_features_raw": 13,
+  "split": "random stratified 80/20, seed 42",
+  "roc_auc": 0.9674405375580716,
+  "accuracy": 0.9197431781701445,
+  "known_defects": [
+    "post-hoc whole-trace features (resolution_hours, total_events, *_max)",
+    "random split ignores strong month-to-month base-rate drift",
+    "model selected on the test set"
+  ]
+}

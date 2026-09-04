@@ -1,0 +1,80 @@
+{
+  "run_id": "a0bf2efb68",
+  "run_at": "2026-09-04T19:12:08",
+  "log": "uci_servicenow",
+  "encoding": "index",
+  "learner_forced": null,
+  "selected_model": "logreg (fixed per bucket)",
+  "bucketing": "prefix_length",
+  "buckets_fitted": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "buckets_skipped": [],
+  "raw_columns_by_bucket": {
+    "1": 25,
+    "2": 33,
+    "3": 41,
+    "4": 49,
+    "5": 57,
+    "6": 65,
+    "7": 73,
+    "8": 81
+  },
+  "k_max": 8,
+  "n_cases_total": 23102,
+  "n_cases_dense_window": 22828,
+  "n_cases_dropped_all_terminal": 1816,
+  "breach_rate_dropped_cases": 0.16299559471365638,
+  "breach_rate_kept_cases": 0.38174184053328714,
+  "split_mode": "temporal",
+  "split": {
+    "n_train_cases": 9602,
+    "n_val_cases": 2881,
+    "n_calib_cases": 1920,
+    "n_test_cases": 5707,
+    "test_boundary": "2016-05-05 15:00:15",
+    "calib_mode": "random",
+    "n_dropped_straddling": {
+      "modelling_period": 2718
+    }
+  },
+  "label_construction": {
+    "n_sentinel_events_dropped": 5,
+    "n_cases_full": 24918,
+    "n_cases_dropped_all_terminal": 1816,
+    "breach_rate_dropped": 0.16299559471365638,
+    "breach_rate_kept": 0.38174184053328714,
+    "spec_name": "uci_servicenow"
+  },
+  "test_prefixes_already_past_deadline": null,
+  "base_rate_by_fold": {
+    "train": 0.5635882234437506,
+    "val": 0.5761728042630127,
+    "calib": 0.5831530362036637,
+    "test": 0.39607430774623203
+  },
+  "test_variable_cohort": {
+    "prefix_weighted_auc": 0.7729990222328149,
+    "prefix_weighted_ap": 0.6777520131387479,
+    "n_prefix_rows": 17118
+  },
+  "test_fixed_cohort": {
+    "prefix_weighted_auc": 0.7174540769862953,
+    "prefix_weighted_ap": 0.8698769518931636,
+    "n_prefix_rows": 3824
+  },
+  "test_case_level_at_k1": {
+    "at_k": 1,
+    "n_cases": 5707,
+    "base_rate": 0.23199579463816367,
+    "auc": 0.7773549859281913,
+    "ap": 0.4939022847148993
+  }
+}

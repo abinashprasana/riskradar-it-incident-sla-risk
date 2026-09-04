@@ -1,0 +1,96 @@
+{
+  "run_id": "47b74b5f0a",
+  "run_at": "2026-09-04T19:30:58",
+  "log": "bpi2013",
+  "encoding": "agg",
+  "learner_forced": null,
+  "selected_model": "xgboost",
+  "tuned": true,
+  "n_trials_per_learner": 60,
+  "search": {
+    "logreg": {
+      "learner": "logreg",
+      "n_trials": 60,
+      "best_val_auc": 0.8801591884407932,
+      "worst_val_auc": 0.8657085394821454,
+      "median_val_auc": 0.8771357010098557,
+      "best_params": {
+        "C": 0.16484318387214913,
+        "class_weight": "balanced",
+        "solver": "lbfgs",
+        "max_iter": 2000
+      },
+      "seconds": 38.9
+    },
+    "xgboost": {
+      "learner": "xgboost",
+      "n_trials": 60,
+      "best_val_auc": 0.9166353786631058,
+      "worst_val_auc": 0.8985271603794014,
+      "median_val_auc": 0.9137017054029581,
+      "best_params": {
+        "max_depth": 8,
+        "learning_rate": 0.019897081722733686,
+        "n_estimators": 159,
+        "min_child_weight": 6,
+        "subsample": 0.8710634694451429,
+        "colsample_bytree": 0.6487330018514125,
+        "reg_lambda": 1.8442713896241263,
+        "scale_pos_weight": 1.0
+      },
+      "seconds": 81.8
+    }
+  },
+  "bucketing": "single",
+  "imbalance": "balanced",
+  "k_max": 12,
+  "n_cases_total": 7545,
+  "n_cases_dense_window": 7545,
+  "n_cases_dropped_all_terminal": 1,
+  "breach_rate_dropped_cases": null,
+  "breach_rate_kept_cases": null,
+  "split_mode": "random_case",
+  "split": {
+    "n_train_cases": 3772,
+    "n_val_cases": 1131,
+    "n_calib_cases": 754,
+    "n_test_cases": 1888,
+    "test_boundary": "NaT",
+    "calib_mode": "random_case_split(seed=42)",
+    "n_dropped_straddling": {
+      "modelling_period": 0
+    }
+  },
+  "label_construction": {
+    "n_cases_full": 7546,
+    "n_cases_censored_dropped": 8,
+    "n_cases_dropped_all_terminal": 1,
+    "spec_name": "bpi2013",
+    "deadline_hours": 240.0,
+    "source": "fixed policy constant, not fitted"
+  },
+  "test_prefixes_already_past_deadline": 0.03743823641201064,
+  "base_rate_by_fold": {
+    "train": 0.48347399688811354,
+    "val": 0.47051302541153905,
+    "calib": 0.4949731119943886,
+    "test": 0.48166096541239073
+  },
+  "test_variable_cohort": {
+    "prefix_weighted_auc": 0.9161013412052578,
+    "prefix_weighted_ap": 0.9293437712330517,
+    "n_prefix_rows": 10130
+  },
+  "test_fixed_cohort": {
+    "prefix_weighted_auc": 0.9054601886837154,
+    "prefix_weighted_ap": 0.9681740095024098,
+    "n_prefix_rows": 3502
+  },
+  "test_case_level_at_k1": {
+    "at_k": 1,
+    "n_cases": 1888,
+    "base_rate": 0.3045550847457627,
+    "auc": 0.9283572303718667,
+    "ap": 0.9104058651276848
+  }
+}

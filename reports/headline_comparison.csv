@@ -1,0 +1,12 @@
+log,arm,what it measures,ROC-AUC
+UCI,"As shipped: leaky features, random split, selected on test",one row per completed incident,0.9674
+UCI,"Prefix-based, out-of-time, case decision at k=1","one decision per ticket, first event",0.7482
+UCI,"Prefix-based, out-of-time, fixed cohort k=1","long cases only, first event",0.6185
+UCI,"Prefix-based, out-of-time, fixed cohort k=8","same cases, eight events",0.8874
+UCI,"Same, but random case split (ablation)","price of honest evaluation, k=1",0.7437
+BPI 2013,"Prefix-based, random split, fixed cohort k=1",no out-of-time split possible,0.9124
+BPI 2013,"Prefix-based, random split, fixed cohort k=12",curve is flat: signal is present at intake,0.8983
+UCI,"Encoding control: aggregation + logreg, k=8",learner held fixed,0.8703
+UCI,"Encoding control: index + logreg, k=8",learner held fixed -- within noise of aggregation,0.8282
+BPI 2013,"Encoding control: aggregation + logreg, k=12",learner held fixed,0.8599
+BPI 2013,"Encoding control: index + logreg, k=12",index drops the running aggregates BPI depends on,0.7291

@@ -1,0 +1,3417 @@
+k,feature,mean_abs_shap
+1,num__num__k,0.0010567533317953348
+1,num__num__n_distinct_activities,0.0075431447476148605
+1,num__num__n_distinct_resources,0.013241486623883247
+1,num__num__n_resource_changes,0.007585342973470688
+1,num__num__n_activity_repeats,0.005488414783030748
+1,num__num__n_waiting_events,0.0024672476574778557
+1,num__num__frac_waiting,0.0023974378127604723
+1,num__num__last_gap_h,0.0010311991209164262
+1,num__num__max_gap_h,0.08865869790315628
+1,num__num__elapsed_h,0.5667743682861328
+1,num__num__log_elapsed_h,0.10197662562131882
+1,num__num__mean_gap_h,0.010763122700154781
+1,num__num__hour_of_k,0.04853551834821701
+1,num__num__dow_of_k,0.04585741460323334
+1,num__num__arrivals_24h,0.13294267654418945
+1,num__num__arrivals_7d,0.4417266547679901
+1,num__static__opened_hour,0.05489648878574371
+1,num__static__opened_dow,0.15527662634849548
+1,num__static__opened_is_offhours,0.005992733873426914
+1,num__dyn_num__reassignment_count,0.01095549575984478
+1,num__dyn_num__reopen_count,0.00019473338034003973
+1,num__dyn_num__sys_mod_count,0.0003145502123516053
+1,num__dyn_cat__assigned_to_known,0.05461738258600235
+1,num__static__knowledge,0.3024113178253174
+1,num__static__u_priority_confirmation,0.0
+1,num__static__cmdb_ci_known,8.252360566984862e-05
+1,cat__dyn_cat__priority_1 - Critical,0.024097643792629242
+1,cat__dyn_cat__priority_2 - High,0.06515057384967804
+1,cat__dyn_cat__priority_3 - Moderate,0.04124538600444794
+1,cat__dyn_cat__priority_4 - Low,0.10575791448354721
+1,cat__static__category_Category 13,0.0015570849645882845
+1,cat__static__category_Category 17,0.00017949404718820006
+1,cat__static__category_Category 19,0.00010972705786116421
+1,cat__static__category_Category 20,0.009191066958010197
+1,cat__static__category_Category 22,0.0
+1,cat__static__category_Category 23,0.002024981891736388
+1,cat__static__category_Category 24,0.010917918756604195
+1,cat__static__category_Category 26,0.015124993398785591
+1,cat__static__category_Category 28,0.0022636500652879477
+1,cat__static__category_Category 32,0.004125779494643211
+1,cat__static__category_Category 34,9.214659803546965e-05
+1,cat__static__category_Category 35,0.00011829828144982457
+1,cat__static__category_Category 37,0.0027115470729768276
+1,cat__static__category_Category 38,7.217770416900748e-06
+1,cat__static__category_Category 40,0.0005304401856847107
+1,cat__static__category_Category 41,0.0
+1,cat__static__category_Category 42,0.0033561610616743565
+1,cat__static__category_Category 43,0.002260924782603979
+1,cat__static__category_Category 44,0.00016197511286009103
+1,cat__static__category_Category 45,0.004798635374754667
+1,cat__static__category_Category 46,0.03981952741742134
+1,cat__static__category_Category 51,0.0008520604460500181
+1,cat__static__category_Category 53,0.0017684538615867496
+1,cat__static__category_Category 55,0.0001496112090535462
+1,cat__static__category_Category 57,0.006185813341289759
+1,cat__static__category_Category 61,0.003477990860119462
+1,cat__static__category_Category 63,0.0
+1,cat__static__category_Category 7,0.0
+1,cat__static__category_Category 8,0.00031899000168778
+1,cat__static__category_Category 9,0.012171778827905655
+1,cat__static__category_infrequent_sklearn,0.001769953640177846
+1,cat__static__subcategory_Subcategory 103,0.007444011978805065
+1,cat__static__subcategory_Subcategory 107,0.0
+1,cat__static__subcategory_Subcategory 114,0.00035905762342736125
+1,cat__static__subcategory_Subcategory 117,0.0014669958036392927
+1,cat__static__subcategory_Subcategory 123,0.0005321427597664297
+1,cat__static__subcategory_Subcategory 125,2.743391269177664e-05
+1,cat__static__subcategory_Subcategory 130,4.693062510341406e-05
+1,cat__static__subcategory_Subcategory 134,7.579878729302436e-05
+1,cat__static__subcategory_Subcategory 135,0.0032572895288467407
+1,cat__static__subcategory_Subcategory 150,0.008187007158994675
+1,cat__static__subcategory_Subcategory 154,3.391009522601962e-05
+1,cat__static__subcategory_Subcategory 16,9.417487308382988e-05
+1,cat__static__subcategory_Subcategory 163,0.004170050844550133
+1,cat__static__subcategory_Subcategory 164,0.0012603740906342864
+1,cat__static__subcategory_Subcategory 168,0.0001798513694666326
+1,cat__static__subcategory_Subcategory 170,0.0008686635410413146
+1,cat__static__subcategory_Subcategory 174,0.011218800209462643
+1,cat__static__subcategory_Subcategory 175,0.020440243184566498
+1,cat__static__subcategory_Subcategory 183,0.0012100026942789555
+1,cat__static__subcategory_Subcategory 185,0.004022905603051186
+1,cat__static__subcategory_Subcategory 200,0.0021410470362752676
+1,cat__static__subcategory_Subcategory 202,3.878861389239319e-05
+1,cat__static__subcategory_Subcategory 215,0.0
+1,cat__static__subcategory_Subcategory 220,0.003808829002082348
+1,cat__static__subcategory_Subcategory 223,0.007742900401353836
+1,cat__static__subcategory_Subcategory 224,0.00023506919387727976
+1,cat__static__subcategory_Subcategory 229,0.001820978126488626
+1,cat__static__subcategory_Subcategory 251,0.00137187703512609
+1,cat__static__subcategory_Subcategory 271,1.863591023720801e-05
+1,cat__static__subcategory_Subcategory 275,0.0005908964085392654
+1,cat__static__subcategory_Subcategory 28,0.0023287921212613583
+1,cat__static__subcategory_Subcategory 289,9.289896115660667e-05
+1,cat__static__subcategory_Subcategory 29,0.00019255763618275523
+1,cat__static__subcategory_Subcategory 3,0.0031900894828140736
+1,cat__static__subcategory_Subcategory 300,0.004152180161327124
+1,cat__static__subcategory_Subcategory 302,0.0
+1,cat__static__subcategory_Subcategory 303,0.0009852986549958587
+1,cat__static__subcategory_Subcategory 31,2.9385164452833124e-05
+1,cat__static__subcategory_Subcategory 36,0.0010130759328603745
+1,cat__static__subcategory_Subcategory 43,0.0013203041162341833
+1,cat__static__subcategory_Subcategory 44,0.0022394622210413218
+1,cat__static__subcategory_Subcategory 54,0.0001525285333627835
+1,cat__static__subcategory_Subcategory 60,0.00019840874301735312
+1,cat__static__subcategory_Subcategory 69,0.0037586914841085672
+1,cat__static__subcategory_Subcategory 75,0.0024632196873426437
+1,cat__static__subcategory_Subcategory 80,0.0033802727703005075
+1,cat__static__subcategory_Subcategory 82,0.0007816355209797621
+1,cat__static__subcategory_Subcategory 9,0.004469567444175482
+1,cat__static__subcategory_Subcategory 94,3.958532033720985e-05
+1,cat__static__subcategory_infrequent_sklearn,0.003751234384253621
+1,cat__static__u_symptom_Symptom 10,0.003071530256420374
+1,cat__static__u_symptom_Symptom 102,0.0
+1,cat__static__u_symptom_Symptom 105,0.0
+1,cat__static__u_symptom_Symptom 114,7.326974446186796e-05
+1,cat__static__u_symptom_Symptom 115,0.0012698161881417036
+1,cat__static__u_symptom_Symptom 116,0.008195768110454082
+1,cat__static__u_symptom_Symptom 117,0.0005404272815212607
+1,cat__static__u_symptom_Symptom 118,0.00012988358503207564
+1,cat__static__u_symptom_Symptom 119,0.002040448598563671
+1,cat__static__u_symptom_Symptom 120,0.0026462336536496878
+1,cat__static__u_symptom_Symptom 127,0.0015749488957226276
+1,cat__static__u_symptom_Symptom 13,0.0
+1,cat__static__u_symptom_Symptom 134,0.0005542964208871126
+1,cat__static__u_symptom_Symptom 208,0.0016041963826864958
+1,cat__static__u_symptom_Symptom 232,0.0010604002745822072
+1,cat__static__u_symptom_Symptom 296,0.0002735225425567478
+1,cat__static__u_symptom_Symptom 382,0.00012131105177104473
+1,cat__static__u_symptom_Symptom 387,0.00020581865101121366
+1,cat__static__u_symptom_Symptom 4,0.00023120128025766462
+1,cat__static__u_symptom_Symptom 444,0.0
+1,cat__static__u_symptom_Symptom 454,0.0008815770852379501
+1,cat__static__u_symptom_Symptom 455,8.32372170407325e-05
+1,cat__static__u_symptom_Symptom 458,0.00990149937570095
+1,cat__static__u_symptom_Symptom 462,3.462484528427012e-05
+1,cat__static__u_symptom_Symptom 470,0.00031791231594979763
+1,cat__static__u_symptom_Symptom 471,3.624890450737439e-05
+1,cat__static__u_symptom_Symptom 473,0.00067062524612993
+1,cat__static__u_symptom_Symptom 491,0.006995724979788065
+1,cat__static__u_symptom_Symptom 494,4.4035594328306615e-05
+1,cat__static__u_symptom_Symptom 5,0.0
+1,cat__static__u_symptom_Symptom 506,0.0
+1,cat__static__u_symptom_Symptom 509,0.00013711766223423183
+1,cat__static__u_symptom_Symptom 517,0.01528327725827694
+1,cat__static__u_symptom_Symptom 532,0.0005267448141239583
+1,cat__static__u_symptom_Symptom 534,0.11767829209566116
+1,cat__static__u_symptom_Symptom 54,0.0005019294330850244
+1,cat__static__u_symptom_Symptom 571,0.0009280841331928968
+1,cat__static__u_symptom_Symptom 573,0.001231823000125587
+1,cat__static__u_symptom_Symptom 580,0.0005218947189860046
+1,cat__static__u_symptom_Symptom 592,0.00011428126890677959
+1,cat__static__u_symptom_Symptom 6,0.00039153374382294714
+1,cat__static__u_symptom_Symptom 607,6.016581392032094e-05
+1,cat__static__u_symptom_Symptom 65,0.0
+1,cat__static__u_symptom_Symptom 70,0.00018053136591333896
+1,cat__static__u_symptom_Symptom 8,7.658317917957902e-05
+1,cat__static__u_symptom_Symptom 86,0.0
+1,cat__static__u_symptom_Symptom 87,0.0005981156718917191
+1,cat__static__u_symptom_Symptom 9,0.0025219141971319914
+1,cat__static__u_symptom___MISSING__,0.01686280407011509
+1,cat__static__u_symptom_infrequent_sklearn,0.03012191317975521
+1,cat__static__contact_type_Email,0.0
+1,cat__static__contact_type_Phone,0.0
+1,cat__static__location_Location 108,0.003329775296151638
+1,cat__static__location_Location 111,0.0023201412986963987
+1,cat__static__location_Location 113,8.07303367764689e-05
+1,cat__static__location_Location 125,9.777705599844921e-06
+1,cat__static__location_Location 128,0.000369763292837888
+1,cat__static__location_Location 135,0.0022112932056188583
+1,cat__static__location_Location 136,0.0010487036779522896
+1,cat__static__location_Location 143,0.0027341695968061686
+1,cat__static__location_Location 15,7.024277147138491e-05
+1,cat__static__location_Location 161,0.02581322193145752
+1,cat__static__location_Location 165,0.0
+1,cat__static__location_Location 173,0.006168636027723551
+1,cat__static__location_Location 179,0.0020578147377818823
+1,cat__static__location_Location 18,9.874058741843328e-05
+1,cat__static__location_Location 188,0.0015599897596985102
+1,cat__static__location_Location 197,5.837338903802447e-06
+1,cat__static__location_Location 199,0.0
+1,cat__static__location_Location 204,0.014668017625808716
+1,cat__static__location_Location 209,0.0
+1,cat__static__location_Location 210,7.91834099800326e-06
+1,cat__static__location_Location 229,0.0
+1,cat__static__location_Location 242,0.0
+1,cat__static__location_Location 245,0.0002313739387318492
+1,cat__static__location_Location 34,0.0009217807091772556
+1,cat__static__location_Location 35,0.00019977655028924346
+1,cat__static__location_Location 36,0.00042769432184286416
+1,cat__static__location_Location 37,0.002072863979265094
+1,cat__static__location_Location 38,0.00024011445930227637
+1,cat__static__location_Location 39,0.0
+1,cat__static__location_Location 40,0.0
+1,cat__static__location_Location 41,0.0002686959342099726
+1,cat__static__location_Location 42,0.003388239536434412
+1,cat__static__location_Location 43,0.0004844634677283466
+1,cat__static__location_Location 44,0.0
+1,cat__static__location_Location 45,1.1168905984959565e-05
+1,cat__static__location_Location 46,0.0005201307940296829
+1,cat__static__location_Location 47,0.0
+1,cat__static__location_Location 51,0.00244597508572042
+1,cat__static__location_Location 54,0.0006421907455660403
+1,cat__static__location_Location 55,0.00021530073718167841
+1,cat__static__location_Location 56,0.0
+1,cat__static__location_Location 69,0.0020984818693250418
+1,cat__static__location_Location 70,0.0008557444671168923
+1,cat__static__location_Location 71,0.0007057950715534389
+1,cat__static__location_Location 82,0.0004914592718705535
+1,cat__static__location_Location 91,0.00037721425178460777
+1,cat__static__location_Location 93,0.01279706135392189
+1,cat__static__location_Location 96,0.0017827135743573308
+1,cat__static__location_Location 97,0.00017746629600878805
+1,cat__static__location_infrequent_sklearn,0.011784165166318417
+1,cat__static__impact_1 - High,0.0007085140096023679
+1,cat__static__impact_2 - Medium,0.004809938836842775
+1,cat__static__impact_3 - Low,0.0033274730667471886
+1,cat__static__urgency_1 - High,0.0010348557261750102
+1,cat__static__urgency_2 - Medium,0.0019371849484741688
+1,cat__static__urgency_3 - Low,0.012232409790158272
+1,cat__static__caller_id_Caller 1062,0.00014387708506546915
+1,cat__static__caller_id_Caller 1129,0.0037277117371559143
+1,cat__static__caller_id_Caller 1182,0.0010850172257050872
+1,cat__static__caller_id_Caller 1270,0.0
+1,cat__static__caller_id_Caller 1441,0.0002073275245493278
+1,cat__static__caller_id_Caller 1517,0.00024983202456496656
+1,cat__static__caller_id_Caller 1519,0.0
+1,cat__static__caller_id_Caller 1531,0.0
+1,cat__static__caller_id_Caller 1546,0.000987374223768711
+1,cat__static__caller_id_Caller 156,0.0
+1,cat__static__caller_id_Caller 1904,0.00953973364084959
+1,cat__static__caller_id_Caller 203,0.0011107054306194186
+1,cat__static__caller_id_Caller 225,0.00014075056242290884
+1,cat__static__caller_id_Caller 2377,0.0007762853056192398
+1,cat__static__caller_id_Caller 2416,1.5537329090875573e-05
+1,cat__static__caller_id_Caller 2435,0.0
+1,cat__static__caller_id_Caller 2471,4.358263686299324e-05
+1,cat__static__caller_id_Caller 2691,4.6007779019419104e-05
+1,cat__static__caller_id_Caller 298,0.0
+1,cat__static__caller_id_Caller 3038,0.0
+1,cat__static__caller_id_Caller 3081,0.0009422068251296878
+1,cat__static__caller_id_Caller 3136,0.0
+1,cat__static__caller_id_Caller 3160,0.00020126371236983687
+1,cat__static__caller_id_Caller 318,0.0011829519644379616
+1,cat__static__caller_id_Caller 3329,0.00034551433054730296
+1,cat__static__caller_id_Caller 337,0.000723049568478018
+1,cat__static__caller_id_Caller 3388,0.0
+1,cat__static__caller_id_Caller 3479,0.00012565522047225386
+1,cat__static__caller_id_Caller 3763,0.0007563491817563772
+1,cat__static__caller_id_Caller 3933,0.0
+1,cat__static__caller_id_Caller 3986,0.0003805661981459707
+1,cat__static__caller_id_Caller 4316,0.0
+1,cat__static__caller_id_Caller 4414,0.0
+1,cat__static__caller_id_Caller 4475,0.0001229619956575334
+1,cat__static__caller_id_Caller 4514,6.087696965551004e-05
+1,cat__static__caller_id_Caller 4710,0.0021688062697649
+1,cat__static__caller_id_Caller 4893,0.0012867562472820282
+1,cat__static__caller_id_Caller 501,0.0
+1,cat__static__caller_id_Caller 5093,0.0
+1,cat__static__caller_id_Caller 512,0.0
+1,cat__static__caller_id_Caller 5368,0.0
+1,cat__static__caller_id_Caller 671,0.0
+1,cat__static__caller_id_Caller 68,0.00021998892771080136
+1,cat__static__caller_id_Caller 685,4.4150016037747264e-05
+1,cat__static__caller_id_Caller 723,0.00022583368991035968
+1,cat__static__caller_id_Caller 92,0.0
+1,cat__static__caller_id_Caller 920,0.0
+1,cat__static__caller_id_Caller 93,0.00086551922140643
+1,cat__static__caller_id_Caller 944,0.0003205665561836213
+1,cat__static__caller_id_infrequent_sklearn,0.0011212473036721349
+1,cat__static__opened_by_Opened by  108,0.0003738870145753026
+1,cat__static__opened_by_Opened by  131,0.01682038977742195
+1,cat__static__opened_by_Opened by  168,0.00036502734292298555
+1,cat__static__opened_by_Opened by  17,0.011362164281308651
+1,cat__static__opened_by_Opened by  174,0.0
+1,cat__static__opened_by_Opened by  180,0.004863619804382324
+1,cat__static__opened_by_Opened by  20,0.00023792717547621578
+1,cat__static__opened_by_Opened by  221,0.0020129417534917593
+1,cat__static__opened_by_Opened by  228,0.0
+1,cat__static__opened_by_Opened by  239,0.0016279879491776228
+1,cat__static__opened_by_Opened by  24,0.009013831615447998
+1,cat__static__opened_by_Opened by  240,0.0
+1,cat__static__opened_by_Opened by  242,0.0
+1,cat__static__opened_by_Opened by  247,0.0013340195873752236
+1,cat__static__opened_by_Opened by  257,0.0
+1,cat__static__opened_by_Opened by  267,0.0
+1,cat__static__opened_by_Opened by  301,0.0007332612294703722
+1,cat__static__opened_by_Opened by  305,0.00020846666302531958
+1,cat__static__opened_by_Opened by  325,0.001320682349614799
+1,cat__static__opened_by_Opened by  360,0.0013365254271775484
+1,cat__static__opened_by_Opened by  381,0.0
+1,cat__static__opened_by_Opened by  386,0.0026694994885474443
+1,cat__static__opened_by_Opened by  390,0.009273383766412735
+1,cat__static__opened_by_Opened by  397,0.03561681509017944
+1,cat__static__opened_by_Opened by  40,0.001872697495855391
+1,cat__static__opened_by_Opened by  402,6.836171087343246e-05
+1,cat__static__opened_by_Opened by  433,7.30986866983585e-05
+1,cat__static__opened_by_Opened by  44,0.00032693648245185614
+1,cat__static__opened_by_Opened by  443,0.000607544498052448
+1,cat__static__opened_by_Opened by  444,0.0
+1,cat__static__opened_by_Opened by  460,0.0003054774715565145
+1,cat__static__opened_by_Opened by  463,0.0015418471302837133
+1,cat__static__opened_by_Opened by  468,0.0
+1,cat__static__opened_by_Opened by  47,0.00016711518401280046
+1,cat__static__opened_by_Opened by  500,0.0009945648489519954
+1,cat__static__opened_by_Opened by  501,0.001018449547700584
+1,cat__static__opened_by_Opened by  512,0.0005760532803833485
+1,cat__static__opened_by_Opened by  536,0.0009006343316286802
+1,cat__static__opened_by_Opened by  55,0.0016334907850250602
+1,cat__static__opened_by_Opened by  58,0.0017319299513474107
+1,cat__static__opened_by_Opened by  59,0.0040772445499897
+1,cat__static__opened_by_Opened by  62,0.013311127200722694
+1,cat__static__opened_by_Opened by  70,0.00018607806123327464
+1,cat__static__opened_by_Opened by  8,0.0012667677365243435
+1,cat__static__opened_by_Opened by  9,0.00048301619244739413
+1,cat__static__opened_by_Opened by  94,0.0
+1,cat__static__opened_by___MISSING__,0.0017531446646898985
+1,cat__static__opened_by_infrequent_sklearn,0.002543255453929305
+1,cat__static__sys_created_by_Created by 10,0.004633985925465822
+1,cat__static__sys_created_by_Created by 101,0.0
+1,cat__static__sys_created_by_Created by 107,0.0033850129693746567
+1,cat__static__sys_created_by_Created by 108,0.0
+1,cat__static__sys_created_by_Created by 109,0.0007070638821460307
+1,cat__static__sys_created_by_Created by 113,0.0
+1,cat__static__sys_created_by_Created by 114,0.0
+1,cat__static__sys_created_by_Created by 12,0.0
+1,cat__static__sys_created_by_Created by 120,0.0008450914174318314
+1,cat__static__sys_created_by_Created by 129,0.0009440674912184477
+1,cat__static__sys_created_by_Created by 13,0.012551814317703247
+1,cat__static__sys_created_by_Created by 130,0.0017635418334975839
+1,cat__static__sys_created_by_Created by 140,0.00021207836107350886
+1,cat__static__sys_created_by_Created by 158,0.0
+1,cat__static__sys_created_by_Created by 167,0.0007221894920803607
+1,cat__static__sys_created_by_Created by 169,1.1595894648053218e-05
+1,cat__static__sys_created_by_Created by 171,0.0005526517052203417
+1,cat__static__sys_created_by_Created by 172,0.00011808977433247492
+1,cat__static__sys_created_by_Created by 18,0.0006270958692766726
+1,cat__static__sys_created_by_Created by 188,0.0
+1,cat__static__sys_created_by_Created by 190,0.0
+1,cat__static__sys_created_by_Created by 192,6.610820855712518e-05
+1,cat__static__sys_created_by_Created by 193,0.0
+1,cat__static__sys_created_by_Created by 199,0.0
+1,cat__static__sys_created_by_Created by 20,0.0008936350932344794
+1,cat__static__sys_created_by_Created by 202,0.0
+1,cat__static__sys_created_by_Created by 216,0.0036628562957048416
+1,cat__static__sys_created_by_Created by 217,3.5243763704784214e-05
+1,cat__static__sys_created_by_Created by 221,0.0
+1,cat__static__sys_created_by_Created by 23,0.0
+1,cat__static__sys_created_by_Created by 233,6.750738248229027e-05
+1,cat__static__sys_created_by_Created by 25,0.0
+1,cat__static__sys_created_by_Created by 30,0.0001732412347337231
+1,cat__static__sys_created_by_Created by 31,1.3905112609791104e-05
+1,cat__static__sys_created_by_Created by 33,0.005795961711555719
+1,cat__static__sys_created_by_Created by 34,0.0007462576031684875
+1,cat__static__sys_created_by_Created by 45,0.0012406496098265052
+1,cat__static__sys_created_by_Created by 47,0.0
+1,cat__static__sys_created_by_Created by 5,0.0
+1,cat__static__sys_created_by_Created by 52,0.0028610622975975275
+1,cat__static__sys_created_by_Created by 6,0.001680062967352569
+1,cat__static__sys_created_by_Created by 62,0.008066308684647083
+1,cat__static__sys_created_by_Created by 79,0.0
+1,cat__static__sys_created_by_Created by 81,0.004529872443526983
+1,cat__static__sys_created_by_Created by 89,0.00110586395021528
+1,cat__static__sys_created_by_Created by 98,0.004175002686679363
+1,cat__static__sys_created_by___MISSING__,0.050624970346689224
+1,cat__static__sys_created_by_infrequent_sklearn,0.0011122504947707057
+1,cat__static__notify_Do Not Notify,0.0
+1,cat__static__notify_Send Email,0.0
+1,cat__dyn_cat__activity_Active,0.03935274854302406
+1,cat__dyn_cat__activity_Awaiting Problem,0.0
+1,cat__dyn_cat__activity_Awaiting User Info,0.04008954390883446
+1,cat__dyn_cat__activity_New,0.00245951977558434
+1,cat__dyn_cat__activity_infrequent_sklearn,0.0
+1,cat__dyn_cat__activity_prev_Active,0.0006604111986234784
+1,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+1,cat__dyn_cat__activity_prev_Awaiting User Info,0.002522367285564542
+1,cat__dyn_cat__activity_prev_New,0.0007007219828665257
+1,cat__dyn_cat__activity_prev___MISSING__,0.0
+1,cat__dyn_cat__resource_Group 10,0.016018524765968323
+1,cat__dyn_cat__resource_Group 12,0.00980798527598381
+1,cat__dyn_cat__resource_Group 15,0.0013333638198673725
+1,cat__dyn_cat__resource_Group 19,0.000764347380027175
+1,cat__dyn_cat__resource_Group 20,0.024406082928180695
+1,cat__dyn_cat__resource_Group 21,0.0
+1,cat__dyn_cat__resource_Group 22,0.006482881959527731
+1,cat__dyn_cat__resource_Group 23,0.024817543104290962
+1,cat__dyn_cat__resource_Group 24,0.027494342997670174
+1,cat__dyn_cat__resource_Group 25,0.00045874647912569344
+1,cat__dyn_cat__resource_Group 27,0.013677657581865788
+1,cat__dyn_cat__resource_Group 28,0.006661106366664171
+1,cat__dyn_cat__resource_Group 29,0.005450365133583546
+1,cat__dyn_cat__resource_Group 3,0.0005329588311724365
+1,cat__dyn_cat__resource_Group 30,0.0031879073940217495
+1,cat__dyn_cat__resource_Group 31,0.0002795237232930958
+1,cat__dyn_cat__resource_Group 33,9.701314411358908e-05
+1,cat__dyn_cat__resource_Group 34,0.0005119440029375255
+1,cat__dyn_cat__resource_Group 37,0.012852995656430721
+1,cat__dyn_cat__resource_Group 39,0.017779646441340446
+1,cat__dyn_cat__resource_Group 46,0.00012231570144649595
+1,cat__dyn_cat__resource_Group 47,0.0
+1,cat__dyn_cat__resource_Group 48,0.006251095328480005
+1,cat__dyn_cat__resource_Group 49,0.0
+1,cat__dyn_cat__resource_Group 5,0.0
+1,cat__dyn_cat__resource_Group 50,0.0
+1,cat__dyn_cat__resource_Group 51,0.00020235763804521412
+1,cat__dyn_cat__resource_Group 53,0.0
+1,cat__dyn_cat__resource_Group 54,0.001576103619299829
+1,cat__dyn_cat__resource_Group 55,0.00025639840168878436
+1,cat__dyn_cat__resource_Group 56,0.0
+1,cat__dyn_cat__resource_Group 57,0.007407201919704676
+1,cat__dyn_cat__resource_Group 58,0.005413013510406017
+1,cat__dyn_cat__resource_Group 6,0.0005025844438932836
+1,cat__dyn_cat__resource_Group 62,0.0002378161298111081
+1,cat__dyn_cat__resource_Group 64,0.0020512796472758055
+1,cat__dyn_cat__resource_Group 65,7.752382225589827e-05
+1,cat__dyn_cat__resource_Group 66,0.0025414598640054464
+1,cat__dyn_cat__resource_Group 69,1.6675012375344522e-05
+1,cat__dyn_cat__resource_Group 70,0.1545645296573639
+1,cat__dyn_cat__resource_Group 72,0.01069737784564495
+1,cat__dyn_cat__resource_Group 73,0.00622100755572319
+1,cat__dyn_cat__resource_Group 74,0.000690095592290163
+1,cat__dyn_cat__resource_Group 75,0.0018332585459575057
+1,cat__dyn_cat__resource_Group 76,0.011458225548267365
+1,cat__dyn_cat__resource_Group 77,0.0
+1,cat__dyn_cat__resource_Group 81,0.0
+1,cat__dyn_cat__resource_Group 9,0.010804167948663235
+1,cat__dyn_cat__resource___MISSING__,0.05133338272571564
+1,cat__dyn_cat__resource_infrequent_sklearn,0.0001407577219652012
+2,num__num__k,0.0006810613558627665
+2,num__num__n_distinct_activities,0.013016650453209877
+2,num__num__n_distinct_resources,0.00979133415967226
+2,num__num__n_resource_changes,0.007174638565629721
+2,num__num__n_activity_repeats,0.004867916461080313
+2,num__num__n_waiting_events,0.002474712673574686
+2,num__num__frac_waiting,0.0034211757592856884
+2,num__num__last_gap_h,0.007105653174221516
+2,num__num__max_gap_h,0.18090695142745972
+2,num__num__elapsed_h,0.38158348202705383
+2,num__num__log_elapsed_h,0.10016181319952011
+2,num__num__mean_gap_h,0.11100802570581436
+2,num__num__hour_of_k,0.04355049133300781
+2,num__num__dow_of_k,0.04017479345202446
+2,num__num__arrivals_24h,0.1263747662305832
+2,num__num__arrivals_7d,0.5097604990005493
+2,num__static__opened_hour,0.05879337713122368
+2,num__static__opened_dow,0.15227830410003662
+2,num__static__opened_is_offhours,0.003120692679658532
+2,num__dyn_num__reassignment_count,0.009103386662900448
+2,num__dyn_num__reopen_count,0.001044382923282683
+2,num__dyn_num__sys_mod_count,0.0012803631834685802
+2,num__dyn_cat__assigned_to_known,0.03283729404211044
+2,num__static__knowledge,0.2717549800872803
+2,num__static__u_priority_confirmation,0.0
+2,num__static__cmdb_ci_known,0.00012482190504670143
+2,cat__dyn_cat__priority_1 - Critical,0.048271194100379944
+2,cat__dyn_cat__priority_2 - High,0.1162019819021225
+2,cat__dyn_cat__priority_3 - Moderate,0.06439020484685898
+2,cat__dyn_cat__priority_4 - Low,0.11254674941301346
+2,cat__static__category_Category 13,0.001217702287249267
+2,cat__static__category_Category 17,2.9993341740919277e-05
+2,cat__static__category_Category 19,0.00014976112288422883
+2,cat__static__category_Category 20,0.006308904383331537
+2,cat__static__category_Category 22,0.0
+2,cat__static__category_Category 23,0.0022963702213019133
+2,cat__static__category_Category 24,0.009677179157733917
+2,cat__static__category_Category 26,0.012549939565360546
+2,cat__static__category_Category 28,0.0020253201946616173
+2,cat__static__category_Category 32,0.0035338804591447115
+2,cat__static__category_Category 34,0.0011777307372540236
+2,cat__static__category_Category 35,0.0001807305234251544
+2,cat__static__category_Category 37,0.0029234723187983036
+2,cat__static__category_Category 38,1.5230465578497387e-05
+2,cat__static__category_Category 40,0.000733090506400913
+2,cat__static__category_Category 41,0.0
+2,cat__static__category_Category 42,0.0042267958633601665
+2,cat__static__category_Category 43,0.0026848893612623215
+2,cat__static__category_Category 44,0.00032556045334786177
+2,cat__static__category_Category 45,0.004907028283923864
+2,cat__static__category_Category 46,0.0440058596432209
+2,cat__static__category_Category 51,0.0010728702181950212
+2,cat__static__category_Category 53,0.0016203038394451141
+2,cat__static__category_Category 55,0.00012970060924999416
+2,cat__static__category_Category 57,0.010198387317359447
+2,cat__static__category_Category 61,0.005170262418687344
+2,cat__static__category_Category 63,0.0
+2,cat__static__category_Category 7,0.0
+2,cat__static__category_Category 8,0.0003151965793222189
+2,cat__static__category_Category 9,0.011455349624156952
+2,cat__static__category_infrequent_sklearn,0.002789547201246023
+2,cat__static__subcategory_Subcategory 103,0.004137777257710695
+2,cat__static__subcategory_Subcategory 107,0.0
+2,cat__static__subcategory_Subcategory 114,0.0002570990764070302
+2,cat__static__subcategory_Subcategory 117,0.0015112508554011583
+2,cat__static__subcategory_Subcategory 123,0.00038384064100682735
+2,cat__static__subcategory_Subcategory 125,2.971159301523585e-05
+2,cat__static__subcategory_Subcategory 130,5.0956430641235784e-05
+2,cat__static__subcategory_Subcategory 134,0.0003684090916067362
+2,cat__static__subcategory_Subcategory 135,0.00262070563621819
+2,cat__static__subcategory_Subcategory 150,0.009356091730296612
+2,cat__static__subcategory_Subcategory 154,7.229809125419706e-05
+2,cat__static__subcategory_Subcategory 16,0.00028945363010279834
+2,cat__static__subcategory_Subcategory 163,0.005481386091560125
+2,cat__static__subcategory_Subcategory 164,0.001765807275660336
+2,cat__static__subcategory_Subcategory 168,0.00029666416230611503
+2,cat__static__subcategory_Subcategory 170,0.0016796619165688753
+2,cat__static__subcategory_Subcategory 174,0.010949356481432915
+2,cat__static__subcategory_Subcategory 175,0.018075302243232727
+2,cat__static__subcategory_Subcategory 183,0.002647018525749445
+2,cat__static__subcategory_Subcategory 185,0.002078605815768242
+2,cat__static__subcategory_Subcategory 200,0.002228653058409691
+2,cat__static__subcategory_Subcategory 202,6.690561713185161e-05
+2,cat__static__subcategory_Subcategory 215,0.0
+2,cat__static__subcategory_Subcategory 220,0.007134380750358105
+2,cat__static__subcategory_Subcategory 223,0.0063800751231610775
+2,cat__static__subcategory_Subcategory 224,0.00022501633793581277
+2,cat__static__subcategory_Subcategory 229,0.0016953840386122465
+2,cat__static__subcategory_Subcategory 251,0.0005390446749515831
+2,cat__static__subcategory_Subcategory 271,2.5394616386620328e-05
+2,cat__static__subcategory_Subcategory 275,0.0007241676212288439
+2,cat__static__subcategory_Subcategory 28,0.0026281699538230896
+2,cat__static__subcategory_Subcategory 289,0.00019427230290602893
+2,cat__static__subcategory_Subcategory 29,0.00014220002049114555
+2,cat__static__subcategory_Subcategory 3,0.0035779813770204782
+2,cat__static__subcategory_Subcategory 300,0.005872840993106365
+2,cat__static__subcategory_Subcategory 302,0.0
+2,cat__static__subcategory_Subcategory 303,0.001120892120525241
+2,cat__static__subcategory_Subcategory 31,5.36446095793508e-05
+2,cat__static__subcategory_Subcategory 36,0.0013804351910948753
+2,cat__static__subcategory_Subcategory 43,0.0013805885100737214
+2,cat__static__subcategory_Subcategory 44,0.0022646142169833183
+2,cat__static__subcategory_Subcategory 54,0.0001601131953066215
+2,cat__static__subcategory_Subcategory 60,0.00010377837315900251
+2,cat__static__subcategory_Subcategory 69,0.0021152489352971315
+2,cat__static__subcategory_Subcategory 75,0.0025954509619623423
+2,cat__static__subcategory_Subcategory 80,0.004668003413826227
+2,cat__static__subcategory_Subcategory 82,0.001214967924170196
+2,cat__static__subcategory_Subcategory 9,0.0031378192361444235
+2,cat__static__subcategory_Subcategory 94,3.964876304962672e-05
+2,cat__static__subcategory_infrequent_sklearn,0.005263793282210827
+2,cat__static__u_symptom_Symptom 10,0.002749684965237975
+2,cat__static__u_symptom_Symptom 102,0.0
+2,cat__static__u_symptom_Symptom 105,0.0
+2,cat__static__u_symptom_Symptom 114,0.0002130857901647687
+2,cat__static__u_symptom_Symptom 115,0.0011350950226187706
+2,cat__static__u_symptom_Symptom 116,0.005038786679506302
+2,cat__static__u_symptom_Symptom 117,0.001341731520369649
+2,cat__static__u_symptom_Symptom 118,8.633275865577161e-05
+2,cat__static__u_symptom_Symptom 119,0.0016567979473620653
+2,cat__static__u_symptom_Symptom 120,0.0029525042045861483
+2,cat__static__u_symptom_Symptom 127,0.0017086261650547385
+2,cat__static__u_symptom_Symptom 13,0.0
+2,cat__static__u_symptom_Symptom 134,0.0006298238295130432
+2,cat__static__u_symptom_Symptom 208,0.0015451839426532388
+2,cat__static__u_symptom_Symptom 232,0.0010368752991780639
+2,cat__static__u_symptom_Symptom 296,0.00045052298810333014
+2,cat__static__u_symptom_Symptom 382,0.00012261219671927392
+2,cat__static__u_symptom_Symptom 387,0.00017839130305219442
+2,cat__static__u_symptom_Symptom 4,0.00032084781560115516
+2,cat__static__u_symptom_Symptom 444,0.0
+2,cat__static__u_symptom_Symptom 454,0.0017251439858227968
+2,cat__static__u_symptom_Symptom 455,0.0005898578674532473
+2,cat__static__u_symptom_Symptom 458,0.00705718295648694
+2,cat__static__u_symptom_Symptom 462,8.878028893377632e-05
+2,cat__static__u_symptom_Symptom 470,0.0003935301792807877
+2,cat__static__u_symptom_Symptom 471,3.952110273530707e-05
+2,cat__static__u_symptom_Symptom 473,0.0006811398197896779
+2,cat__static__u_symptom_Symptom 491,0.007597288116812706
+2,cat__static__u_symptom_Symptom 494,9.018139826366678e-05
+2,cat__static__u_symptom_Symptom 5,0.0
+2,cat__static__u_symptom_Symptom 506,0.0
+2,cat__static__u_symptom_Symptom 509,0.00023270826204679906
+2,cat__static__u_symptom_Symptom 517,0.003848129417747259
+2,cat__static__u_symptom_Symptom 532,0.0007156342035159469
+2,cat__static__u_symptom_Symptom 534,0.0455540269613266
+2,cat__static__u_symptom_Symptom 54,0.0015481369337067008
+2,cat__static__u_symptom_Symptom 571,0.001606555888429284
+2,cat__static__u_symptom_Symptom 573,0.0014754808507859707
+2,cat__static__u_symptom_Symptom 580,0.0005617205752059817
+2,cat__static__u_symptom_Symptom 592,0.00010911987192230299
+2,cat__static__u_symptom_Symptom 6,0.0004333716642577201
+2,cat__static__u_symptom_Symptom 607,5.500754195963964e-05
+2,cat__static__u_symptom_Symptom 65,0.0
+2,cat__static__u_symptom_Symptom 70,0.00047393300337716937
+2,cat__static__u_symptom_Symptom 8,6.033836689312011e-05
+2,cat__static__u_symptom_Symptom 86,0.0
+2,cat__static__u_symptom_Symptom 87,0.0005808541318401694
+2,cat__static__u_symptom_Symptom 9,0.0023182688746601343
+2,cat__static__u_symptom___MISSING__,0.015736253932118416
+2,cat__static__u_symptom_infrequent_sklearn,0.028316456824541092
+2,cat__static__contact_type_Email,0.0
+2,cat__static__contact_type_Phone,0.0
+2,cat__static__location_Location 108,0.0034232616890221834
+2,cat__static__location_Location 111,0.0023413952440023422
+2,cat__static__location_Location 113,0.00016906019300222397
+2,cat__static__location_Location 125,9.671313819126226e-06
+2,cat__static__location_Location 128,0.0012158520985394716
+2,cat__static__location_Location 135,0.001650450867600739
+2,cat__static__location_Location 136,0.0012629309203475714
+2,cat__static__location_Location 143,0.004832677077502012
+2,cat__static__location_Location 15,4.218330650473945e-05
+2,cat__static__location_Location 161,0.031732335686683655
+2,cat__static__location_Location 165,0.0
+2,cat__static__location_Location 173,0.0021773010957986116
+2,cat__static__location_Location 179,0.0032376479357481003
+2,cat__static__location_Location 18,0.00018648503464646637
+2,cat__static__location_Location 188,0.0007636597729288042
+2,cat__static__location_Location 197,6.588541964447359e-06
+2,cat__static__location_Location 199,0.0
+2,cat__static__location_Location 204,0.018007155507802963
+2,cat__static__location_Location 209,0.0
+2,cat__static__location_Location 210,2.2562520825886168e-05
+2,cat__static__location_Location 229,0.0
+2,cat__static__location_Location 242,0.0
+2,cat__static__location_Location 245,9.316641808254644e-05
+2,cat__static__location_Location 34,0.0009252281743101776
+2,cat__static__location_Location 35,0.000565718044526875
+2,cat__static__location_Location 36,0.00047220938722603023
+2,cat__static__location_Location 37,0.001566291437484324
+2,cat__static__location_Location 38,0.00041133337072096765
+2,cat__static__location_Location 39,0.0
+2,cat__static__location_Location 40,0.0
+2,cat__static__location_Location 41,0.0002684085920918733
+2,cat__static__location_Location 42,0.0044159479439258575
+2,cat__static__location_Location 43,0.0004962710663676262
+2,cat__static__location_Location 44,0.0
+2,cat__static__location_Location 45,2.3645359760848805e-05
+2,cat__static__location_Location 46,0.0011330123525112867
+2,cat__static__location_Location 47,0.0
+2,cat__static__location_Location 51,0.0025277649983763695
+2,cat__static__location_Location 54,0.0004451638087630272
+2,cat__static__location_Location 55,0.00022258183162193745
+2,cat__static__location_Location 56,0.0
+2,cat__static__location_Location 69,0.001027846708893776
+2,cat__static__location_Location 70,0.0008732581045478582
+2,cat__static__location_Location 71,0.000783141003921628
+2,cat__static__location_Location 82,0.0004913214361295104
+2,cat__static__location_Location 91,0.00024695234606042504
+2,cat__static__location_Location 93,0.012325427494943142
+2,cat__static__location_Location 96,0.0023191669024527073
+2,cat__static__location_Location 97,0.00021386980370152742
+2,cat__static__location_infrequent_sklearn,0.011379498988389969
+2,cat__static__impact_1 - High,0.0012724094558507204
+2,cat__static__impact_2 - Medium,0.005314978305250406
+2,cat__static__impact_3 - Low,0.003853671485558152
+2,cat__static__urgency_1 - High,0.001514444244094193
+2,cat__static__urgency_2 - Medium,0.0032216738909482956
+2,cat__static__urgency_3 - Low,0.010873428545892239
+2,cat__static__caller_id_Caller 1062,0.0001441174536012113
+2,cat__static__caller_id_Caller 1129,0.005934081505984068
+2,cat__static__caller_id_Caller 1182,0.0010829693637788296
+2,cat__static__caller_id_Caller 1270,0.0
+2,cat__static__caller_id_Caller 1441,0.00020742455672007054
+2,cat__static__caller_id_Caller 1517,0.00014621057198382914
+2,cat__static__caller_id_Caller 1519,0.0
+2,cat__static__caller_id_Caller 1531,0.0
+2,cat__static__caller_id_Caller 1546,0.0007185391150414944
+2,cat__static__caller_id_Caller 156,0.0
+2,cat__static__caller_id_Caller 1904,0.009678058326244354
+2,cat__static__caller_id_Caller 203,0.0011554287048056722
+2,cat__static__caller_id_Caller 225,0.0003309198946226388
+2,cat__static__caller_id_Caller 2377,0.0008112919167615473
+2,cat__static__caller_id_Caller 2416,1.4855497283861041e-05
+2,cat__static__caller_id_Caller 2435,0.0
+2,cat__static__caller_id_Caller 2471,7.232254574773833e-05
+2,cat__static__caller_id_Caller 2691,4.674441515817307e-05
+2,cat__static__caller_id_Caller 298,0.0
+2,cat__static__caller_id_Caller 3038,0.0
+2,cat__static__caller_id_Caller 3081,0.0014635168481618166
+2,cat__static__caller_id_Caller 3136,0.0
+2,cat__static__caller_id_Caller 3160,9.45356659940444e-05
+2,cat__static__caller_id_Caller 318,0.0013113005552440882
+2,cat__static__caller_id_Caller 3329,0.00014297643792815506
+2,cat__static__caller_id_Caller 337,0.0007141379755921662
+2,cat__static__caller_id_Caller 3388,0.0
+2,cat__static__caller_id_Caller 3479,0.00012678408529609442
+2,cat__static__caller_id_Caller 3763,0.0004922996158711612
+2,cat__static__caller_id_Caller 3933,0.0
+2,cat__static__caller_id_Caller 3986,0.000372718641301617
+2,cat__static__caller_id_Caller 4316,0.0
+2,cat__static__caller_id_Caller 4414,0.0
+2,cat__static__caller_id_Caller 4475,0.00016309368947986513
+2,cat__static__caller_id_Caller 4514,4.2475596274016425e-05
+2,cat__static__caller_id_Caller 4710,0.001515156589448452
+2,cat__static__caller_id_Caller 4893,0.0013131987070664763
+2,cat__static__caller_id_Caller 501,0.0
+2,cat__static__caller_id_Caller 5093,0.0
+2,cat__static__caller_id_Caller 512,0.0
+2,cat__static__caller_id_Caller 5368,0.0
+2,cat__static__caller_id_Caller 671,0.0
+2,cat__static__caller_id_Caller 68,0.0002215741405962035
+2,cat__static__caller_id_Caller 685,5.6213353673228994e-05
+2,cat__static__caller_id_Caller 723,0.0005961494753137231
+2,cat__static__caller_id_Caller 92,0.0
+2,cat__static__caller_id_Caller 920,0.0
+2,cat__static__caller_id_Caller 93,0.000863731256686151
+2,cat__static__caller_id_Caller 944,0.0010727369226515293
+2,cat__static__caller_id_infrequent_sklearn,0.0023329323157668114
+2,cat__static__opened_by_Opened by  108,0.0006467306520789862
+2,cat__static__opened_by_Opened by  131,0.019677938893437386
+2,cat__static__opened_by_Opened by  168,0.0030933753587305546
+2,cat__static__opened_by_Opened by  17,0.015573184937238693
+2,cat__static__opened_by_Opened by  174,0.0
+2,cat__static__opened_by_Opened by  180,0.003362953430041671
+2,cat__static__opened_by_Opened by  20,0.0002183924661949277
+2,cat__static__opened_by_Opened by  221,0.0019602596294134855
+2,cat__static__opened_by_Opened by  228,0.0
+2,cat__static__opened_by_Opened by  239,0.0011817673221230507
+2,cat__static__opened_by_Opened by  24,0.00850856862962246
+2,cat__static__opened_by_Opened by  240,0.0
+2,cat__static__opened_by_Opened by  242,0.0
+2,cat__static__opened_by_Opened by  247,0.0025093310978263617
+2,cat__static__opened_by_Opened by  257,0.0
+2,cat__static__opened_by_Opened by  267,0.0
+2,cat__static__opened_by_Opened by  301,0.0012037241831421852
+2,cat__static__opened_by_Opened by  305,0.0004090395523235202
+2,cat__static__opened_by_Opened by  325,0.0006419708370231092
+2,cat__static__opened_by_Opened by  360,0.0008013400947675109
+2,cat__static__opened_by_Opened by  381,0.0
+2,cat__static__opened_by_Opened by  386,0.0023175657261162996
+2,cat__static__opened_by_Opened by  390,0.0067722732201218605
+2,cat__static__opened_by_Opened by  397,0.0391671396791935
+2,cat__static__opened_by_Opened by  40,0.0014142474392428994
+2,cat__static__opened_by_Opened by  402,7.944054959807545e-05
+2,cat__static__opened_by_Opened by  433,3.604952871683054e-05
+2,cat__static__opened_by_Opened by  44,0.00033195342984981835
+2,cat__static__opened_by_Opened by  443,0.0006829546182416379
+2,cat__static__opened_by_Opened by  444,0.0
+2,cat__static__opened_by_Opened by  460,7.620787073392421e-05
+2,cat__static__opened_by_Opened by  463,0.0015463806921616197
+2,cat__static__opened_by_Opened by  468,0.0
+2,cat__static__opened_by_Opened by  47,6.605027738260105e-05
+2,cat__static__opened_by_Opened by  500,0.0009034774266183376
+2,cat__static__opened_by_Opened by  501,0.0024592606350779533
+2,cat__static__opened_by_Opened by  512,0.004511343315243721
+2,cat__static__opened_by_Opened by  536,0.0008995679090730846
+2,cat__static__opened_by_Opened by  55,0.002899500075727701
+2,cat__static__opened_by_Opened by  58,0.00106633803807199
+2,cat__static__opened_by_Opened by  59,0.0031106085516512394
+2,cat__static__opened_by_Opened by  62,0.012947656214237213
+2,cat__static__opened_by_Opened by  70,0.00011139363050460815
+2,cat__static__opened_by_Opened by  8,0.0016457178862765431
+2,cat__static__opened_by_Opened by  9,0.0017817510524764657
+2,cat__static__opened_by_Opened by  94,0.0
+2,cat__static__opened_by___MISSING__,0.00199123565107584
+2,cat__static__opened_by_infrequent_sklearn,0.004292509984225035
+2,cat__static__sys_created_by_Created by 10,0.0038128599990159273
+2,cat__static__sys_created_by_Created by 101,0.0
+2,cat__static__sys_created_by_Created by 107,0.003044686047360301
+2,cat__static__sys_created_by_Created by 108,0.0
+2,cat__static__sys_created_by_Created by 109,0.0007101691444404423
+2,cat__static__sys_created_by_Created by 113,0.0
+2,cat__static__sys_created_by_Created by 114,0.0
+2,cat__static__sys_created_by_Created by 12,0.0
+2,cat__static__sys_created_by_Created by 120,0.001586042228154838
+2,cat__static__sys_created_by_Created by 129,0.0016355402767658234
+2,cat__static__sys_created_by_Created by 13,0.01918771117925644
+2,cat__static__sys_created_by_Created by 130,0.0019806947093456984
+2,cat__static__sys_created_by_Created by 140,0.00011916385119548067
+2,cat__static__sys_created_by_Created by 158,0.0
+2,cat__static__sys_created_by_Created by 167,0.0005452585755847394
+2,cat__static__sys_created_by_Created by 169,1.1616804840741679e-05
+2,cat__static__sys_created_by_Created by 171,0.000459790084278211
+2,cat__static__sys_created_by_Created by 172,0.00012043854803778231
+2,cat__static__sys_created_by_Created by 18,0.0005474900244735181
+2,cat__static__sys_created_by_Created by 188,0.0
+2,cat__static__sys_created_by_Created by 190,0.0
+2,cat__static__sys_created_by_Created by 192,6.530106475111097e-05
+2,cat__static__sys_created_by_Created by 193,0.0
+2,cat__static__sys_created_by_Created by 199,0.0
+2,cat__static__sys_created_by_Created by 20,0.00096331094391644
+2,cat__static__sys_created_by_Created by 202,0.0
+2,cat__static__sys_created_by_Created by 216,0.004283363465219736
+2,cat__static__sys_created_by_Created by 217,3.053381078643724e-05
+2,cat__static__sys_created_by_Created by 221,0.0
+2,cat__static__sys_created_by_Created by 23,0.0
+2,cat__static__sys_created_by_Created by 233,6.86045823385939e-05
+2,cat__static__sys_created_by_Created by 25,0.0
+2,cat__static__sys_created_by_Created by 30,0.00034644303377717733
+2,cat__static__sys_created_by_Created by 31,2.260045221191831e-05
+2,cat__static__sys_created_by_Created by 33,0.006315063219517469
+2,cat__static__sys_created_by_Created by 34,0.00042970580398105085
+2,cat__static__sys_created_by_Created by 45,0.001585362944751978
+2,cat__static__sys_created_by_Created by 47,0.0
+2,cat__static__sys_created_by_Created by 5,0.0
+2,cat__static__sys_created_by_Created by 52,0.002221085363999009
+2,cat__static__sys_created_by_Created by 6,0.0013838328886777163
+2,cat__static__sys_created_by_Created by 62,0.012420901097357273
+2,cat__static__sys_created_by_Created by 79,0.0
+2,cat__static__sys_created_by_Created by 81,0.002329073380678892
+2,cat__static__sys_created_by_Created by 89,0.001674483995884657
+2,cat__static__sys_created_by_Created by 98,0.005308615043759346
+2,cat__static__sys_created_by___MISSING__,0.028483755886554718
+2,cat__static__sys_created_by_infrequent_sklearn,0.0009772060438990593
+2,cat__static__notify_Do Not Notify,0.0
+2,cat__static__notify_Send Email,0.0
+2,cat__dyn_cat__activity_Active,0.0335235558450222
+2,cat__dyn_cat__activity_Awaiting Problem,0.0
+2,cat__dyn_cat__activity_Awaiting User Info,0.033334553241729736
+2,cat__dyn_cat__activity_New,0.0012795841321349144
+2,cat__dyn_cat__activity_infrequent_sklearn,0.0
+2,cat__dyn_cat__activity_prev_Active,0.0009402770665474236
+2,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+2,cat__dyn_cat__activity_prev_Awaiting User Info,0.003284274134784937
+2,cat__dyn_cat__activity_prev_New,0.0008481956901960075
+2,cat__dyn_cat__activity_prev___MISSING__,0.0
+2,cat__dyn_cat__resource_Group 10,0.016802262514829636
+2,cat__dyn_cat__resource_Group 12,0.015984389930963516
+2,cat__dyn_cat__resource_Group 15,0.0022443311754614115
+2,cat__dyn_cat__resource_Group 19,0.001203268300741911
+2,cat__dyn_cat__resource_Group 20,0.022576766088604927
+2,cat__dyn_cat__resource_Group 21,0.0
+2,cat__dyn_cat__resource_Group 22,0.003991956356912851
+2,cat__dyn_cat__resource_Group 23,0.023441210389137268
+2,cat__dyn_cat__resource_Group 24,0.04451277107000351
+2,cat__dyn_cat__resource_Group 25,0.0009732214966788888
+2,cat__dyn_cat__resource_Group 27,0.012580037117004395
+2,cat__dyn_cat__resource_Group 28,0.011702649295330048
+2,cat__dyn_cat__resource_Group 29,0.012812167406082153
+2,cat__dyn_cat__resource_Group 3,0.0002344009408261627
+2,cat__dyn_cat__resource_Group 30,0.005143674556165934
+2,cat__dyn_cat__resource_Group 31,0.00034567154943943024
+2,cat__dyn_cat__resource_Group 33,0.00026706545031629503
+2,cat__dyn_cat__resource_Group 34,0.00032743773772381246
+2,cat__dyn_cat__resource_Group 37,0.013685174286365509
+2,cat__dyn_cat__resource_Group 39,0.039333950728178024
+2,cat__dyn_cat__resource_Group 46,0.00016488126129843295
+2,cat__dyn_cat__resource_Group 47,0.0
+2,cat__dyn_cat__resource_Group 48,0.0042639682069420815
+2,cat__dyn_cat__resource_Group 49,0.0
+2,cat__dyn_cat__resource_Group 5,0.0
+2,cat__dyn_cat__resource_Group 50,0.0
+2,cat__dyn_cat__resource_Group 51,0.0003507013607304543
+2,cat__dyn_cat__resource_Group 53,0.0
+2,cat__dyn_cat__resource_Group 54,0.0050561679527163506
+2,cat__dyn_cat__resource_Group 55,0.00046469434164464474
+2,cat__dyn_cat__resource_Group 56,0.0
+2,cat__dyn_cat__resource_Group 57,0.009580409154295921
+2,cat__dyn_cat__resource_Group 58,0.0036628972738981247
+2,cat__dyn_cat__resource_Group 6,0.000693304231390357
+2,cat__dyn_cat__resource_Group 62,0.0005952039500698447
+2,cat__dyn_cat__resource_Group 64,0.0007761045708321035
+2,cat__dyn_cat__resource_Group 65,0.0001354061532765627
+2,cat__dyn_cat__resource_Group 66,0.004233513958752155
+2,cat__dyn_cat__resource_Group 69,2.467682134010829e-05
+2,cat__dyn_cat__resource_Group 70,0.04454071447253227
+2,cat__dyn_cat__resource_Group 72,0.035125184804201126
+2,cat__dyn_cat__resource_Group 73,0.012651365250349045
+2,cat__dyn_cat__resource_Group 74,0.00033292945590801537
+2,cat__dyn_cat__resource_Group 75,0.005891785491257906
+2,cat__dyn_cat__resource_Group 76,0.013134177774190903
+2,cat__dyn_cat__resource_Group 77,0.0
+2,cat__dyn_cat__resource_Group 81,0.0
+2,cat__dyn_cat__resource_Group 9,0.02529255859553814
+2,cat__dyn_cat__resource___MISSING__,0.04759133234620094
+2,cat__dyn_cat__resource_infrequent_sklearn,0.0001992621400859207
+3,num__num__k,0.0008625424816273153
+3,num__num__n_distinct_activities,0.016477229073643684
+3,num__num__n_distinct_resources,0.010015202686190605
+3,num__num__n_resource_changes,0.008993641473352909
+3,num__num__n_activity_repeats,0.0051604812033474445
+3,num__num__n_waiting_events,0.004086755216121674
+3,num__num__frac_waiting,0.0047460682690143585
+3,num__num__last_gap_h,0.006196369417011738
+3,num__num__max_gap_h,0.23533712327480316
+3,num__num__elapsed_h,0.5082433819770813
+3,num__num__log_elapsed_h,0.11691472679376602
+3,num__num__mean_gap_h,0.09799859672784805
+3,num__num__hour_of_k,0.04050646722316742
+3,num__num__dow_of_k,0.04349134489893913
+3,num__num__arrivals_24h,0.1260187029838562
+3,num__num__arrivals_7d,0.5447685718536377
+3,num__static__opened_hour,0.05199365317821503
+3,num__static__opened_dow,0.1605364829301834
+3,num__static__opened_is_offhours,0.0031805485486984253
+3,num__dyn_num__reassignment_count,0.012665409594774246
+3,num__dyn_num__reopen_count,0.00046086456859484315
+3,num__dyn_num__sys_mod_count,0.0018098920118063688
+3,num__dyn_cat__assigned_to_known,0.03336191922426224
+3,num__static__knowledge,0.2524404227733612
+3,num__static__u_priority_confirmation,0.0
+3,num__static__cmdb_ci_known,8.079278632067144e-05
+3,cat__dyn_cat__priority_1 - Critical,0.05025233328342438
+3,cat__dyn_cat__priority_2 - High,0.1055905744433403
+3,cat__dyn_cat__priority_3 - Moderate,0.05905785411596298
+3,cat__dyn_cat__priority_4 - Low,0.12408480793237686
+3,cat__static__category_Category 13,0.0019254466751590371
+3,cat__static__category_Category 17,3.0126744604785927e-05
+3,cat__static__category_Category 19,6.754714559065178e-05
+3,cat__static__category_Category 20,0.006128072738647461
+3,cat__static__category_Category 22,0.0
+3,cat__static__category_Category 23,0.0023385437671095133
+3,cat__static__category_Category 24,0.01096467487514019
+3,cat__static__category_Category 26,0.011627675034105778
+3,cat__static__category_Category 28,0.001615016721189022
+3,cat__static__category_Category 32,0.0038644822780042887
+3,cat__static__category_Category 34,0.0007461203495040536
+3,cat__static__category_Category 35,8.978765254141763e-05
+3,cat__static__category_Category 37,0.002848283154889941
+3,cat__static__category_Category 38,1.2068696378264576e-05
+3,cat__static__category_Category 40,0.0007355632842518389
+3,cat__static__category_Category 41,0.0
+3,cat__static__category_Category 42,0.004895364865660667
+3,cat__static__category_Category 43,0.002569568809121847
+3,cat__static__category_Category 44,0.0004975349875167012
+3,cat__static__category_Category 45,0.004862369503825903
+3,cat__static__category_Category 46,0.04224620759487152
+3,cat__static__category_Category 51,0.0012347466545179486
+3,cat__static__category_Category 53,0.001751427655108273
+3,cat__static__category_Category 55,0.00013366674829740077
+3,cat__static__category_Category 57,0.013428361155092716
+3,cat__static__category_Category 61,0.004612234886735678
+3,cat__static__category_Category 63,0.0
+3,cat__static__category_Category 7,0.0
+3,cat__static__category_Category 8,0.00030438671819865704
+3,cat__static__category_Category 9,0.011092845350503922
+3,cat__static__category_infrequent_sklearn,0.002780292881652713
+3,cat__static__subcategory_Subcategory 103,0.003693006932735443
+3,cat__static__subcategory_Subcategory 107,0.0
+3,cat__static__subcategory_Subcategory 114,0.0007254875963553786
+3,cat__static__subcategory_Subcategory 117,0.0015325045678764582
+3,cat__static__subcategory_Subcategory 123,0.0005020394455641508
+3,cat__static__subcategory_Subcategory 125,6.0805985413026065e-05
+3,cat__static__subcategory_Subcategory 130,0.0001871929707704112
+3,cat__static__subcategory_Subcategory 134,0.00012761750258505344
+3,cat__static__subcategory_Subcategory 135,0.0021287896670401096
+3,cat__static__subcategory_Subcategory 150,0.011129126884043217
+3,cat__static__subcategory_Subcategory 154,2.401512574579101e-05
+3,cat__static__subcategory_Subcategory 16,0.000252070021815598
+3,cat__static__subcategory_Subcategory 163,0.0037292572669684887
+3,cat__static__subcategory_Subcategory 164,0.0020305891521275043
+3,cat__static__subcategory_Subcategory 168,0.0003136316663585603
+3,cat__static__subcategory_Subcategory 170,0.0023708599619567394
+3,cat__static__subcategory_Subcategory 174,0.011583562009036541
+3,cat__static__subcategory_Subcategory 175,0.016034983098506927
+3,cat__static__subcategory_Subcategory 183,0.001165106543339789
+3,cat__static__subcategory_Subcategory 185,0.004926348105072975
+3,cat__static__subcategory_Subcategory 200,0.002192215295508504
+3,cat__static__subcategory_Subcategory 202,5.038093149778433e-05
+3,cat__static__subcategory_Subcategory 215,0.0
+3,cat__static__subcategory_Subcategory 220,0.004792321007698774
+3,cat__static__subcategory_Subcategory 223,0.0060247438959777355
+3,cat__static__subcategory_Subcategory 224,0.00021494306565728039
+3,cat__static__subcategory_Subcategory 229,0.0017301210900768638
+3,cat__static__subcategory_Subcategory 251,0.0009517486905679107
+3,cat__static__subcategory_Subcategory 271,3.530323374434374e-05
+3,cat__static__subcategory_Subcategory 275,0.0006843381561338902
+3,cat__static__subcategory_Subcategory 28,0.0012345249997451901
+3,cat__static__subcategory_Subcategory 289,0.00024577544536441565
+3,cat__static__subcategory_Subcategory 29,0.00014945774455554783
+3,cat__static__subcategory_Subcategory 3,0.00520921777933836
+3,cat__static__subcategory_Subcategory 300,0.0048891534097492695
+3,cat__static__subcategory_Subcategory 302,0.0
+3,cat__static__subcategory_Subcategory 303,0.0013919511111453176
+3,cat__static__subcategory_Subcategory 31,6.275132909649983e-05
+3,cat__static__subcategory_Subcategory 36,0.0012703246902674437
+3,cat__static__subcategory_Subcategory 43,0.0013017940800637007
+3,cat__static__subcategory_Subcategory 44,0.00326361833140254
+3,cat__static__subcategory_Subcategory 54,0.0001613502245163545
+3,cat__static__subcategory_Subcategory 60,0.00020016006601508707
+3,cat__static__subcategory_Subcategory 69,0.00411592610180378
+3,cat__static__subcategory_Subcategory 75,0.0024176829028874636
+3,cat__static__subcategory_Subcategory 80,0.004026434849947691
+3,cat__static__subcategory_Subcategory 82,0.0014306113589555025
+3,cat__static__subcategory_Subcategory 9,0.0039517744444310665
+3,cat__static__subcategory_Subcategory 94,3.9286624087253585e-05
+3,cat__static__subcategory_infrequent_sklearn,0.0043798028491437435
+3,cat__static__u_symptom_Symptom 10,0.00489045912399888
+3,cat__static__u_symptom_Symptom 102,0.0
+3,cat__static__u_symptom_Symptom 105,0.0
+3,cat__static__u_symptom_Symptom 114,0.00012356173829175532
+3,cat__static__u_symptom_Symptom 115,0.0010942630469799042
+3,cat__static__u_symptom_Symptom 116,0.005825576838105917
+3,cat__static__u_symptom_Symptom 117,0.00030182881164364517
+3,cat__static__u_symptom_Symptom 118,5.092275023343973e-05
+3,cat__static__u_symptom_Symptom 119,0.0018589592073112726
+3,cat__static__u_symptom_Symptom 120,0.002499129856005311
+3,cat__static__u_symptom_Symptom 127,0.0009057905990630388
+3,cat__static__u_symptom_Symptom 13,0.0
+3,cat__static__u_symptom_Symptom 134,0.0006065572961233556
+3,cat__static__u_symptom_Symptom 208,0.0015748876612633467
+3,cat__static__u_symptom_Symptom 232,0.000996178830973804
+3,cat__static__u_symptom_Symptom 296,0.0007539468351751566
+3,cat__static__u_symptom_Symptom 382,0.00011891698522958905
+3,cat__static__u_symptom_Symptom 387,0.0001289441279368475
+3,cat__static__u_symptom_Symptom 4,0.0004847208329010755
+3,cat__static__u_symptom_Symptom 444,0.0
+3,cat__static__u_symptom_Symptom 454,0.00034348436747677624
+3,cat__static__u_symptom_Symptom 455,0.0004060952633153647
+3,cat__static__u_symptom_Symptom 458,0.007271764799952507
+3,cat__static__u_symptom_Symptom 462,4.152436667936854e-05
+3,cat__static__u_symptom_Symptom 470,0.0006752517074346542
+3,cat__static__u_symptom_Symptom 471,6.159404438221827e-05
+3,cat__static__u_symptom_Symptom 473,0.0006780388066545129
+3,cat__static__u_symptom_Symptom 491,0.007533066440373659
+3,cat__static__u_symptom_Symptom 494,5.394883919507265e-05
+3,cat__static__u_symptom_Symptom 5,0.0
+3,cat__static__u_symptom_Symptom 506,0.0
+3,cat__static__u_symptom_Symptom 509,0.00023235379194375128
+3,cat__static__u_symptom_Symptom 517,0.004290037322789431
+3,cat__static__u_symptom_Symptom 532,0.0017195914406329393
+3,cat__static__u_symptom_Symptom 534,0.04252675548195839
+3,cat__static__u_symptom_Symptom 54,0.0014868335565552115
+3,cat__static__u_symptom_Symptom 571,0.0016609416343271732
+3,cat__static__u_symptom_Symptom 573,0.0014940734254196286
+3,cat__static__u_symptom_Symptom 580,0.0005495921359397471
+3,cat__static__u_symptom_Symptom 592,0.0002027240552706644
+3,cat__static__u_symptom_Symptom 6,0.0004824772186111659
+3,cat__static__u_symptom_Symptom 607,6.156526069389656e-05
+3,cat__static__u_symptom_Symptom 65,0.0
+3,cat__static__u_symptom_Symptom 70,0.0003213806194253266
+3,cat__static__u_symptom_Symptom 8,9.762583067640662e-05
+3,cat__static__u_symptom_Symptom 86,0.0
+3,cat__static__u_symptom_Symptom 87,0.0006726909196004272
+3,cat__static__u_symptom_Symptom 9,0.0015156063018366694
+3,cat__static__u_symptom___MISSING__,0.016498485580086708
+3,cat__static__u_symptom_infrequent_sklearn,0.03056745044887066
+3,cat__static__contact_type_Email,0.0
+3,cat__static__contact_type_Phone,0.0
+3,cat__static__location_Location 108,0.0037637942004948854
+3,cat__static__location_Location 111,0.0018009329214692116
+3,cat__static__location_Location 113,0.00016744621098041534
+3,cat__static__location_Location 125,8.953729775385e-06
+3,cat__static__location_Location 128,0.00046720512909814715
+3,cat__static__location_Location 135,0.0033085241448134184
+3,cat__static__location_Location 136,0.001441570115275681
+3,cat__static__location_Location 143,0.004752721171826124
+3,cat__static__location_Location 15,4.336718484410085e-05
+3,cat__static__location_Location 161,0.027098262682557106
+3,cat__static__location_Location 165,0.0
+3,cat__static__location_Location 173,0.002247557044029236
+3,cat__static__location_Location 179,0.0024071887601166964
+3,cat__static__location_Location 18,0.00020106554438825697
+3,cat__static__location_Location 188,0.000482072529848665
+3,cat__static__location_Location 197,5.382647486840142e-06
+3,cat__static__location_Location 199,0.0
+3,cat__static__location_Location 204,0.0160157959908247
+3,cat__static__location_Location 209,0.0
+3,cat__static__location_Location 210,3.682442184071988e-05
+3,cat__static__location_Location 229,0.0
+3,cat__static__location_Location 242,0.0
+3,cat__static__location_Location 245,9.255766053684056e-05
+3,cat__static__location_Location 34,0.0007794882403686643
+3,cat__static__location_Location 35,0.0004974310286343098
+3,cat__static__location_Location 36,0.0016177486395463347
+3,cat__static__location_Location 37,0.0038469203282147646
+3,cat__static__location_Location 38,0.0004455680027604103
+3,cat__static__location_Location 39,0.0
+3,cat__static__location_Location 40,0.0
+3,cat__static__location_Location 41,0.0003920350573025644
+3,cat__static__location_Location 42,0.0038189643528312445
+3,cat__static__location_Location 43,0.0004099404322914779
+3,cat__static__location_Location 44,0.0
+3,cat__static__location_Location 45,2.652617149578873e-05
+3,cat__static__location_Location 46,0.0014166362816467881
+3,cat__static__location_Location 47,0.0
+3,cat__static__location_Location 51,0.002866263734176755
+3,cat__static__location_Location 54,0.0005475237849168479
+3,cat__static__location_Location 55,0.0002422850375296548
+3,cat__static__location_Location 56,0.0
+3,cat__static__location_Location 69,0.0009774875361472368
+3,cat__static__location_Location 70,0.001768597518093884
+3,cat__static__location_Location 71,0.00029860372887924314
+3,cat__static__location_Location 82,0.00034357511322014034
+3,cat__static__location_Location 91,0.0003324973222333938
+3,cat__static__location_Location 93,0.011926588602364063
+3,cat__static__location_Location 96,0.0015719139482825994
+3,cat__static__location_Location 97,0.0004250810306984931
+3,cat__static__location_infrequent_sklearn,0.011228170245885849
+3,cat__static__impact_1 - High,0.0013165314448997378
+3,cat__static__impact_2 - Medium,0.004884073045104742
+3,cat__static__impact_3 - Low,0.0058400738053023815
+3,cat__static__urgency_1 - High,0.0020255360286682844
+3,cat__static__urgency_2 - Medium,0.003423254005610943
+3,cat__static__urgency_3 - Low,0.009669831953942776
+3,cat__static__caller_id_Caller 1062,0.00014639926666859537
+3,cat__static__caller_id_Caller 1129,0.0036307009868323803
+3,cat__static__caller_id_Caller 1182,0.0010637568775564432
+3,cat__static__caller_id_Caller 1270,0.0
+3,cat__static__caller_id_Caller 1441,0.00012443675950635225
+3,cat__static__caller_id_Caller 1517,0.00013662480341736227
+3,cat__static__caller_id_Caller 1519,0.0
+3,cat__static__caller_id_Caller 1531,0.0
+3,cat__static__caller_id_Caller 1546,0.0007247017347253859
+3,cat__static__caller_id_Caller 156,0.0
+3,cat__static__caller_id_Caller 1904,0.00971220526844263
+3,cat__static__caller_id_Caller 203,0.0030886672902852297
+3,cat__static__caller_id_Caller 225,0.00014316196029540151
+3,cat__static__caller_id_Caller 2377,0.0008110310882329941
+3,cat__static__caller_id_Caller 2416,1.2775686627719551e-05
+3,cat__static__caller_id_Caller 2435,0.0
+3,cat__static__caller_id_Caller 2471,7.986481068655849e-05
+3,cat__static__caller_id_Caller 2691,5.024512211093679e-05
+3,cat__static__caller_id_Caller 298,0.0
+3,cat__static__caller_id_Caller 3038,0.0
+3,cat__static__caller_id_Caller 3081,0.0015205196104943752
+3,cat__static__caller_id_Caller 3136,0.0
+3,cat__static__caller_id_Caller 3160,9.526980284135789e-05
+3,cat__static__caller_id_Caller 318,0.0012276596389710903
+3,cat__static__caller_id_Caller 3329,0.00014273177657742053
+3,cat__static__caller_id_Caller 337,0.0007034442387521267
+3,cat__static__caller_id_Caller 3388,0.0
+3,cat__static__caller_id_Caller 3479,0.00012696166231762618
+3,cat__static__caller_id_Caller 3763,0.00023621588479727507
+3,cat__static__caller_id_Caller 3933,0.0
+3,cat__static__caller_id_Caller 3986,0.00037872110260650516
+3,cat__static__caller_id_Caller 4316,0.0
+3,cat__static__caller_id_Caller 4414,0.0
+3,cat__static__caller_id_Caller 4475,0.00023210396466311067
+3,cat__static__caller_id_Caller 4514,4.874524165643379e-05
+3,cat__static__caller_id_Caller 4710,0.0005297473981045187
+3,cat__static__caller_id_Caller 4893,0.0013278904370963573
+3,cat__static__caller_id_Caller 501,0.0
+3,cat__static__caller_id_Caller 5093,0.0
+3,cat__static__caller_id_Caller 512,0.0
+3,cat__static__caller_id_Caller 5368,0.0
+3,cat__static__caller_id_Caller 671,0.0
+3,cat__static__caller_id_Caller 68,0.00022943525982555002
+3,cat__static__caller_id_Caller 685,6.213405868038535e-05
+3,cat__static__caller_id_Caller 723,0.00028814279357902706
+3,cat__static__caller_id_Caller 92,0.0
+3,cat__static__caller_id_Caller 920,0.0
+3,cat__static__caller_id_Caller 93,0.000820130342617631
+3,cat__static__caller_id_Caller 944,0.0010195112554356456
+3,cat__static__caller_id_infrequent_sklearn,0.0019201241666451097
+3,cat__static__opened_by_Opened by  108,0.00047886051470413804
+3,cat__static__opened_by_Opened by  131,0.017955079674720764
+3,cat__static__opened_by_Opened by  168,0.0013273017248138785
+3,cat__static__opened_by_Opened by  17,0.01857219636440277
+3,cat__static__opened_by_Opened by  174,0.0
+3,cat__static__opened_by_Opened by  180,0.0032237672712653875
+3,cat__static__opened_by_Opened by  20,0.000147148864925839
+3,cat__static__opened_by_Opened by  221,0.0017938449745997787
+3,cat__static__opened_by_Opened by  228,0.0
+3,cat__static__opened_by_Opened by  239,0.000829596072435379
+3,cat__static__opened_by_Opened by  24,0.008522391319274902
+3,cat__static__opened_by_Opened by  240,0.0
+3,cat__static__opened_by_Opened by  242,0.0
+3,cat__static__opened_by_Opened by  247,0.0014626788906753063
+3,cat__static__opened_by_Opened by  257,0.0
+3,cat__static__opened_by_Opened by  267,0.0
+3,cat__static__opened_by_Opened by  301,0.0014272809494286776
+3,cat__static__opened_by_Opened by  305,0.0002819635556079447
+3,cat__static__opened_by_Opened by  325,0.0006280670058913529
+3,cat__static__opened_by_Opened by  360,0.0003905788471456617
+3,cat__static__opened_by_Opened by  381,0.0
+3,cat__static__opened_by_Opened by  386,0.0021220543421804905
+3,cat__static__opened_by_Opened by  390,0.006436571944504976
+3,cat__static__opened_by_Opened by  397,0.04186490923166275
+3,cat__static__opened_by_Opened by  40,0.0016090263379737735
+3,cat__static__opened_by_Opened by  402,7.161346729844809e-05
+3,cat__static__opened_by_Opened by  433,2.7032658181269653e-05
+3,cat__static__opened_by_Opened by  44,0.00027215914451517165
+3,cat__static__opened_by_Opened by  443,0.00044759828597307205
+3,cat__static__opened_by_Opened by  444,0.0
+3,cat__static__opened_by_Opened by  460,7.778545113978907e-05
+3,cat__static__opened_by_Opened by  463,0.0006846844917163253
+3,cat__static__opened_by_Opened by  468,0.0
+3,cat__static__opened_by_Opened by  47,5.484957728185691e-05
+3,cat__static__opened_by_Opened by  500,0.000539189379196614
+3,cat__static__opened_by_Opened by  501,0.002171996980905533
+3,cat__static__opened_by_Opened by  512,0.0005758330808021128
+3,cat__static__opened_by_Opened by  536,0.0009010438807308674
+3,cat__static__opened_by_Opened by  55,0.0024081587325781584
+3,cat__static__opened_by_Opened by  58,0.0008156609255820513
+3,cat__static__opened_by_Opened by  59,0.0031855106353759766
+3,cat__static__opened_by_Opened by  62,0.011601763777434826
+3,cat__static__opened_by_Opened by  70,0.00011694936256390065
+3,cat__static__opened_by_Opened by  8,0.0014000022783875465
+3,cat__static__opened_by_Opened by  9,0.0004754914261866361
+3,cat__static__opened_by_Opened by  94,0.0
+3,cat__static__opened_by___MISSING__,0.0020686755888164043
+3,cat__static__opened_by_infrequent_sklearn,0.004059439990669489
+3,cat__static__sys_created_by_Created by 10,0.004407612141221762
+3,cat__static__sys_created_by_Created by 101,0.0
+3,cat__static__sys_created_by_Created by 107,0.0038713128305971622
+3,cat__static__sys_created_by_Created by 108,0.0
+3,cat__static__sys_created_by_Created by 109,0.0007013807189650834
+3,cat__static__sys_created_by_Created by 113,0.0
+3,cat__static__sys_created_by_Created by 114,0.0
+3,cat__static__sys_created_by_Created by 12,0.0
+3,cat__static__sys_created_by_Created by 120,0.0008370145224034786
+3,cat__static__sys_created_by_Created by 129,0.0015147003578022122
+3,cat__static__sys_created_by_Created by 13,0.0160808227956295
+3,cat__static__sys_created_by_Created by 130,0.002038519596680999
+3,cat__static__sys_created_by_Created by 140,0.00011704314238158986
+3,cat__static__sys_created_by_Created by 158,0.0
+3,cat__static__sys_created_by_Created by 167,0.000579488929361105
+3,cat__static__sys_created_by_Created by 169,1.1548225302249193e-05
+3,cat__static__sys_created_by_Created by 171,0.0004525264957919717
+3,cat__static__sys_created_by_Created by 172,0.00011814897879958153
+3,cat__static__sys_created_by_Created by 18,0.0005799049395136535
+3,cat__static__sys_created_by_Created by 188,0.0
+3,cat__static__sys_created_by_Created by 190,0.0
+3,cat__static__sys_created_by_Created by 192,7.045792153803632e-05
+3,cat__static__sys_created_by_Created by 193,0.0
+3,cat__static__sys_created_by_Created by 199,0.0
+3,cat__static__sys_created_by_Created by 20,0.0009942514589056373
+3,cat__static__sys_created_by_Created by 202,0.0
+3,cat__static__sys_created_by_Created by 216,0.0035282494500279427
+3,cat__static__sys_created_by_Created by 217,3.5760396713158116e-05
+3,cat__static__sys_created_by_Created by 221,0.0
+3,cat__static__sys_created_by_Created by 23,0.0
+3,cat__static__sys_created_by_Created by 233,6.964626663830131e-05
+3,cat__static__sys_created_by_Created by 25,0.0
+3,cat__static__sys_created_by_Created by 30,0.000624685431830585
+3,cat__static__sys_created_by_Created by 31,2.0765890440088697e-05
+3,cat__static__sys_created_by_Created by 33,0.008274253457784653
+3,cat__static__sys_created_by_Created by 34,0.000449109822511673
+3,cat__static__sys_created_by_Created by 45,0.0008163867751136422
+3,cat__static__sys_created_by_Created by 47,0.0
+3,cat__static__sys_created_by_Created by 5,0.0
+3,cat__static__sys_created_by_Created by 52,0.002524915151298046
+3,cat__static__sys_created_by_Created by 6,0.0011876102071255445
+3,cat__static__sys_created_by_Created by 62,0.012161842547357082
+3,cat__static__sys_created_by_Created by 79,0.0
+3,cat__static__sys_created_by_Created by 81,0.0021208494435995817
+3,cat__static__sys_created_by_Created by 89,0.0016368679935112596
+3,cat__static__sys_created_by_Created by 98,0.005765929352492094
+3,cat__static__sys_created_by___MISSING__,0.026941487565636635
+3,cat__static__sys_created_by_infrequent_sklearn,0.001029705977998674
+3,cat__static__notify_Do Not Notify,0.0
+3,cat__static__notify_Send Email,0.0
+3,cat__dyn_cat__activity_Active,0.03232448175549507
+3,cat__dyn_cat__activity_Awaiting Problem,0.0
+3,cat__dyn_cat__activity_Awaiting User Info,0.04480956494808197
+3,cat__dyn_cat__activity_New,0.0018054312095046043
+3,cat__dyn_cat__activity_infrequent_sklearn,0.0
+3,cat__dyn_cat__activity_prev_Active,0.0016479701735079288
+3,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+3,cat__dyn_cat__activity_prev_Awaiting User Info,0.005175220314413309
+3,cat__dyn_cat__activity_prev_New,0.0010900746565312147
+3,cat__dyn_cat__activity_prev___MISSING__,0.0
+3,cat__dyn_cat__resource_Group 10,0.014786111190915108
+3,cat__dyn_cat__resource_Group 12,0.021046016365289688
+3,cat__dyn_cat__resource_Group 15,0.0004458596813492477
+3,cat__dyn_cat__resource_Group 19,0.00035075965570285916
+3,cat__dyn_cat__resource_Group 20,0.028273019939661026
+3,cat__dyn_cat__resource_Group 21,0.0
+3,cat__dyn_cat__resource_Group 22,0.004827879834920168
+3,cat__dyn_cat__resource_Group 23,0.027817292138934135
+3,cat__dyn_cat__resource_Group 24,0.04510112106800079
+3,cat__dyn_cat__resource_Group 25,0.0018286429112777114
+3,cat__dyn_cat__resource_Group 27,0.017478473484516144
+3,cat__dyn_cat__resource_Group 28,0.01261617336422205
+3,cat__dyn_cat__resource_Group 29,0.013057264499366283
+3,cat__dyn_cat__resource_Group 3,0.0004586331488098949
+3,cat__dyn_cat__resource_Group 30,0.0033605063799768686
+3,cat__dyn_cat__resource_Group 31,0.0006615876336582005
+3,cat__dyn_cat__resource_Group 33,0.0003156766761094332
+3,cat__dyn_cat__resource_Group 34,0.0009329539025202394
+3,cat__dyn_cat__resource_Group 37,0.010136088356375694
+3,cat__dyn_cat__resource_Group 39,0.04312890022993088
+3,cat__dyn_cat__resource_Group 46,0.0005559773999266326
+3,cat__dyn_cat__resource_Group 47,0.0
+3,cat__dyn_cat__resource_Group 48,0.00112062762491405
+3,cat__dyn_cat__resource_Group 49,0.0
+3,cat__dyn_cat__resource_Group 5,0.0
+3,cat__dyn_cat__resource_Group 50,0.0
+3,cat__dyn_cat__resource_Group 51,0.00032482855021953583
+3,cat__dyn_cat__resource_Group 53,0.0
+3,cat__dyn_cat__resource_Group 54,0.0028798687271773815
+3,cat__dyn_cat__resource_Group 55,0.00015088797954376787
+3,cat__dyn_cat__resource_Group 56,0.0
+3,cat__dyn_cat__resource_Group 57,0.01116451621055603
+3,cat__dyn_cat__resource_Group 58,0.0062330253422260284
+3,cat__dyn_cat__resource_Group 6,0.0011188219068571925
+3,cat__dyn_cat__resource_Group 62,0.0005617424612864852
+3,cat__dyn_cat__resource_Group 64,0.0003433575911913067
+3,cat__dyn_cat__resource_Group 65,0.0002586309565231204
+3,cat__dyn_cat__resource_Group 66,0.0038861646316945553
+3,cat__dyn_cat__resource_Group 69,7.463916699634865e-05
+3,cat__dyn_cat__resource_Group 70,0.03569976985454559
+3,cat__dyn_cat__resource_Group 72,0.031135618686676025
+3,cat__dyn_cat__resource_Group 73,0.007880991324782372
+3,cat__dyn_cat__resource_Group 74,0.00033617549343034625
+3,cat__dyn_cat__resource_Group 75,0.007407228462398052
+3,cat__dyn_cat__resource_Group 76,0.018587613478302956
+3,cat__dyn_cat__resource_Group 77,0.0
+3,cat__dyn_cat__resource_Group 81,0.0
+3,cat__dyn_cat__resource_Group 9,0.01280842162668705
+3,cat__dyn_cat__resource___MISSING__,0.048694148659706116
+3,cat__dyn_cat__resource_infrequent_sklearn,0.00010907504474744201
+4,num__num__k,0.0020826999098062515
+4,num__num__n_distinct_activities,0.015600570477545261
+4,num__num__n_distinct_resources,0.013126544654369354
+4,num__num__n_resource_changes,0.013689160346984863
+4,num__num__n_activity_repeats,0.0058160205371677876
+4,num__num__n_waiting_events,0.005035066977143288
+4,num__num__frac_waiting,0.004868197254836559
+4,num__num__last_gap_h,0.006791749503463507
+4,num__num__max_gap_h,0.32122939825057983
+4,num__num__elapsed_h,0.7820999026298523
+4,num__num__log_elapsed_h,0.16429126262664795
+4,num__num__mean_gap_h,0.08374877274036407
+4,num__num__hour_of_k,0.03927924484014511
+4,num__num__dow_of_k,0.046410027891397476
+4,num__num__arrivals_24h,0.1240718811750412
+4,num__num__arrivals_7d,0.5387268662452698
+4,num__static__opened_hour,0.0600195936858654
+4,num__static__opened_dow,0.17293687164783478
+4,num__static__opened_is_offhours,0.004070914816111326
+4,num__dyn_num__reassignment_count,0.017598532140254974
+4,num__dyn_num__reopen_count,0.0012623907532542944
+4,num__dyn_num__sys_mod_count,0.0033140673767775297
+4,num__dyn_cat__assigned_to_known,0.03874992951750755
+4,num__static__knowledge,0.23451466858386993
+4,num__static__u_priority_confirmation,0.0
+4,num__static__cmdb_ci_known,7.722634472884238e-05
+4,cat__dyn_cat__priority_1 - Critical,0.04389520734548569
+4,cat__dyn_cat__priority_2 - High,0.1389695256948471
+4,cat__dyn_cat__priority_3 - Moderate,0.0664186179637909
+4,cat__dyn_cat__priority_4 - Low,0.10207861661911011
+4,cat__static__category_Category 13,0.0012299376539885998
+4,cat__static__category_Category 17,3.0107132261036895e-05
+4,cat__static__category_Category 19,6.212134758243337e-05
+4,cat__static__category_Category 20,0.005408144555985928
+4,cat__static__category_Category 22,0.0
+4,cat__static__category_Category 23,0.0024836238007992506
+4,cat__static__category_Category 24,0.014778808690607548
+4,cat__static__category_Category 26,0.012369275093078613
+4,cat__static__category_Category 28,0.001339572831057012
+4,cat__static__category_Category 32,0.003787486581131816
+4,cat__static__category_Category 34,0.0012314283521845937
+4,cat__static__category_Category 35,0.00011054086644435301
+4,cat__static__category_Category 37,0.003041171235963702
+4,cat__static__category_Category 38,1.3508351912605576e-05
+4,cat__static__category_Category 40,0.0014540234114974737
+4,cat__static__category_Category 41,0.0
+4,cat__static__category_Category 42,0.004725096747279167
+4,cat__static__category_Category 43,0.003836367977783084
+4,cat__static__category_Category 44,0.0007923680823296309
+4,cat__static__category_Category 45,0.004772212356328964
+4,cat__static__category_Category 46,0.03534182906150818
+4,cat__static__category_Category 51,0.0009580565965734422
+4,cat__static__category_Category 53,0.0017818670021370053
+4,cat__static__category_Category 55,0.00012692197924479842
+4,cat__static__category_Category 57,0.012631175108253956
+4,cat__static__category_Category 61,0.005214030854403973
+4,cat__static__category_Category 63,0.0
+4,cat__static__category_Category 7,0.0
+4,cat__static__category_Category 8,0.00030062158475629985
+4,cat__static__category_Category 9,0.009992267936468124
+4,cat__static__category_infrequent_sklearn,0.003568204352632165
+4,cat__static__subcategory_Subcategory 103,0.00284699653275311
+4,cat__static__subcategory_Subcategory 107,0.0
+4,cat__static__subcategory_Subcategory 114,0.0005999425193294883
+4,cat__static__subcategory_Subcategory 117,0.0015751533210277557
+4,cat__static__subcategory_Subcategory 123,0.00042144316830672324
+4,cat__static__subcategory_Subcategory 125,5.259097088128328e-05
+4,cat__static__subcategory_Subcategory 130,4.358951991889626e-05
+4,cat__static__subcategory_Subcategory 134,0.00011263131455052644
+4,cat__static__subcategory_Subcategory 135,0.0023111794143915176
+4,cat__static__subcategory_Subcategory 150,0.009333271533250809
+4,cat__static__subcategory_Subcategory 154,2.99026050925022e-05
+4,cat__static__subcategory_Subcategory 16,0.00017901649698615074
+4,cat__static__subcategory_Subcategory 163,0.004690107889473438
+4,cat__static__subcategory_Subcategory 164,0.0017708353698253632
+4,cat__static__subcategory_Subcategory 168,0.00019377209537196904
+4,cat__static__subcategory_Subcategory 170,0.0020001798402518034
+4,cat__static__subcategory_Subcategory 174,0.01326672825962305
+4,cat__static__subcategory_Subcategory 175,0.022949550300836563
+4,cat__static__subcategory_Subcategory 183,0.0015747337602078915
+4,cat__static__subcategory_Subcategory 185,0.005240018479526043
+4,cat__static__subcategory_Subcategory 200,0.0021294676698744297
+4,cat__static__subcategory_Subcategory 202,3.847695916192606e-05
+4,cat__static__subcategory_Subcategory 215,0.0
+4,cat__static__subcategory_Subcategory 220,0.003109428333118558
+4,cat__static__subcategory_Subcategory 223,0.005504954606294632
+4,cat__static__subcategory_Subcategory 224,0.00042099758866243064
+4,cat__static__subcategory_Subcategory 229,0.0017096117371693254
+4,cat__static__subcategory_Subcategory 251,0.0012598329922184348
+4,cat__static__subcategory_Subcategory 271,5.656303255818784e-05
+4,cat__static__subcategory_Subcategory 275,0.0005797320045530796
+4,cat__static__subcategory_Subcategory 28,0.002368606859818101
+4,cat__static__subcategory_Subcategory 289,0.00031353524536825716
+4,cat__static__subcategory_Subcategory 29,0.00011843033280456439
+4,cat__static__subcategory_Subcategory 3,0.003423751797527075
+4,cat__static__subcategory_Subcategory 300,0.007098324131220579
+4,cat__static__subcategory_Subcategory 302,0.0
+4,cat__static__subcategory_Subcategory 303,0.0016329457284882665
+4,cat__static__subcategory_Subcategory 31,3.9464575820602477e-05
+4,cat__static__subcategory_Subcategory 36,0.0016022642375901341
+4,cat__static__subcategory_Subcategory 43,0.0012981517938897014
+4,cat__static__subcategory_Subcategory 44,0.005463216453790665
+4,cat__static__subcategory_Subcategory 54,0.00016618164954707026
+4,cat__static__subcategory_Subcategory 60,0.00010817220754688606
+4,cat__static__subcategory_Subcategory 69,0.004027750343084335
+4,cat__static__subcategory_Subcategory 75,0.002468074206262827
+4,cat__static__subcategory_Subcategory 80,0.004396703094244003
+4,cat__static__subcategory_Subcategory 82,0.0011061679106205702
+4,cat__static__subcategory_Subcategory 9,0.004114683251827955
+4,cat__static__subcategory_Subcategory 94,3.9326139813056216e-05
+4,cat__static__subcategory_infrequent_sklearn,0.005080870818346739
+4,cat__static__u_symptom_Symptom 10,0.003644959069788456
+4,cat__static__u_symptom_Symptom 102,0.0
+4,cat__static__u_symptom_Symptom 105,0.0
+4,cat__static__u_symptom_Symptom 114,0.0001082093731383793
+4,cat__static__u_symptom_Symptom 115,0.0011246198555454612
+4,cat__static__u_symptom_Symptom 116,0.004046801943331957
+4,cat__static__u_symptom_Symptom 117,0.0005316038150340319
+4,cat__static__u_symptom_Symptom 118,0.00013023283099755645
+4,cat__static__u_symptom_Symptom 119,0.00280214985832572
+4,cat__static__u_symptom_Symptom 120,0.0019787291530519724
+4,cat__static__u_symptom_Symptom 127,0.0009302817052230239
+4,cat__static__u_symptom_Symptom 13,0.0
+4,cat__static__u_symptom_Symptom 134,0.0006693474133498967
+4,cat__static__u_symptom_Symptom 208,0.0016182390972971916
+4,cat__static__u_symptom_Symptom 232,0.0009624822996556759
+4,cat__static__u_symptom_Symptom 296,0.0007815898861736059
+4,cat__static__u_symptom_Symptom 382,0.00012483930913731456
+4,cat__static__u_symptom_Symptom 387,0.00018126385111827403
+4,cat__static__u_symptom_Symptom 4,0.0005254611605778337
+4,cat__static__u_symptom_Symptom 444,0.0
+4,cat__static__u_symptom_Symptom 454,0.000868173607159406
+4,cat__static__u_symptom_Symptom 455,0.00017021251551341265
+4,cat__static__u_symptom_Symptom 458,0.0076133678667247295
+4,cat__static__u_symptom_Symptom 462,6.573813152499497e-05
+4,cat__static__u_symptom_Symptom 470,0.0005704503273591399
+4,cat__static__u_symptom_Symptom 471,4.560989691526629e-05
+4,cat__static__u_symptom_Symptom 473,0.0006706208223477006
+4,cat__static__u_symptom_Symptom 491,0.006429943256080151
+4,cat__static__u_symptom_Symptom 494,0.00010554854816291481
+4,cat__static__u_symptom_Symptom 5,0.0
+4,cat__static__u_symptom_Symptom 506,0.0
+4,cat__static__u_symptom_Symptom 509,0.0002456236688885838
+4,cat__static__u_symptom_Symptom 517,0.00443565659224987
+4,cat__static__u_symptom_Symptom 532,0.0005741005297750235
+4,cat__static__u_symptom_Symptom 534,0.03808056190609932
+4,cat__static__u_symptom_Symptom 54,0.00044364016503095627
+4,cat__static__u_symptom_Symptom 571,0.0013227908639237285
+4,cat__static__u_symptom_Symptom 573,0.0012713735923171043
+4,cat__static__u_symptom_Symptom 580,0.000629277026746422
+4,cat__static__u_symptom_Symptom 592,8.973589137895033e-05
+4,cat__static__u_symptom_Symptom 6,0.000518153072334826
+4,cat__static__u_symptom_Symptom 607,5.896145012229681e-05
+4,cat__static__u_symptom_Symptom 65,0.0
+4,cat__static__u_symptom_Symptom 70,0.0001757076825015247
+4,cat__static__u_symptom_Symptom 8,6.027499330230057e-05
+4,cat__static__u_symptom_Symptom 86,0.0
+4,cat__static__u_symptom_Symptom 87,0.0006651612347923219
+4,cat__static__u_symptom_Symptom 9,0.0008406627457588911
+4,cat__static__u_symptom___MISSING__,0.0157516710460186
+4,cat__static__u_symptom_infrequent_sklearn,0.027828652411699295
+4,cat__static__contact_type_Email,0.0
+4,cat__static__contact_type_Phone,0.0
+4,cat__static__location_Location 108,0.004145834129303694
+4,cat__static__location_Location 111,0.0020840070210397243
+4,cat__static__location_Location 113,8.072487253230065e-05
+4,cat__static__location_Location 125,8.620354492450133e-06
+4,cat__static__location_Location 128,0.0006688222056254745
+4,cat__static__location_Location 135,0.0018002561992034316
+4,cat__static__location_Location 136,0.0013043801300227642
+4,cat__static__location_Location 143,0.005337716545909643
+4,cat__static__location_Location 15,3.935062704840675e-05
+4,cat__static__location_Location 161,0.02530684880912304
+4,cat__static__location_Location 165,0.0
+4,cat__static__location_Location 173,0.009491567499935627
+4,cat__static__location_Location 179,0.005065975710749626
+4,cat__static__location_Location 18,0.00019493191211950034
+4,cat__static__location_Location 188,0.0002946954919025302
+4,cat__static__location_Location 197,9.39896926865913e-06
+4,cat__static__location_Location 199,0.0
+4,cat__static__location_Location 204,0.016431385651230812
+4,cat__static__location_Location 209,0.0
+4,cat__static__location_Location 210,0.00022839903249405324
+4,cat__static__location_Location 229,0.0
+4,cat__static__location_Location 242,0.0
+4,cat__static__location_Location 245,0.00022109040583018214
+4,cat__static__location_Location 34,0.000943308521527797
+4,cat__static__location_Location 35,0.00010829723760252818
+4,cat__static__location_Location 36,0.0003943377232644707
+4,cat__static__location_Location 37,0.0009355928632430732
+4,cat__static__location_Location 38,0.00016209691239055246
+4,cat__static__location_Location 39,0.0
+4,cat__static__location_Location 40,0.0
+4,cat__static__location_Location 41,0.0003551838162820786
+4,cat__static__location_Location 42,0.001843637670390308
+4,cat__static__location_Location 43,0.00025758601259440184
+4,cat__static__location_Location 44,0.0
+4,cat__static__location_Location 45,8.549644007871393e-06
+4,cat__static__location_Location 46,0.0009670211584307253
+4,cat__static__location_Location 47,0.0
+4,cat__static__location_Location 51,0.002751564374193549
+4,cat__static__location_Location 54,0.0006585429073311388
+4,cat__static__location_Location 55,0.00019494212756399065
+4,cat__static__location_Location 56,0.0
+4,cat__static__location_Location 69,0.0012670799624174833
+4,cat__static__location_Location 70,0.0009483692701905966
+4,cat__static__location_Location 71,0.0011838662903755903
+4,cat__static__location_Location 82,0.00034842744935303926
+4,cat__static__location_Location 91,0.00025545325479470193
+4,cat__static__location_Location 93,0.013204624876379967
+4,cat__static__location_Location 96,0.001691855606622994
+4,cat__static__location_Location 97,0.00043785895104520023
+4,cat__static__location_infrequent_sklearn,0.014908344484865665
+4,cat__static__impact_1 - High,0.001404043403454125
+4,cat__static__impact_2 - Medium,0.004235275089740753
+4,cat__static__impact_3 - Low,0.004587442148476839
+4,cat__static__urgency_1 - High,0.0020509371533989906
+4,cat__static__urgency_2 - Medium,0.002019693609327078
+4,cat__static__urgency_3 - Low,0.005998039618134499
+4,cat__static__caller_id_Caller 1062,0.0001492509472882375
+4,cat__static__caller_id_Caller 1129,0.0036643636412918568
+4,cat__static__caller_id_Caller 1182,0.0024632590357214212
+4,cat__static__caller_id_Caller 1270,0.0
+4,cat__static__caller_id_Caller 1441,0.00034909971873275936
+4,cat__static__caller_id_Caller 1517,0.00013456068700179458
+4,cat__static__caller_id_Caller 1519,0.0
+4,cat__static__caller_id_Caller 1531,0.0
+4,cat__static__caller_id_Caller 1546,0.0008284499635919929
+4,cat__static__caller_id_Caller 156,0.0
+4,cat__static__caller_id_Caller 1904,0.009587240405380726
+4,cat__static__caller_id_Caller 203,0.0011336274910718203
+4,cat__static__caller_id_Caller 225,0.00014598690904676914
+4,cat__static__caller_id_Caller 2377,0.0008468854357488453
+4,cat__static__caller_id_Caller 2416,1.4725666005688254e-05
+4,cat__static__caller_id_Caller 2435,0.0
+4,cat__static__caller_id_Caller 2471,6.696936907246709e-05
+4,cat__static__caller_id_Caller 2691,0.00017605687025934458
+4,cat__static__caller_id_Caller 298,0.0
+4,cat__static__caller_id_Caller 3038,0.0
+4,cat__static__caller_id_Caller 3081,0.0032020879443734884
+4,cat__static__caller_id_Caller 3136,0.0
+4,cat__static__caller_id_Caller 3160,0.00033569600782357156
+4,cat__static__caller_id_Caller 318,0.0026242495514452457
+4,cat__static__caller_id_Caller 3329,0.0001455613091820851
+4,cat__static__caller_id_Caller 337,0.0006991785485297441
+4,cat__static__caller_id_Caller 3388,0.0
+4,cat__static__caller_id_Caller 3479,0.00012688389688264579
+4,cat__static__caller_id_Caller 3763,0.000860337691847235
+4,cat__static__caller_id_Caller 3933,0.0
+4,cat__static__caller_id_Caller 3986,0.0003790982882492244
+4,cat__static__caller_id_Caller 4316,0.0
+4,cat__static__caller_id_Caller 4414,0.0
+4,cat__static__caller_id_Caller 4475,0.0002725546946749091
+4,cat__static__caller_id_Caller 4514,4.46991398348473e-05
+4,cat__static__caller_id_Caller 4710,0.0005193632678128779
+4,cat__static__caller_id_Caller 4893,0.0013242911081761122
+4,cat__static__caller_id_Caller 501,0.0
+4,cat__static__caller_id_Caller 5093,0.0
+4,cat__static__caller_id_Caller 512,0.0
+4,cat__static__caller_id_Caller 5368,0.0
+4,cat__static__caller_id_Caller 671,0.0
+4,cat__static__caller_id_Caller 68,0.00023003834940027446
+4,cat__static__caller_id_Caller 685,4.8215839342447e-05
+4,cat__static__caller_id_Caller 723,0.0002763152006082237
+4,cat__static__caller_id_Caller 92,0.0
+4,cat__static__caller_id_Caller 920,0.0
+4,cat__static__caller_id_Caller 93,0.0008200329029932618
+4,cat__static__caller_id_Caller 944,0.0016715015517547727
+4,cat__static__caller_id_infrequent_sklearn,0.0021252771839499474
+4,cat__static__opened_by_Opened by  108,0.0007210933254100382
+4,cat__static__opened_by_Opened by  131,0.019005728885531425
+4,cat__static__opened_by_Opened by  168,0.0013291180366650224
+4,cat__static__opened_by_Opened by  17,0.023320533335208893
+4,cat__static__opened_by_Opened by  174,0.0
+4,cat__static__opened_by_Opened by  180,0.003206430934369564
+4,cat__static__opened_by_Opened by  20,0.0001506045664427802
+4,cat__static__opened_by_Opened by  221,0.001976446248590946
+4,cat__static__opened_by_Opened by  228,0.0
+4,cat__static__opened_by_Opened by  239,0.0011084032012149692
+4,cat__static__opened_by_Opened by  24,0.007882810197770596
+4,cat__static__opened_by_Opened by  240,0.0
+4,cat__static__opened_by_Opened by  242,0.0
+4,cat__static__opened_by_Opened by  247,0.0012971743708476424
+4,cat__static__opened_by_Opened by  257,0.0
+4,cat__static__opened_by_Opened by  267,0.0
+4,cat__static__opened_by_Opened by  301,0.0014011819148436189
+4,cat__static__opened_by_Opened by  305,0.0005140293505974114
+4,cat__static__opened_by_Opened by  325,0.0006362519925460219
+4,cat__static__opened_by_Opened by  360,0.001097403815947473
+4,cat__static__opened_by_Opened by  381,0.0
+4,cat__static__opened_by_Opened by  386,0.002064073458313942
+4,cat__static__opened_by_Opened by  390,0.00594979478046298
+4,cat__static__opened_by_Opened by  397,0.03888983651995659
+4,cat__static__opened_by_Opened by  40,0.0015641840873286128
+4,cat__static__opened_by_Opened by  402,0.00011351665307302028
+4,cat__static__opened_by_Opened by  433,2.2132291633170098e-05
+4,cat__static__opened_by_Opened by  44,0.0002690160181373358
+4,cat__static__opened_by_Opened by  443,0.0004570062446873635
+4,cat__static__opened_by_Opened by  444,0.0
+4,cat__static__opened_by_Opened by  460,8.696966688148677e-05
+4,cat__static__opened_by_Opened by  463,0.0006057306891307235
+4,cat__static__opened_by_Opened by  468,0.0
+4,cat__static__opened_by_Opened by  47,6.87435021973215e-05
+4,cat__static__opened_by_Opened by  500,0.0009558716556057334
+4,cat__static__opened_by_Opened by  501,0.0006145357619971037
+4,cat__static__opened_by_Opened by  512,0.0018915681866928935
+4,cat__static__opened_by_Opened by  536,0.0009025612380355597
+4,cat__static__opened_by_Opened by  55,0.0029533205088227987
+4,cat__static__opened_by_Opened by  58,0.0010892879217863083
+4,cat__static__opened_by_Opened by  59,0.0032135858200490475
+4,cat__static__opened_by_Opened by  62,0.014111556112766266
+4,cat__static__opened_by_Opened by  70,9.108759695664048e-05
+4,cat__static__opened_by_Opened by  8,0.0016937026521191
+4,cat__static__opened_by_Opened by  9,0.0004731328517664224
+4,cat__static__opened_by_Opened by  94,0.0
+4,cat__static__opened_by___MISSING__,0.0022036097943782806
+4,cat__static__opened_by_infrequent_sklearn,0.003225668566301465
+4,cat__static__sys_created_by_Created by 10,0.004345102701336145
+4,cat__static__sys_created_by_Created by 101,0.0
+4,cat__static__sys_created_by_Created by 107,0.00364120420999825
+4,cat__static__sys_created_by_Created by 108,0.0
+4,cat__static__sys_created_by_Created by 109,0.000693822861649096
+4,cat__static__sys_created_by_Created by 113,0.0
+4,cat__static__sys_created_by_Created by 114,0.0
+4,cat__static__sys_created_by_Created by 12,0.0
+4,cat__static__sys_created_by_Created by 120,0.0008339997148141265
+4,cat__static__sys_created_by_Created by 129,0.001870919018983841
+4,cat__static__sys_created_by_Created by 13,0.014453904703259468
+4,cat__static__sys_created_by_Created by 130,0.0052988361567258835
+4,cat__static__sys_created_by_Created by 140,0.00011355782044120133
+4,cat__static__sys_created_by_Created by 158,0.0
+4,cat__static__sys_created_by_Created by 167,0.0005275215371511877
+4,cat__static__sys_created_by_Created by 169,1.110595439968165e-05
+4,cat__static__sys_created_by_Created by 171,0.0005819632788188756
+4,cat__static__sys_created_by_Created by 172,0.00011808158888015896
+4,cat__static__sys_created_by_Created by 18,0.0005840169033035636
+4,cat__static__sys_created_by_Created by 188,0.0
+4,cat__static__sys_created_by_Created by 190,0.0
+4,cat__static__sys_created_by_Created by 192,7.262094732141122e-05
+4,cat__static__sys_created_by_Created by 193,0.0
+4,cat__static__sys_created_by_Created by 199,0.0
+4,cat__static__sys_created_by_Created by 20,0.0010019403416663408
+4,cat__static__sys_created_by_Created by 202,0.0
+4,cat__static__sys_created_by_Created by 216,0.004530256614089012
+4,cat__static__sys_created_by_Created by 217,3.0337530915858224e-05
+4,cat__static__sys_created_by_Created by 221,0.0
+4,cat__static__sys_created_by_Created by 23,0.0
+4,cat__static__sys_created_by_Created by 233,7.194203499238938e-05
+4,cat__static__sys_created_by_Created by 25,0.0
+4,cat__static__sys_created_by_Created by 30,0.0005522347055375576
+4,cat__static__sys_created_by_Created by 31,3.250319423386827e-05
+4,cat__static__sys_created_by_Created by 33,0.008524258621037006
+4,cat__static__sys_created_by_Created by 34,0.00044007744872942567
+4,cat__static__sys_created_by_Created by 45,0.0013111080043017864
+4,cat__static__sys_created_by_Created by 47,0.0
+4,cat__static__sys_created_by_Created by 5,0.0
+4,cat__static__sys_created_by_Created by 52,0.002392705762758851
+4,cat__static__sys_created_by_Created by 6,0.0012676045298576355
+4,cat__static__sys_created_by_Created by 62,0.012163427658379078
+4,cat__static__sys_created_by_Created by 79,0.0
+4,cat__static__sys_created_by_Created by 81,0.002019330859184265
+4,cat__static__sys_created_by_Created by 89,0.001626454177312553
+4,cat__static__sys_created_by_Created by 98,0.004683675244450569
+4,cat__static__sys_created_by___MISSING__,0.02135227993130684
+4,cat__static__sys_created_by_infrequent_sklearn,0.0013047733809798956
+4,cat__static__notify_Do Not Notify,0.0
+4,cat__static__notify_Send Email,0.0
+4,cat__dyn_cat__activity_Active,0.0326765738427639
+4,cat__dyn_cat__activity_Awaiting Problem,0.0
+4,cat__dyn_cat__activity_Awaiting User Info,0.054003551602363586
+4,cat__dyn_cat__activity_New,0.0014995875535532832
+4,cat__dyn_cat__activity_infrequent_sklearn,0.0
+4,cat__dyn_cat__activity_prev_Active,0.0019859359599649906
+4,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+4,cat__dyn_cat__activity_prev_Awaiting User Info,0.007416506297886372
+4,cat__dyn_cat__activity_prev_New,0.0010394765995442867
+4,cat__dyn_cat__activity_prev___MISSING__,0.0
+4,cat__dyn_cat__resource_Group 10,0.010192678309977055
+4,cat__dyn_cat__resource_Group 12,0.005866692867130041
+4,cat__dyn_cat__resource_Group 15,0.0004479711933527142
+4,cat__dyn_cat__resource_Group 19,0.00031592935556545854
+4,cat__dyn_cat__resource_Group 20,0.025344382971525192
+4,cat__dyn_cat__resource_Group 21,0.0
+4,cat__dyn_cat__resource_Group 22,0.00607414310798049
+4,cat__dyn_cat__resource_Group 23,0.035306718200445175
+4,cat__dyn_cat__resource_Group 24,0.0386556014418602
+4,cat__dyn_cat__resource_Group 25,0.0033882816787809134
+4,cat__dyn_cat__resource_Group 27,0.018001887947320938
+4,cat__dyn_cat__resource_Group 28,0.01299925334751606
+4,cat__dyn_cat__resource_Group 29,0.010583191178739071
+4,cat__dyn_cat__resource_Group 3,0.0007506701513193548
+4,cat__dyn_cat__resource_Group 30,0.002516605192795396
+4,cat__dyn_cat__resource_Group 31,0.00023994865478016436
+4,cat__dyn_cat__resource_Group 33,0.0003254460170865059
+4,cat__dyn_cat__resource_Group 34,0.0002608435461297631
+4,cat__dyn_cat__resource_Group 37,0.011143508367240429
+4,cat__dyn_cat__resource_Group 39,0.02555033378303051
+4,cat__dyn_cat__resource_Group 46,0.00023399612109642476
+4,cat__dyn_cat__resource_Group 47,0.0
+4,cat__dyn_cat__resource_Group 48,0.004043983295559883
+4,cat__dyn_cat__resource_Group 49,0.0
+4,cat__dyn_cat__resource_Group 5,0.0
+4,cat__dyn_cat__resource_Group 50,0.0
+4,cat__dyn_cat__resource_Group 51,0.00039892233326099813
+4,cat__dyn_cat__resource_Group 53,0.0
+4,cat__dyn_cat__resource_Group 54,0.004107438959181309
+4,cat__dyn_cat__resource_Group 55,0.0001366489304928109
+4,cat__dyn_cat__resource_Group 56,0.0
+4,cat__dyn_cat__resource_Group 57,0.009313833899796009
+4,cat__dyn_cat__resource_Group 58,0.004830885212868452
+4,cat__dyn_cat__resource_Group 6,0.00057062110863626
+4,cat__dyn_cat__resource_Group 62,0.0012483480386435986
+4,cat__dyn_cat__resource_Group 64,0.0003245386469643563
+4,cat__dyn_cat__resource_Group 65,0.00017147815378848463
+4,cat__dyn_cat__resource_Group 66,0.002518855966627598
+4,cat__dyn_cat__resource_Group 69,3.2852716685738415e-05
+4,cat__dyn_cat__resource_Group 70,0.03160557523369789
+4,cat__dyn_cat__resource_Group 72,0.033536363393068314
+4,cat__dyn_cat__resource_Group 73,0.010240070521831512
+4,cat__dyn_cat__resource_Group 74,0.00039189611561596394
+4,cat__dyn_cat__resource_Group 75,0.0009307911386713386
+4,cat__dyn_cat__resource_Group 76,0.012035781517624855
+4,cat__dyn_cat__resource_Group 77,0.0
+4,cat__dyn_cat__resource_Group 81,0.0
+4,cat__dyn_cat__resource_Group 9,0.016613762825727463
+4,cat__dyn_cat__resource___MISSING__,0.05187242850661278
+4,cat__dyn_cat__resource_infrequent_sklearn,0.0003609917184803635
+5,num__num__k,0.0027153820265084505
+5,num__num__n_distinct_activities,0.0162484273314476
+5,num__num__n_distinct_resources,0.01399252563714981
+5,num__num__n_resource_changes,0.01559295505285263
+5,num__num__n_activity_repeats,0.005809355992823839
+5,num__num__n_waiting_events,0.006516702938824892
+5,num__num__frac_waiting,0.005357526708394289
+5,num__num__last_gap_h,0.007472306024283171
+5,num__num__max_gap_h,0.43808770179748535
+5,num__num__elapsed_h,1.14911687374115
+5,num__num__log_elapsed_h,0.2324998527765274
+5,num__num__mean_gap_h,0.08683110028505325
+5,num__num__hour_of_k,0.038489922881126404
+5,num__num__dow_of_k,0.0418553352355957
+5,num__num__arrivals_24h,0.13013477623462677
+5,num__num__arrivals_7d,0.5667374134063721
+5,num__static__opened_hour,0.06396587938070297
+5,num__static__opened_dow,0.18674905598163605
+5,num__static__opened_is_offhours,0.004508634097874165
+5,num__dyn_num__reassignment_count,0.024689223617315292
+5,num__dyn_num__reopen_count,0.0011190095683559775
+5,num__dyn_num__sys_mod_count,0.0042141941376030445
+5,num__dyn_cat__assigned_to_known,0.04410145804286003
+5,num__static__knowledge,0.2194252610206604
+5,num__static__u_priority_confirmation,0.0
+5,num__static__cmdb_ci_known,7.942455704323947e-05
+5,cat__dyn_cat__priority_1 - Critical,0.07158120721578598
+5,cat__dyn_cat__priority_2 - High,0.10908474773168564
+5,cat__dyn_cat__priority_3 - Moderate,0.07916196435689926
+5,cat__dyn_cat__priority_4 - Low,0.12451758235692978
+5,cat__static__category_Category 13,0.0013145095435902476
+5,cat__static__category_Category 17,2.4945486075012013e-05
+5,cat__static__category_Category 19,0.00013041526835877448
+5,cat__static__category_Category 20,0.006448162253946066
+5,cat__static__category_Category 22,0.0
+5,cat__static__category_Category 23,0.003396776271983981
+5,cat__static__category_Category 24,0.009009885601699352
+5,cat__static__category_Category 26,0.011442610062658787
+5,cat__static__category_Category 28,0.0013844019267708063
+5,cat__static__category_Category 32,0.0031470060348510742
+5,cat__static__category_Category 34,0.0011392398737370968
+5,cat__static__category_Category 35,7.344601908698678e-05
+5,cat__static__category_Category 37,0.004254496656358242
+5,cat__static__category_Category 38,1.687790427240543e-05
+5,cat__static__category_Category 40,0.0012991658877581358
+5,cat__static__category_Category 41,0.0
+5,cat__static__category_Category 42,0.004013971891254187
+5,cat__static__category_Category 43,0.0030035939998924732
+5,cat__static__category_Category 44,0.000897472957149148
+5,cat__static__category_Category 45,0.004684155341237783
+5,cat__static__category_Category 46,0.030642932280898094
+5,cat__static__category_Category 51,0.0010319934226572514
+5,cat__static__category_Category 53,0.0019231322221457958
+5,cat__static__category_Category 55,0.0001445757079636678
+5,cat__static__category_Category 57,0.01510827150195837
+5,cat__static__category_Category 61,0.004404851701110601
+5,cat__static__category_Category 63,0.0
+5,cat__static__category_Category 7,0.0
+5,cat__static__category_Category 8,0.0002892345073632896
+5,cat__static__category_Category 9,0.008276933804154396
+5,cat__static__category_infrequent_sklearn,0.002513899002224207
+5,cat__static__subcategory_Subcategory 103,0.0030842768028378487
+5,cat__static__subcategory_Subcategory 107,0.0
+5,cat__static__subcategory_Subcategory 114,0.0009920625016093254
+5,cat__static__subcategory_Subcategory 117,0.0016571799060329795
+5,cat__static__subcategory_Subcategory 123,0.0007781626773066819
+5,cat__static__subcategory_Subcategory 125,0.00010154842311749235
+5,cat__static__subcategory_Subcategory 130,6.646059773629531e-05
+5,cat__static__subcategory_Subcategory 134,7.146628195187077e-05
+5,cat__static__subcategory_Subcategory 135,0.001258566975593567
+5,cat__static__subcategory_Subcategory 150,0.0035519420634955168
+5,cat__static__subcategory_Subcategory 154,2.502142706362065e-05
+5,cat__static__subcategory_Subcategory 16,0.00015530746895819902
+5,cat__static__subcategory_Subcategory 163,0.0051162270829081535
+5,cat__static__subcategory_Subcategory 164,0.0016781528247520328
+5,cat__static__subcategory_Subcategory 168,0.0003039026923943311
+5,cat__static__subcategory_Subcategory 170,0.0030032461509108543
+5,cat__static__subcategory_Subcategory 174,0.013250256888568401
+5,cat__static__subcategory_Subcategory 175,0.022462211549282074
+5,cat__static__subcategory_Subcategory 183,0.0011063800193369389
+5,cat__static__subcategory_Subcategory 185,0.006482441443949938
+5,cat__static__subcategory_Subcategory 200,0.0020954697392880917
+5,cat__static__subcategory_Subcategory 202,5.983425216982141e-05
+5,cat__static__subcategory_Subcategory 215,0.0
+5,cat__static__subcategory_Subcategory 220,0.004776532296091318
+5,cat__static__subcategory_Subcategory 223,0.005794488359242678
+5,cat__static__subcategory_Subcategory 224,0.00035355176078155637
+5,cat__static__subcategory_Subcategory 229,0.001699051819741726
+5,cat__static__subcategory_Subcategory 251,0.0015962909674271941
+5,cat__static__subcategory_Subcategory 271,6.843947630841285e-05
+5,cat__static__subcategory_Subcategory 275,0.0007497441256418824
+5,cat__static__subcategory_Subcategory 28,0.0012148515088483691
+5,cat__static__subcategory_Subcategory 289,0.00022249789617490023
+5,cat__static__subcategory_Subcategory 29,0.00010041693894891068
+5,cat__static__subcategory_Subcategory 3,0.004254408646374941
+5,cat__static__subcategory_Subcategory 300,0.007281152531504631
+5,cat__static__subcategory_Subcategory 302,0.0
+5,cat__static__subcategory_Subcategory 303,0.001435945276170969
+5,cat__static__subcategory_Subcategory 31,5.4757016187068075e-05
+5,cat__static__subcategory_Subcategory 36,0.0010583755793049932
+5,cat__static__subcategory_Subcategory 43,0.0012729433365166187
+5,cat__static__subcategory_Subcategory 44,0.0055664777755737305
+5,cat__static__subcategory_Subcategory 54,0.0001738165010465309
+5,cat__static__subcategory_Subcategory 60,0.00010713726078392938
+5,cat__static__subcategory_Subcategory 69,0.004982692189514637
+5,cat__static__subcategory_Subcategory 75,0.0014015482738614082
+5,cat__static__subcategory_Subcategory 80,0.005239156074821949
+5,cat__static__subcategory_Subcategory 82,0.0019568530842661858
+5,cat__static__subcategory_Subcategory 9,0.004226979799568653
+5,cat__static__subcategory_Subcategory 94,0.00026852742303162813
+5,cat__static__subcategory_infrequent_sklearn,0.003834865754470229
+5,cat__static__u_symptom_Symptom 10,0.009264804422855377
+5,cat__static__u_symptom_Symptom 102,0.0
+5,cat__static__u_symptom_Symptom 105,0.0
+5,cat__static__u_symptom_Symptom 114,9.137900633504614e-05
+5,cat__static__u_symptom_Symptom 115,0.00264376075938344
+5,cat__static__u_symptom_Symptom 116,0.00391363212838769
+5,cat__static__u_symptom_Symptom 117,0.0003024756151717156
+5,cat__static__u_symptom_Symptom 118,0.00011830157018266618
+5,cat__static__u_symptom_Symptom 119,0.0024344217963516712
+5,cat__static__u_symptom_Symptom 120,0.0037866607308387756
+5,cat__static__u_symptom_Symptom 127,0.0013015246950089931
+5,cat__static__u_symptom_Symptom 13,0.0
+5,cat__static__u_symptom_Symptom 134,0.0005996536347083747
+5,cat__static__u_symptom_Symptom 208,0.0016550378641113639
+5,cat__static__u_symptom_Symptom 232,0.0009311435278505087
+5,cat__static__u_symptom_Symptom 296,0.0018437758553773165
+5,cat__static__u_symptom_Symptom 382,0.00012054793478455395
+5,cat__static__u_symptom_Symptom 387,0.00012813085049856454
+5,cat__static__u_symptom_Symptom 4,0.0005187173373997211
+5,cat__static__u_symptom_Symptom 444,0.0
+5,cat__static__u_symptom_Symptom 454,0.00109455909114331
+5,cat__static__u_symptom_Symptom 455,5.266885636956431e-05
+5,cat__static__u_symptom_Symptom 458,0.006015252321958542
+5,cat__static__u_symptom_Symptom 462,3.95996066799853e-05
+5,cat__static__u_symptom_Symptom 470,0.0006593769649043679
+5,cat__static__u_symptom_Symptom 471,5.580779179581441e-05
+5,cat__static__u_symptom_Symptom 473,0.0006859804852865636
+5,cat__static__u_symptom_Symptom 491,0.006598964333534241
+5,cat__static__u_symptom_Symptom 494,0.0001175064971903339
+5,cat__static__u_symptom_Symptom 5,0.0
+5,cat__static__u_symptom_Symptom 506,0.0
+5,cat__static__u_symptom_Symptom 509,0.0003083432966377586
+5,cat__static__u_symptom_Symptom 517,0.008816656656563282
+5,cat__static__u_symptom_Symptom 532,0.0007255764794535935
+5,cat__static__u_symptom_Symptom 534,0.017528953030705452
+5,cat__static__u_symptom_Symptom 54,0.0006413340452127159
+5,cat__static__u_symptom_Symptom 571,0.001901377341710031
+5,cat__static__u_symptom_Symptom 573,0.0012459750287234783
+5,cat__static__u_symptom_Symptom 580,0.0005956165841780603
+5,cat__static__u_symptom_Symptom 592,0.00012399676779750735
+5,cat__static__u_symptom_Symptom 6,0.0005686887889169157
+5,cat__static__u_symptom_Symptom 607,7.558149809483439e-05
+5,cat__static__u_symptom_Symptom 65,0.0
+5,cat__static__u_symptom_Symptom 70,0.00022669810277875513
+5,cat__static__u_symptom_Symptom 8,6.057672726456076e-05
+5,cat__static__u_symptom_Symptom 86,0.0
+5,cat__static__u_symptom_Symptom 87,0.0007851735572330654
+5,cat__static__u_symptom_Symptom 9,0.0033838795498013496
+5,cat__static__u_symptom___MISSING__,0.015550288371741772
+5,cat__static__u_symptom_infrequent_sklearn,0.02664664015173912
+5,cat__static__contact_type_Email,0.0
+5,cat__static__contact_type_Phone,0.0
+5,cat__static__location_Location 108,0.0033324400428682566
+5,cat__static__location_Location 111,0.001210076385177672
+5,cat__static__location_Location 113,8.231458923546597e-05
+5,cat__static__location_Location 125,8.226681529777125e-06
+5,cat__static__location_Location 128,0.0005255145370028913
+5,cat__static__location_Location 135,0.0020975167863070965
+5,cat__static__location_Location 136,0.0012693422613665462
+5,cat__static__location_Location 143,0.005282527767121792
+5,cat__static__location_Location 15,4.033672666992061e-05
+5,cat__static__location_Location 161,0.028638742864131927
+5,cat__static__location_Location 165,0.0
+5,cat__static__location_Location 173,0.005567778833210468
+5,cat__static__location_Location 179,0.003388900775462389
+5,cat__static__location_Location 18,0.0006796685047447681
+5,cat__static__location_Location 188,0.00029908056603744626
+5,cat__static__location_Location 197,4.973946943209739e-06
+5,cat__static__location_Location 199,0.0
+5,cat__static__location_Location 204,0.01573381945490837
+5,cat__static__location_Location 209,0.0
+5,cat__static__location_Location 210,0.00017340108752250671
+5,cat__static__location_Location 229,0.0
+5,cat__static__location_Location 242,0.0
+5,cat__static__location_Location 245,8.480918768327683e-05
+5,cat__static__location_Location 34,0.0008592602680437267
+5,cat__static__location_Location 35,0.0002012508048210293
+5,cat__static__location_Location 36,0.0006086787907406688
+5,cat__static__location_Location 37,0.0009233389282599092
+5,cat__static__location_Location 38,0.000408292340580374
+5,cat__static__location_Location 39,0.0
+5,cat__static__location_Location 40,0.0
+5,cat__static__location_Location 41,0.0003672247985377908
+5,cat__static__location_Location 42,0.0034570302814245224
+5,cat__static__location_Location 43,0.0003298228548374027
+5,cat__static__location_Location 44,0.0
+5,cat__static__location_Location 45,9.587166459823493e-06
+5,cat__static__location_Location 46,0.0006804160657338798
+5,cat__static__location_Location 47,0.0
+5,cat__static__location_Location 51,0.0034897851292043924
+5,cat__static__location_Location 54,0.0005344643723219633
+5,cat__static__location_Location 55,0.0003681628732010722
+5,cat__static__location_Location 56,0.0
+5,cat__static__location_Location 69,0.002132984111085534
+5,cat__static__location_Location 70,0.0020348767284303904
+5,cat__static__location_Location 71,0.0007786115747876465
+5,cat__static__location_Location 82,0.00034882593899965286
+5,cat__static__location_Location 91,0.0003433768870308995
+5,cat__static__location_Location 93,0.010878938250243664
+5,cat__static__location_Location 96,0.0015155930304899812
+5,cat__static__location_Location 97,0.0005023045814596117
+5,cat__static__location_infrequent_sklearn,0.013466610573232174
+5,cat__static__impact_1 - High,0.0016969703137874603
+5,cat__static__impact_2 - Medium,0.004132114816457033
+5,cat__static__impact_3 - Low,0.00613139383494854
+5,cat__static__urgency_1 - High,0.0027413577772676945
+5,cat__static__urgency_2 - Medium,0.002103449311107397
+5,cat__static__urgency_3 - Low,0.006925305817276239
+5,cat__static__caller_id_Caller 1062,0.00014846296107862145
+5,cat__static__caller_id_Caller 1129,0.0037417442072182894
+5,cat__static__caller_id_Caller 1182,0.0024537229910492897
+5,cat__static__caller_id_Caller 1270,0.0
+5,cat__static__caller_id_Caller 1441,7.422902126563713e-05
+5,cat__static__caller_id_Caller 1517,0.00012930636876262724
+5,cat__static__caller_id_Caller 1519,0.0
+5,cat__static__caller_id_Caller 1531,0.0
+5,cat__static__caller_id_Caller 1546,0.0006424739840440452
+5,cat__static__caller_id_Caller 156,0.0
+5,cat__static__caller_id_Caller 1904,0.009501585736870766
+5,cat__static__caller_id_Caller 203,0.0011335407616570592
+5,cat__static__caller_id_Caller 225,0.00014487087901216
+5,cat__static__caller_id_Caller 2377,0.0029159486293792725
+5,cat__static__caller_id_Caller 2416,1.0432820999994874e-05
+5,cat__static__caller_id_Caller 2435,0.0
+5,cat__static__caller_id_Caller 2471,9.088551450986415e-05
+5,cat__static__caller_id_Caller 2691,0.00017459697846788913
+5,cat__static__caller_id_Caller 298,0.0
+5,cat__static__caller_id_Caller 3038,0.0
+5,cat__static__caller_id_Caller 3081,0.0016539619537070394
+5,cat__static__caller_id_Caller 3136,0.0
+5,cat__static__caller_id_Caller 3160,0.0003367622848600149
+5,cat__static__caller_id_Caller 318,0.0013399060117080808
+5,cat__static__caller_id_Caller 3329,0.00014459174417424947
+5,cat__static__caller_id_Caller 337,0.0006951518589630723
+5,cat__static__caller_id_Caller 3388,0.0
+5,cat__static__caller_id_Caller 3479,0.00012710665760096163
+5,cat__static__caller_id_Caller 3763,0.0008674779674038291
+5,cat__static__caller_id_Caller 3933,0.0
+5,cat__static__caller_id_Caller 3986,0.0003830742498394102
+5,cat__static__caller_id_Caller 4316,0.0
+5,cat__static__caller_id_Caller 4414,0.0
+5,cat__static__caller_id_Caller 4475,0.0003321957483422011
+5,cat__static__caller_id_Caller 4514,5.139806307852268e-05
+5,cat__static__caller_id_Caller 4710,0.0012713425094261765
+5,cat__static__caller_id_Caller 4893,0.0013241204433143139
+5,cat__static__caller_id_Caller 501,0.0
+5,cat__static__caller_id_Caller 5093,0.0
+5,cat__static__caller_id_Caller 512,0.0
+5,cat__static__caller_id_Caller 5368,0.0
+5,cat__static__caller_id_Caller 671,0.0
+5,cat__static__caller_id_Caller 68,0.00023387177498079836
+5,cat__static__caller_id_Caller 685,4.8171859816648066e-05
+5,cat__static__caller_id_Caller 723,0.0002585479523986578
+5,cat__static__caller_id_Caller 92,0.0
+5,cat__static__caller_id_Caller 920,0.0
+5,cat__static__caller_id_Caller 93,0.0029656109400093555
+5,cat__static__caller_id_Caller 944,0.0003085318021476269
+5,cat__static__caller_id_infrequent_sklearn,0.0022782229352742434
+5,cat__static__opened_by_Opened by  108,0.0009948641527444124
+5,cat__static__opened_by_Opened by  131,0.02016885206103325
+5,cat__static__opened_by_Opened by  168,0.00045985582983121276
+5,cat__static__opened_by_Opened by  17,0.02690686471760273
+5,cat__static__opened_by_Opened by  174,0.0
+5,cat__static__opened_by_Opened by  180,0.0030145009513944387
+5,cat__static__opened_by_Opened by  20,0.00014699781604576856
+5,cat__static__opened_by_Opened by  221,0.002046353882178664
+5,cat__static__opened_by_Opened by  228,0.0
+5,cat__static__opened_by_Opened by  239,0.0006019370630383492
+5,cat__static__opened_by_Opened by  24,0.00608437554910779
+5,cat__static__opened_by_Opened by  240,0.0
+5,cat__static__opened_by_Opened by  242,0.0
+5,cat__static__opened_by_Opened by  247,0.0021467716433107853
+5,cat__static__opened_by_Opened by  257,0.0
+5,cat__static__opened_by_Opened by  267,0.0
+5,cat__static__opened_by_Opened by  301,0.0018237594049423933
+5,cat__static__opened_by_Opened by  305,0.0006583144422620535
+5,cat__static__opened_by_Opened by  325,0.0006143201608210802
+5,cat__static__opened_by_Opened by  360,0.0011047178413718939
+5,cat__static__opened_by_Opened by  381,0.0
+5,cat__static__opened_by_Opened by  386,0.0020747054368257523
+5,cat__static__opened_by_Opened by  390,0.006147014442831278
+5,cat__static__opened_by_Opened by  397,0.0448506698012352
+5,cat__static__opened_by_Opened by  40,0.0016581094823777676
+5,cat__static__opened_by_Opened by  402,9.207636321661994e-05
+5,cat__static__opened_by_Opened by  433,2.3130538465920836e-05
+5,cat__static__opened_by_Opened by  44,0.00027017618413083255
+5,cat__static__opened_by_Opened by  443,0.0004433134163264185
+5,cat__static__opened_by_Opened by  444,0.0
+5,cat__static__opened_by_Opened by  460,8.091724157566205e-05
+5,cat__static__opened_by_Opened by  463,0.00035827557439915836
+5,cat__static__opened_by_Opened by  468,0.0
+5,cat__static__opened_by_Opened by  47,5.1912142225774005e-05
+5,cat__static__opened_by_Opened by  500,0.000609174370765686
+5,cat__static__opened_by_Opened by  501,0.0012063811300322413
+5,cat__static__opened_by_Opened by  512,0.0005747654940932989
+5,cat__static__opened_by_Opened by  536,0.0009031949448399246
+5,cat__static__opened_by_Opened by  55,0.0035740917082875967
+5,cat__static__opened_by_Opened by  58,0.0009029970970004797
+5,cat__static__opened_by_Opened by  59,0.0033461665734648705
+5,cat__static__opened_by_Opened by  62,0.011704226955771446
+5,cat__static__opened_by_Opened by  70,4.316533886594698e-05
+5,cat__static__opened_by_Opened by  8,0.0016134093748405576
+5,cat__static__opened_by_Opened by  9,0.000466778437839821
+5,cat__static__opened_by_Opened by  94,0.0
+5,cat__static__opened_by___MISSING__,0.002055719029158354
+5,cat__static__opened_by_infrequent_sklearn,0.0013756498228758574
+5,cat__static__sys_created_by_Created by 10,0.003949862904846668
+5,cat__static__sys_created_by_Created by 101,0.0
+5,cat__static__sys_created_by_Created by 107,0.0025937671307474375
+5,cat__static__sys_created_by_Created by 108,0.0
+5,cat__static__sys_created_by_Created by 109,0.0007060029893182218
+5,cat__static__sys_created_by_Created by 113,0.0
+5,cat__static__sys_created_by_Created by 114,0.0
+5,cat__static__sys_created_by_Created by 12,0.0
+5,cat__static__sys_created_by_Created by 120,0.001961310626938939
+5,cat__static__sys_created_by_Created by 129,0.0017177205299958587
+5,cat__static__sys_created_by_Created by 13,0.012484725564718246
+5,cat__static__sys_created_by_Created by 130,0.002513081533834338
+5,cat__static__sys_created_by_Created by 140,0.00010144543193746358
+5,cat__static__sys_created_by_Created by 158,0.0
+5,cat__static__sys_created_by_Created by 167,0.0004988235887140036
+5,cat__static__sys_created_by_Created by 169,1.112488371290965e-05
+5,cat__static__sys_created_by_Created by 171,0.0007567908032797277
+5,cat__static__sys_created_by_Created by 172,0.00012084937770850956
+5,cat__static__sys_created_by_Created by 18,0.0005659745656885207
+5,cat__static__sys_created_by_Created by 188,0.0
+5,cat__static__sys_created_by_Created by 190,0.0
+5,cat__static__sys_created_by_Created by 192,6.568759999936447e-05
+5,cat__static__sys_created_by_Created by 193,0.0
+5,cat__static__sys_created_by_Created by 199,0.0
+5,cat__static__sys_created_by_Created by 20,0.0010673474753275514
+5,cat__static__sys_created_by_Created by 202,0.0
+5,cat__static__sys_created_by_Created by 216,0.003958557732403278
+5,cat__static__sys_created_by_Created by 217,2.260086876049172e-05
+5,cat__static__sys_created_by_Created by 221,0.0
+5,cat__static__sys_created_by_Created by 23,0.0
+5,cat__static__sys_created_by_Created by 233,7.49393439036794e-05
+5,cat__static__sys_created_by_Created by 25,0.0
+5,cat__static__sys_created_by_Created by 30,0.0006683499086648226
+5,cat__static__sys_created_by_Created by 31,3.5121964174322784e-05
+5,cat__static__sys_created_by_Created by 33,0.006988267879933119
+5,cat__static__sys_created_by_Created by 34,0.00041262409649789333
+5,cat__static__sys_created_by_Created by 45,0.002106965985149145
+5,cat__static__sys_created_by_Created by 47,0.0
+5,cat__static__sys_created_by_Created by 5,0.0
+5,cat__static__sys_created_by_Created by 52,0.0021668365225195885
+5,cat__static__sys_created_by_Created by 6,0.001388331176713109
+5,cat__static__sys_created_by_Created by 62,0.012014920823276043
+5,cat__static__sys_created_by_Created by 79,0.0
+5,cat__static__sys_created_by_Created by 81,0.001973432721570134
+5,cat__static__sys_created_by_Created by 89,0.0014746972592547536
+5,cat__static__sys_created_by_Created by 98,0.0044840979389846325
+5,cat__static__sys_created_by___MISSING__,0.024569043889641762
+5,cat__static__sys_created_by_infrequent_sklearn,0.0006753958878107369
+5,cat__static__notify_Do Not Notify,0.0
+5,cat__static__notify_Send Email,0.0
+5,cat__dyn_cat__activity_Active,0.029282739385962486
+5,cat__dyn_cat__activity_Awaiting Problem,0.0
+5,cat__dyn_cat__activity_Awaiting User Info,0.06793873012065887
+5,cat__dyn_cat__activity_New,0.001840010634623468
+5,cat__dyn_cat__activity_infrequent_sklearn,0.0
+5,cat__dyn_cat__activity_prev_Active,0.0013378448784351349
+5,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+5,cat__dyn_cat__activity_prev_Awaiting User Info,0.010559755377471447
+5,cat__dyn_cat__activity_prev_New,0.0012771047186106443
+5,cat__dyn_cat__activity_prev___MISSING__,0.0
+5,cat__dyn_cat__resource_Group 10,0.005757544189691544
+5,cat__dyn_cat__resource_Group 12,0.008261815644800663
+5,cat__dyn_cat__resource_Group 15,0.0004434883303474635
+5,cat__dyn_cat__resource_Group 19,0.00028765961178578436
+5,cat__dyn_cat__resource_Group 20,0.01977570541203022
+5,cat__dyn_cat__resource_Group 21,0.0
+5,cat__dyn_cat__resource_Group 22,0.005383225157856941
+5,cat__dyn_cat__resource_Group 23,0.039373818784952164
+5,cat__dyn_cat__resource_Group 24,0.045423246920108795
+5,cat__dyn_cat__resource_Group 25,0.0036034658551216125
+5,cat__dyn_cat__resource_Group 27,0.0197468064725399
+5,cat__dyn_cat__resource_Group 28,0.01630380004644394
+5,cat__dyn_cat__resource_Group 29,0.01087078545242548
+5,cat__dyn_cat__resource_Group 3,0.00021996867144480348
+5,cat__dyn_cat__resource_Group 30,0.003666526172310114
+5,cat__dyn_cat__resource_Group 31,0.000749280909076333
+5,cat__dyn_cat__resource_Group 33,0.0014386869734153152
+5,cat__dyn_cat__resource_Group 34,0.00034804033930413425
+5,cat__dyn_cat__resource_Group 37,0.007627782411873341
+5,cat__dyn_cat__resource_Group 39,0.02822381816804409
+5,cat__dyn_cat__resource_Group 46,0.00043416651897132397
+5,cat__dyn_cat__resource_Group 47,0.0
+5,cat__dyn_cat__resource_Group 48,0.0011019872035831213
+5,cat__dyn_cat__resource_Group 49,0.0
+5,cat__dyn_cat__resource_Group 5,0.0
+5,cat__dyn_cat__resource_Group 50,0.0
+5,cat__dyn_cat__resource_Group 51,0.00029234070098027587
+5,cat__dyn_cat__resource_Group 53,0.0
+5,cat__dyn_cat__resource_Group 54,0.003056600457057357
+5,cat__dyn_cat__resource_Group 55,0.0001452868600608781
+5,cat__dyn_cat__resource_Group 56,0.0
+5,cat__dyn_cat__resource_Group 57,0.006464810576289892
+5,cat__dyn_cat__resource_Group 58,0.003087554359808564
+5,cat__dyn_cat__resource_Group 6,0.00031781778670847416
+5,cat__dyn_cat__resource_Group 62,0.0017607153858989477
+5,cat__dyn_cat__resource_Group 64,0.00029976325458846986
+5,cat__dyn_cat__resource_Group 65,0.00013311492512002587
+5,cat__dyn_cat__resource_Group 66,0.003582059172913432
+5,cat__dyn_cat__resource_Group 69,3.689688310259953e-05
+5,cat__dyn_cat__resource_Group 70,0.030747411772608757
+5,cat__dyn_cat__resource_Group 72,0.0364978201687336
+5,cat__dyn_cat__resource_Group 73,0.00907720997929573
+5,cat__dyn_cat__resource_Group 74,0.0006714212941005826
+5,cat__dyn_cat__resource_Group 75,0.002556266263127327
+5,cat__dyn_cat__resource_Group 76,0.02103022299706936
+5,cat__dyn_cat__resource_Group 77,0.0
+5,cat__dyn_cat__resource_Group 81,0.0
+5,cat__dyn_cat__resource_Group 9,0.01025801058858633
+5,cat__dyn_cat__resource___MISSING__,0.047750938683748245
+5,cat__dyn_cat__resource_infrequent_sklearn,0.00042645016219466925
+6,num__num__k,0.0034939851611852646
+6,num__num__n_distinct_activities,0.016750257462263107
+6,num__num__n_distinct_resources,0.0168941468000412
+6,num__num__n_resource_changes,0.01635049097239971
+6,num__num__n_activity_repeats,0.006034309975802898
+6,num__num__n_waiting_events,0.0066232504323124886
+6,num__num__frac_waiting,0.007186607923358679
+6,num__num__last_gap_h,0.008448152802884579
+6,num__num__max_gap_h,0.472402960062027
+6,num__num__elapsed_h,1.3611873388290405
+6,num__num__log_elapsed_h,0.27176693081855774
+6,num__num__mean_gap_h,0.08537746220827103
+6,num__num__hour_of_k,0.039476774632930756
+6,num__num__dow_of_k,0.04521620646119118
+6,num__num__arrivals_24h,0.13799987733364105
+6,num__num__arrivals_7d,0.5869616866111755
+6,num__static__opened_hour,0.060236211866140366
+6,num__static__opened_dow,0.16679109632968903
+6,num__static__opened_is_offhours,0.005572335794568062
+6,num__dyn_num__reassignment_count,0.02946344204246998
+6,num__dyn_num__reopen_count,0.0012322358088567853
+6,num__dyn_num__sys_mod_count,0.0051043350249528885
+6,num__dyn_cat__assigned_to_known,0.04304581508040428
+6,num__static__knowledge,0.20713907480239868
+6,num__static__u_priority_confirmation,0.0
+6,num__static__cmdb_ci_known,8.395710756303743e-05
+6,cat__dyn_cat__priority_1 - Critical,0.08193536102771759
+6,cat__dyn_cat__priority_2 - High,0.1549021303653717
+6,cat__dyn_cat__priority_3 - Moderate,0.09227070957422256
+6,cat__dyn_cat__priority_4 - Low,0.13432008028030396
+6,cat__static__category_Category 13,0.002023308537900448
+6,cat__static__category_Category 17,2.4271621441585012e-05
+6,cat__static__category_Category 19,6.608776311622933e-05
+6,cat__static__category_Category 20,0.004981896374374628
+6,cat__static__category_Category 22,0.0
+6,cat__static__category_Category 23,0.0030507915653288364
+6,cat__static__category_Category 24,0.012029089033603668
+6,cat__static__category_Category 26,0.01113962009549141
+6,cat__static__category_Category 28,0.0008447515428997576
+6,cat__static__category_Category 32,0.0027563192415982485
+6,cat__static__category_Category 34,0.0011797643965110183
+6,cat__static__category_Category 35,7.137269858503714e-05
+6,cat__static__category_Category 37,0.004275149200111628
+6,cat__static__category_Category 38,2.295417471032124e-05
+6,cat__static__category_Category 40,0.0015528382500633597
+6,cat__static__category_Category 41,0.0
+6,cat__static__category_Category 42,0.005110427737236023
+6,cat__static__category_Category 43,0.0023007839918136597
+6,cat__static__category_Category 44,0.0011371640721336007
+6,cat__static__category_Category 45,0.004818265326321125
+6,cat__static__category_Category 46,0.03134958818554878
+6,cat__static__category_Category 51,0.0016498634358868003
+6,cat__static__category_Category 53,0.0020139538682997227
+6,cat__static__category_Category 55,0.00015880887804087251
+6,cat__static__category_Category 57,0.0174363125115633
+6,cat__static__category_Category 61,0.003955051768571138
+6,cat__static__category_Category 63,0.0
+6,cat__static__category_Category 7,0.0
+6,cat__static__category_Category 8,0.00027340761153027415
+6,cat__static__category_Category 9,0.0117269242182374
+6,cat__static__category_infrequent_sklearn,0.002938353456556797
+6,cat__static__subcategory_Subcategory 103,0.004837098531424999
+6,cat__static__subcategory_Subcategory 107,0.0
+6,cat__static__subcategory_Subcategory 114,0.0012714990880340338
+6,cat__static__subcategory_Subcategory 117,0.0016856661532074213
+6,cat__static__subcategory_Subcategory 123,0.0004775790439452976
+6,cat__static__subcategory_Subcategory 125,0.0001528360298834741
+6,cat__static__subcategory_Subcategory 130,8.73519602464512e-05
+6,cat__static__subcategory_Subcategory 134,5.218543446972035e-05
+6,cat__static__subcategory_Subcategory 135,0.002172567183151841
+6,cat__static__subcategory_Subcategory 150,0.006174623500555754
+6,cat__static__subcategory_Subcategory 154,3.4846700145862997e-05
+6,cat__static__subcategory_Subcategory 16,0.00014572385407518595
+6,cat__static__subcategory_Subcategory 163,0.0036441683769226074
+6,cat__static__subcategory_Subcategory 164,0.0019940200727432966
+6,cat__static__subcategory_Subcategory 168,0.00017938610108103603
+6,cat__static__subcategory_Subcategory 170,0.002901949919760227
+6,cat__static__subcategory_Subcategory 174,0.014425364322960377
+6,cat__static__subcategory_Subcategory 175,0.022938167676329613
+6,cat__static__subcategory_Subcategory 183,0.0011002823011949658
+6,cat__static__subcategory_Subcategory 185,0.007055437192320824
+6,cat__static__subcategory_Subcategory 200,0.0020534773357212543
+6,cat__static__subcategory_Subcategory 202,5.772805889137089e-05
+6,cat__static__subcategory_Subcategory 215,0.0
+6,cat__static__subcategory_Subcategory 220,0.004336618352681398
+6,cat__static__subcategory_Subcategory 223,0.004736932460218668
+6,cat__static__subcategory_Subcategory 224,0.0003515507560223341
+6,cat__static__subcategory_Subcategory 229,0.0016423165798187256
+6,cat__static__subcategory_Subcategory 251,0.0009875447722151875
+6,cat__static__subcategory_Subcategory 271,9.302212856709957e-05
+6,cat__static__subcategory_Subcategory 275,0.00042772828601300716
+6,cat__static__subcategory_Subcategory 28,0.0011872043833136559
+6,cat__static__subcategory_Subcategory 289,0.00021036010002717376
+6,cat__static__subcategory_Subcategory 29,0.00022694356448482722
+6,cat__static__subcategory_Subcategory 3,0.0034971702843904495
+6,cat__static__subcategory_Subcategory 300,0.004993842449039221
+6,cat__static__subcategory_Subcategory 302,0.0
+6,cat__static__subcategory_Subcategory 303,0.002598242834210396
+6,cat__static__subcategory_Subcategory 31,4.1259620047640055e-05
+6,cat__static__subcategory_Subcategory 36,0.001080393441952765
+6,cat__static__subcategory_Subcategory 43,0.0012275943299755454
+6,cat__static__subcategory_Subcategory 44,0.0057782139629125595
+6,cat__static__subcategory_Subcategory 54,0.0001776210847310722
+6,cat__static__subcategory_Subcategory 60,0.00010800657764775679
+6,cat__static__subcategory_Subcategory 69,0.007874258793890476
+6,cat__static__subcategory_Subcategory 75,0.004410936497151852
+6,cat__static__subcategory_Subcategory 80,0.008030185475945473
+6,cat__static__subcategory_Subcategory 82,0.0012487517669796944
+6,cat__static__subcategory_Subcategory 9,0.004325569607317448
+6,cat__static__subcategory_Subcategory 94,0.00026788038667291403
+6,cat__static__subcategory_infrequent_sklearn,0.004929930437356234
+6,cat__static__u_symptom_Symptom 10,0.007125770673155785
+6,cat__static__u_symptom_Symptom 102,0.0
+6,cat__static__u_symptom_Symptom 105,0.0
+6,cat__static__u_symptom_Symptom 114,6.105430657044053e-05
+6,cat__static__u_symptom_Symptom 115,0.0022987700067460537
+6,cat__static__u_symptom_Symptom 116,0.005641852039843798
+6,cat__static__u_symptom_Symptom 117,0.0007558424258604646
+6,cat__static__u_symptom_Symptom 118,0.00012403658183757216
+6,cat__static__u_symptom_Symptom 119,0.002741929842159152
+6,cat__static__u_symptom_Symptom 120,0.0018037683330476284
+6,cat__static__u_symptom_Symptom 127,0.0008978683617897332
+6,cat__static__u_symptom_Symptom 13,0.0
+6,cat__static__u_symptom_Symptom 134,0.0006886766641400754
+6,cat__static__u_symptom_Symptom 208,0.0014663594774901867
+6,cat__static__u_symptom_Symptom 232,0.0009087195503525436
+6,cat__static__u_symptom_Symptom 296,0.0033678999170660973
+6,cat__static__u_symptom_Symptom 382,0.00012205161328893155
+6,cat__static__u_symptom_Symptom 387,0.00016760187281761318
+6,cat__static__u_symptom_Symptom 4,0.000717629212886095
+6,cat__static__u_symptom_Symptom 444,0.0
+6,cat__static__u_symptom_Symptom 454,0.0011630376102402806
+6,cat__static__u_symptom_Symptom 455,0.0006422504084184766
+6,cat__static__u_symptom_Symptom 458,0.007523775100708008
+6,cat__static__u_symptom_Symptom 462,4.646466550184414e-05
+6,cat__static__u_symptom_Symptom 470,0.0005406091222539544
+6,cat__static__u_symptom_Symptom 471,4.574254126055166e-05
+6,cat__static__u_symptom_Symptom 473,0.0006840897258371115
+6,cat__static__u_symptom_Symptom 491,0.007469413336366415
+6,cat__static__u_symptom_Symptom 494,4.7658704716013744e-05
+6,cat__static__u_symptom_Symptom 5,0.0
+6,cat__static__u_symptom_Symptom 506,0.0
+6,cat__static__u_symptom_Symptom 509,0.00037971895653754473
+6,cat__static__u_symptom_Symptom 517,0.006274694111198187
+6,cat__static__u_symptom_Symptom 532,0.0005319530027918518
+6,cat__static__u_symptom_Symptom 534,0.02603064849972725
+6,cat__static__u_symptom_Symptom 54,0.0008720151381567121
+6,cat__static__u_symptom_Symptom 571,0.0017977384850382805
+6,cat__static__u_symptom_Symptom 573,0.0011475511128082871
+6,cat__static__u_symptom_Symptom 580,0.0006847471231594682
+6,cat__static__u_symptom_Symptom 592,0.000114659451355692
+6,cat__static__u_symptom_Symptom 6,0.0005977770197205245
+6,cat__static__u_symptom_Symptom 607,7.269876368809491e-05
+6,cat__static__u_symptom_Symptom 65,0.0
+6,cat__static__u_symptom_Symptom 70,0.00045898676034994423
+6,cat__static__u_symptom_Symptom 8,0.00010980172373820096
+6,cat__static__u_symptom_Symptom 86,0.0
+6,cat__static__u_symptom_Symptom 87,0.0010333587415516376
+6,cat__static__u_symptom_Symptom 9,0.0012849883642047644
+6,cat__static__u_symptom___MISSING__,0.016452690586447716
+6,cat__static__u_symptom_infrequent_sklearn,0.027672355994582176
+6,cat__static__contact_type_Email,0.0
+6,cat__static__contact_type_Phone,0.0
+6,cat__static__location_Location 108,0.0034768786281347275
+6,cat__static__location_Location 111,0.001758820260874927
+6,cat__static__location_Location 113,8.132374932756647e-05
+6,cat__static__location_Location 125,8.231417268689256e-06
+6,cat__static__location_Location 128,0.0006723511032760143
+6,cat__static__location_Location 135,0.001630078419111669
+6,cat__static__location_Location 136,0.0012760334648191929
+6,cat__static__location_Location 143,0.005239764228463173
+6,cat__static__location_Location 15,3.112421472906135e-05
+6,cat__static__location_Location 161,0.029068339616060257
+6,cat__static__location_Location 165,0.0
+6,cat__static__location_Location 173,0.002264646580442786
+6,cat__static__location_Location 179,0.004006446339190006
+6,cat__static__location_Location 18,0.0003461400337982923
+6,cat__static__location_Location 188,0.00010894511797232553
+6,cat__static__location_Location 197,5.6058793234115e-06
+6,cat__static__location_Location 199,0.0
+6,cat__static__location_Location 204,0.01447360124439001
+6,cat__static__location_Location 209,0.0
+6,cat__static__location_Location 210,0.0002635785785969347
+6,cat__static__location_Location 229,0.0
+6,cat__static__location_Location 242,0.0
+6,cat__static__location_Location 245,8.306021481985226e-05
+6,cat__static__location_Location 34,0.0009449634817428887
+6,cat__static__location_Location 35,0.00010254167136736214
+6,cat__static__location_Location 36,0.0003634443855844438
+6,cat__static__location_Location 37,0.0021928944624960423
+6,cat__static__location_Location 38,0.00014707111404277384
+6,cat__static__location_Location 39,0.0
+6,cat__static__location_Location 40,0.0
+6,cat__static__location_Location 41,0.0002972491201944649
+6,cat__static__location_Location 42,0.00238843634724617
+6,cat__static__location_Location 43,0.0002475183573551476
+6,cat__static__location_Location 44,0.0
+6,cat__static__location_Location 45,1.058314592228271e-05
+6,cat__static__location_Location 46,0.000811892154160887
+6,cat__static__location_Location 47,0.0
+6,cat__static__location_Location 51,0.002918838057667017
+6,cat__static__location_Location 54,0.00047027322580106556
+6,cat__static__location_Location 55,0.00046532583655789495
+6,cat__static__location_Location 56,0.0
+6,cat__static__location_Location 69,0.0020741440821439028
+6,cat__static__location_Location 70,0.0009734866907820106
+6,cat__static__location_Location 71,0.0007764436304569244
+6,cat__static__location_Location 82,0.0004938137717545033
+6,cat__static__location_Location 91,0.0003114482096862048
+6,cat__static__location_Location 93,0.014628409408032894
+6,cat__static__location_Location 96,0.0014532867353409529
+6,cat__static__location_Location 97,0.0006617333274334669
+6,cat__static__location_infrequent_sklearn,0.015078394673764706
+6,cat__static__impact_1 - High,0.002126951003447175
+6,cat__static__impact_2 - Medium,0.004625948145985603
+6,cat__static__impact_3 - Low,0.0075456988997757435
+6,cat__static__urgency_1 - High,0.004443682264536619
+6,cat__static__urgency_2 - Medium,0.0021395154763013124
+6,cat__static__urgency_3 - Low,0.006751387845724821
+6,cat__static__caller_id_Caller 1062,0.00014743457722943276
+6,cat__static__caller_id_Caller 1129,0.0014353645965456963
+6,cat__static__caller_id_Caller 1182,0.0025081499479711056
+6,cat__static__caller_id_Caller 1270,0.0
+6,cat__static__caller_id_Caller 1441,0.00021389637549873441
+6,cat__static__caller_id_Caller 1517,0.00012767086445819587
+6,cat__static__caller_id_Caller 1519,0.0
+6,cat__static__caller_id_Caller 1531,0.0
+6,cat__static__caller_id_Caller 1546,0.0006897471030242741
+6,cat__static__caller_id_Caller 156,0.0
+6,cat__static__caller_id_Caller 1904,0.009437330067157745
+6,cat__static__caller_id_Caller 203,0.001134117366746068
+6,cat__static__caller_id_Caller 225,0.00014434743206948042
+6,cat__static__caller_id_Caller 2377,0.000925776083022356
+6,cat__static__caller_id_Caller 2416,1.2477790733100846e-05
+6,cat__static__caller_id_Caller 2435,0.0
+6,cat__static__caller_id_Caller 2471,6.711703463224694e-05
+6,cat__static__caller_id_Caller 2691,5.302338468027301e-05
+6,cat__static__caller_id_Caller 298,0.0
+6,cat__static__caller_id_Caller 3038,0.0
+6,cat__static__caller_id_Caller 3081,0.0023969286121428013
+6,cat__static__caller_id_Caller 3136,0.0
+6,cat__static__caller_id_Caller 3160,0.00033896297100000083
+6,cat__static__caller_id_Caller 318,0.001227139146067202
+6,cat__static__caller_id_Caller 3329,0.00014421484956983477
+6,cat__static__caller_id_Caller 337,0.0006857310072518885
+6,cat__static__caller_id_Caller 3388,0.0
+6,cat__static__caller_id_Caller 3479,0.00012686826812569052
+6,cat__static__caller_id_Caller 3763,0.0012198403710499406
+6,cat__static__caller_id_Caller 3933,0.0
+6,cat__static__caller_id_Caller 3986,0.0003851528454106301
+6,cat__static__caller_id_Caller 4316,0.0
+6,cat__static__caller_id_Caller 4414,0.0
+6,cat__static__caller_id_Caller 4475,0.0003305829013697803
+6,cat__static__caller_id_Caller 4514,4.4852971768705174e-05
+6,cat__static__caller_id_Caller 4710,0.0005064874421805143
+6,cat__static__caller_id_Caller 4893,0.0029067741706967354
+6,cat__static__caller_id_Caller 501,0.0
+6,cat__static__caller_id_Caller 5093,0.0
+6,cat__static__caller_id_Caller 512,0.0
+6,cat__static__caller_id_Caller 5368,0.0
+6,cat__static__caller_id_Caller 671,0.0
+6,cat__static__caller_id_Caller 68,0.00023501305258832872
+6,cat__static__caller_id_Caller 685,4.7849891416262835e-05
+6,cat__static__caller_id_Caller 723,0.0002623089822009206
+6,cat__static__caller_id_Caller 92,0.0
+6,cat__static__caller_id_Caller 920,0.0
+6,cat__static__caller_id_Caller 93,0.0028765161987394094
+6,cat__static__caller_id_Caller 944,0.00031187699642032385
+6,cat__static__caller_id_infrequent_sklearn,0.0022022330667823553
+6,cat__static__opened_by_Opened by  108,0.0006866105832159519
+6,cat__static__opened_by_Opened by  131,0.01811130903661251
+6,cat__static__opened_by_Opened by  168,0.0013180850073695183
+6,cat__static__opened_by_Opened by  17,0.027601778507232666
+6,cat__static__opened_by_Opened by  174,0.0
+6,cat__static__opened_by_Opened by  180,0.0031130146235227585
+6,cat__static__opened_by_Opened by  20,0.0001434606092516333
+6,cat__static__opened_by_Opened by  221,0.0021402458660304546
+6,cat__static__opened_by_Opened by  228,0.0
+6,cat__static__opened_by_Opened by  239,0.0010179042583331466
+6,cat__static__opened_by_Opened by  24,0.008202437311410904
+6,cat__static__opened_by_Opened by  240,0.0
+6,cat__static__opened_by_Opened by  242,0.0
+6,cat__static__opened_by_Opened by  247,0.002779499627649784
+6,cat__static__opened_by_Opened by  257,0.0
+6,cat__static__opened_by_Opened by  267,0.0
+6,cat__static__opened_by_Opened by  301,0.0013283115113154054
+6,cat__static__opened_by_Opened by  305,0.0008982386207208037
+6,cat__static__opened_by_Opened by  325,0.0006201255018822849
+6,cat__static__opened_by_Opened by  360,0.001504694577306509
+6,cat__static__opened_by_Opened by  381,0.0
+6,cat__static__opened_by_Opened by  386,0.0021997627336531878
+6,cat__static__opened_by_Opened by  390,0.006559082306921482
+6,cat__static__opened_by_Opened by  397,0.037696871906518936
+6,cat__static__opened_by_Opened by  40,0.001847307663410902
+6,cat__static__opened_by_Opened by  402,9.64043865678832e-05
+6,cat__static__opened_by_Opened by  433,2.158573806809727e-05
+6,cat__static__opened_by_Opened by  44,0.00026653919485397637
+6,cat__static__opened_by_Opened by  443,0.0005496316007338464
+6,cat__static__opened_by_Opened by  444,0.0
+6,cat__static__opened_by_Opened by  460,8.616559352958575e-05
+6,cat__static__opened_by_Opened by  463,0.000658675329759717
+6,cat__static__opened_by_Opened by  468,0.0
+6,cat__static__opened_by_Opened by  47,8.161865116562694e-05
+6,cat__static__opened_by_Opened by  500,0.0005957044777460396
+6,cat__static__opened_by_Opened by  501,0.0010143908439204097
+6,cat__static__opened_by_Opened by  512,0.0005755089223384857
+6,cat__static__opened_by_Opened by  536,0.0009047243511304259
+6,cat__static__opened_by_Opened by  55,0.0035213055089116096
+6,cat__static__opened_by_Opened by  58,0.0007624153513461351
+6,cat__static__opened_by_Opened by  59,0.0032621256541460752
+6,cat__static__opened_by_Opened by  62,0.012955454178154469
+6,cat__static__opened_by_Opened by  70,6.438257696572691e-05
+6,cat__static__opened_by_Opened by  8,0.001270735519938171
+6,cat__static__opened_by_Opened by  9,0.000461446528788656
+6,cat__static__opened_by_Opened by  94,0.0
+6,cat__static__opened_by___MISSING__,0.0019066843669861555
+6,cat__static__opened_by_infrequent_sklearn,0.0015477825654670596
+6,cat__static__sys_created_by_Created by 10,0.00411797221750021
+6,cat__static__sys_created_by_Created by 101,0.0
+6,cat__static__sys_created_by_Created by 107,0.0035571432672441006
+6,cat__static__sys_created_by_Created by 108,0.0
+6,cat__static__sys_created_by_Created by 109,0.0006977639277465641
+6,cat__static__sys_created_by_Created by 113,0.0
+6,cat__static__sys_created_by_Created by 114,0.0
+6,cat__static__sys_created_by_Created by 12,0.0
+6,cat__static__sys_created_by_Created by 120,0.0022441004402935505
+6,cat__static__sys_created_by_Created by 129,0.0018855946836993098
+6,cat__static__sys_created_by_Created by 13,0.011748764663934708
+6,cat__static__sys_created_by_Created by 130,0.0031098860781639814
+6,cat__static__sys_created_by_Created by 140,0.00010164288687519729
+6,cat__static__sys_created_by_Created by 158,0.0
+6,cat__static__sys_created_by_Created by 167,0.0005623764591291547
+6,cat__static__sys_created_by_Created by 169,1.1332964277244173e-05
+6,cat__static__sys_created_by_Created by 171,0.0005441275425255299
+6,cat__static__sys_created_by_Created by 172,0.0001201621926156804
+6,cat__static__sys_created_by_Created by 18,0.0005746499518863857
+6,cat__static__sys_created_by_Created by 188,0.0
+6,cat__static__sys_created_by_Created by 190,0.0
+6,cat__static__sys_created_by_Created by 192,0.00013389706145972013
+6,cat__static__sys_created_by_Created by 193,0.0
+6,cat__static__sys_created_by_Created by 199,0.0
+6,cat__static__sys_created_by_Created by 20,0.0010283679002895951
+6,cat__static__sys_created_by_Created by 202,0.0
+6,cat__static__sys_created_by_Created by 216,0.004323802888393402
+6,cat__static__sys_created_by_Created by 217,4.375304706627503e-05
+6,cat__static__sys_created_by_Created by 221,0.0
+6,cat__static__sys_created_by_Created by 23,0.0
+6,cat__static__sys_created_by_Created by 233,7.648963219253346e-05
+6,cat__static__sys_created_by_Created by 25,0.0
+6,cat__static__sys_created_by_Created by 30,0.000834146048873663
+6,cat__static__sys_created_by_Created by 31,4.119828372495249e-05
+6,cat__static__sys_created_by_Created by 33,0.007385279051959515
+6,cat__static__sys_created_by_Created by 34,0.0004028889234177768
+6,cat__static__sys_created_by_Created by 45,0.0017664236947894096
+6,cat__static__sys_created_by_Created by 47,0.0
+6,cat__static__sys_created_by_Created by 5,0.0
+6,cat__static__sys_created_by_Created by 52,0.001682440284639597
+6,cat__static__sys_created_by_Created by 6,0.0014550634659826756
+6,cat__static__sys_created_by_Created by 62,0.013954534195363522
+6,cat__static__sys_created_by_Created by 79,0.0
+6,cat__static__sys_created_by_Created by 81,0.002014472149312496
+6,cat__static__sys_created_by_Created by 89,0.0014744908548891544
+6,cat__static__sys_created_by_Created by 98,0.004588177427649498
+6,cat__static__sys_created_by___MISSING__,0.02504412829875946
+6,cat__static__sys_created_by_infrequent_sklearn,0.0007441474590450525
+6,cat__static__notify_Do Not Notify,0.0
+6,cat__static__notify_Send Email,0.0
+6,cat__dyn_cat__activity_Active,0.027082638815045357
+6,cat__dyn_cat__activity_Awaiting Problem,0.0
+6,cat__dyn_cat__activity_Awaiting User Info,0.07381481677293777
+6,cat__dyn_cat__activity_New,0.0020392679143697023
+6,cat__dyn_cat__activity_infrequent_sklearn,0.0
+6,cat__dyn_cat__activity_prev_Active,0.0012588835088536143
+6,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+6,cat__dyn_cat__activity_prev_Awaiting User Info,0.012923342175781727
+6,cat__dyn_cat__activity_prev_New,0.0012290157610550523
+6,cat__dyn_cat__activity_prev___MISSING__,0.0
+6,cat__dyn_cat__resource_Group 10,0.008167493157088757
+6,cat__dyn_cat__resource_Group 12,0.008207758888602257
+6,cat__dyn_cat__resource_Group 15,0.00044461668585427105
+6,cat__dyn_cat__resource_Group 19,0.0007281186990439892
+6,cat__dyn_cat__resource_Group 20,0.023783639073371887
+6,cat__dyn_cat__resource_Group 21,0.0
+6,cat__dyn_cat__resource_Group 22,0.004438195377588272
+6,cat__dyn_cat__resource_Group 23,0.046250734478235245
+6,cat__dyn_cat__resource_Group 24,0.0508345365524292
+6,cat__dyn_cat__resource_Group 25,0.003762751817703247
+6,cat__dyn_cat__resource_Group 27,0.015258240513503551
+6,cat__dyn_cat__resource_Group 28,0.01400898490101099
+6,cat__dyn_cat__resource_Group 29,0.008061779662966728
+6,cat__dyn_cat__resource_Group 3,0.00048288170364685357
+6,cat__dyn_cat__resource_Group 30,0.0032642590813338757
+6,cat__dyn_cat__resource_Group 31,0.0006775711663067341
+6,cat__dyn_cat__resource_Group 33,0.0009382745483890176
+6,cat__dyn_cat__resource_Group 34,0.0007039039628580213
+6,cat__dyn_cat__resource_Group 37,0.011868834495544434
+6,cat__dyn_cat__resource_Group 39,0.02004021219909191
+6,cat__dyn_cat__resource_Group 46,0.00028338644187897444
+6,cat__dyn_cat__resource_Group 47,0.0
+6,cat__dyn_cat__resource_Group 48,0.0011453796178102493
+6,cat__dyn_cat__resource_Group 49,0.0
+6,cat__dyn_cat__resource_Group 5,0.0
+6,cat__dyn_cat__resource_Group 50,0.0
+6,cat__dyn_cat__resource_Group 51,0.000485241791466251
+6,cat__dyn_cat__resource_Group 53,0.0
+6,cat__dyn_cat__resource_Group 54,0.002819761401042342
+6,cat__dyn_cat__resource_Group 55,0.00040350068593397737
+6,cat__dyn_cat__resource_Group 56,0.0
+6,cat__dyn_cat__resource_Group 57,0.005773920565843582
+6,cat__dyn_cat__resource_Group 58,0.002444995567202568
+6,cat__dyn_cat__resource_Group 6,0.0008177681011147797
+6,cat__dyn_cat__resource_Group 62,0.0018999935127794743
+6,cat__dyn_cat__resource_Group 64,0.00030368694569915533
+6,cat__dyn_cat__resource_Group 65,0.0002630779054015875
+6,cat__dyn_cat__resource_Group 66,0.002865186659619212
+6,cat__dyn_cat__resource_Group 69,4.9297585064778104e-05
+6,cat__dyn_cat__resource_Group 70,0.028455886989831924
+6,cat__dyn_cat__resource_Group 72,0.030778609216213226
+6,cat__dyn_cat__resource_Group 73,0.0054424237459897995
+6,cat__dyn_cat__resource_Group 74,0.00041801788029260933
+6,cat__dyn_cat__resource_Group 75,0.002561626024544239
+6,cat__dyn_cat__resource_Group 76,0.01659422367811203
+6,cat__dyn_cat__resource_Group 77,0.0
+6,cat__dyn_cat__resource_Group 81,0.0
+6,cat__dyn_cat__resource_Group 9,0.009831389412283897
+6,cat__dyn_cat__resource___MISSING__,0.046392060816287994
+6,cat__dyn_cat__resource_infrequent_sklearn,0.00031401083106175065
+7,num__num__k,0.0031161517836153507
+7,num__num__n_distinct_activities,0.016595089808106422
+7,num__num__n_distinct_resources,0.029221737757325172
+7,num__num__n_resource_changes,0.0211977269500494
+7,num__num__n_activity_repeats,0.008119821548461914
+7,num__num__n_waiting_events,0.006785890553146601
+7,num__num__frac_waiting,0.005082716234028339
+7,num__num__last_gap_h,0.00860593467950821
+7,num__num__max_gap_h,0.5313302874565125
+7,num__num__elapsed_h,1.5950239896774292
+7,num__num__log_elapsed_h,0.3146476149559021
+7,num__num__mean_gap_h,0.08384104073047638
+7,num__num__hour_of_k,0.033520251512527466
+7,num__num__dow_of_k,0.04213445633649826
+7,num__num__arrivals_24h,0.14346559345722198
+7,num__num__arrivals_7d,0.596799373626709
+7,num__static__opened_hour,0.05888238549232483
+7,num__static__opened_dow,0.17368097603321075
+7,num__static__opened_is_offhours,0.00498792203143239
+7,num__dyn_num__reassignment_count,0.034172870218753815
+7,num__dyn_num__reopen_count,0.002221365924924612
+7,num__dyn_num__sys_mod_count,0.005932075437158346
+7,num__dyn_cat__assigned_to_known,0.04574134945869446
+7,num__static__knowledge,0.20122471451759338
+7,num__static__u_priority_confirmation,0.0
+7,num__static__cmdb_ci_known,8.444827108178288e-05
+7,cat__dyn_cat__priority_1 - Critical,0.0766567587852478
+7,cat__dyn_cat__priority_2 - High,0.17663253843784332
+7,cat__dyn_cat__priority_3 - Moderate,0.09788163006305695
+7,cat__dyn_cat__priority_4 - Low,0.1437092125415802
+7,cat__static__category_Category 13,0.001656822394579649
+7,cat__static__category_Category 17,2.4126355128828436e-05
+7,cat__static__category_Category 19,7.447291136486456e-05
+7,cat__static__category_Category 20,0.005617820657789707
+7,cat__static__category_Category 22,0.0
+7,cat__static__category_Category 23,0.0033661113120615482
+7,cat__static__category_Category 24,0.01225165743380785
+7,cat__static__category_Category 26,0.011230596341192722
+7,cat__static__category_Category 28,0.001003412646241486
+7,cat__static__category_Category 32,0.0028080553747713566
+7,cat__static__category_Category 34,0.0012770885368809104
+7,cat__static__category_Category 35,6.897139974171296e-05
+7,cat__static__category_Category 37,0.003293055109679699
+7,cat__static__category_Category 38,1.3314619536686223e-05
+7,cat__static__category_Category 40,0.0020102481357753277
+7,cat__static__category_Category 41,0.0
+7,cat__static__category_Category 42,0.00582557637244463
+7,cat__static__category_Category 43,0.0036889167968183756
+7,cat__static__category_Category 44,0.001327324309386313
+7,cat__static__category_Category 45,0.004789353813976049
+7,cat__static__category_Category 46,0.028420083224773407
+7,cat__static__category_Category 51,0.001655024942010641
+7,cat__static__category_Category 53,0.0020327402744442225
+7,cat__static__category_Category 55,0.0001654466614127159
+7,cat__static__category_Category 57,0.016319306567311287
+7,cat__static__category_Category 61,0.0040570879355072975
+7,cat__static__category_Category 63,0.0
+7,cat__static__category_Category 7,0.0
+7,cat__static__category_Category 8,0.00027534295804798603
+7,cat__static__category_Category 9,0.00917504820972681
+7,cat__static__category_infrequent_sklearn,0.003150870790705085
+7,cat__static__subcategory_Subcategory 103,0.00483282282948494
+7,cat__static__subcategory_Subcategory 107,0.0
+7,cat__static__subcategory_Subcategory 114,0.0011285602813586593
+7,cat__static__subcategory_Subcategory 117,0.001765703083947301
+7,cat__static__subcategory_Subcategory 123,0.000587277696467936
+7,cat__static__subcategory_Subcategory 125,0.0002505441661924124
+7,cat__static__subcategory_Subcategory 130,0.00018105999333783984
+7,cat__static__subcategory_Subcategory 134,0.00010798408766277134
+7,cat__static__subcategory_Subcategory 135,0.001165456953458488
+7,cat__static__subcategory_Subcategory 150,0.00815228559076786
+7,cat__static__subcategory_Subcategory 154,4.549202640191652e-05
+7,cat__static__subcategory_Subcategory 16,0.0001396937877871096
+7,cat__static__subcategory_Subcategory 163,0.003916884772479534
+7,cat__static__subcategory_Subcategory 164,0.0016317598056048155
+7,cat__static__subcategory_Subcategory 168,0.0001536657364340499
+7,cat__static__subcategory_Subcategory 170,0.0035686634946614504
+7,cat__static__subcategory_Subcategory 174,0.01109621673822403
+7,cat__static__subcategory_Subcategory 175,0.025794677436351776
+7,cat__static__subcategory_Subcategory 183,0.0011106241727247834
+7,cat__static__subcategory_Subcategory 185,0.004834790714085102
+7,cat__static__subcategory_Subcategory 200,0.001998320920392871
+7,cat__static__subcategory_Subcategory 202,5.573136149905622e-05
+7,cat__static__subcategory_Subcategory 215,0.0
+7,cat__static__subcategory_Subcategory 220,0.00290939980186522
+7,cat__static__subcategory_Subcategory 223,0.006033080630004406
+7,cat__static__subcategory_Subcategory 224,0.0003524724452290684
+7,cat__static__subcategory_Subcategory 229,0.0016505562234669924
+7,cat__static__subcategory_Subcategory 251,0.0007137436186894774
+7,cat__static__subcategory_Subcategory 271,0.00010453161667101085
+7,cat__static__subcategory_Subcategory 275,0.0005656923749484122
+7,cat__static__subcategory_Subcategory 28,0.0011915891664102674
+7,cat__static__subcategory_Subcategory 289,0.00019577513739932328
+7,cat__static__subcategory_Subcategory 29,0.00013612097245641053
+7,cat__static__subcategory_Subcategory 3,0.0046382746659219265
+7,cat__static__subcategory_Subcategory 300,0.005645918194204569
+7,cat__static__subcategory_Subcategory 302,0.0
+7,cat__static__subcategory_Subcategory 303,0.0015204452211037278
+7,cat__static__subcategory_Subcategory 31,4.3346186430426314e-05
+7,cat__static__subcategory_Subcategory 36,0.0012487303465604782
+7,cat__static__subcategory_Subcategory 43,0.0012003231095150113
+7,cat__static__subcategory_Subcategory 44,0.007295732386410236
+7,cat__static__subcategory_Subcategory 54,0.000184625867404975
+7,cat__static__subcategory_Subcategory 60,0.00010535270121181384
+7,cat__static__subcategory_Subcategory 69,0.00820939987897873
+7,cat__static__subcategory_Subcategory 75,0.003235305892303586
+7,cat__static__subcategory_Subcategory 80,0.00418434152379632
+7,cat__static__subcategory_Subcategory 82,0.0011225854977965355
+7,cat__static__subcategory_Subcategory 9,0.00419823219999671
+7,cat__static__subcategory_Subcategory 94,9.93905559880659e-05
+7,cat__static__subcategory_infrequent_sklearn,0.0051080333068966866
+7,cat__static__u_symptom_Symptom 10,0.010335846804082394
+7,cat__static__u_symptom_Symptom 102,0.0
+7,cat__static__u_symptom_Symptom 105,0.0
+7,cat__static__u_symptom_Symptom 114,7.181740511441603e-05
+7,cat__static__u_symptom_Symptom 115,0.0031005623750388622
+7,cat__static__u_symptom_Symptom 116,0.005117982160300016
+7,cat__static__u_symptom_Symptom 117,0.0005297483876347542
+7,cat__static__u_symptom_Symptom 118,6.165020022308454e-05
+7,cat__static__u_symptom_Symptom 119,0.00286530377343297
+7,cat__static__u_symptom_Symptom 120,0.0012546967482194304
+7,cat__static__u_symptom_Symptom 127,0.001306532067246735
+7,cat__static__u_symptom_Symptom 13,0.0
+7,cat__static__u_symptom_Symptom 134,0.0007256243843585253
+7,cat__static__u_symptom_Symptom 208,0.001554633490741253
+7,cat__static__u_symptom_Symptom 232,0.0008896903600543737
+7,cat__static__u_symptom_Symptom 296,0.004240707028657198
+7,cat__static__u_symptom_Symptom 382,0.00011752332648029551
+7,cat__static__u_symptom_Symptom 387,0.0002131927030859515
+7,cat__static__u_symptom_Symptom 4,0.0007172705954872072
+7,cat__static__u_symptom_Symptom 444,0.0
+7,cat__static__u_symptom_Symptom 454,0.00056248321197927
+7,cat__static__u_symptom_Symptom 455,0.00041020254138857126
+7,cat__static__u_symptom_Symptom 458,0.00901392474770546
+7,cat__static__u_symptom_Symptom 462,5.77304235775955e-05
+7,cat__static__u_symptom_Symptom 470,0.0005387674900703132
+7,cat__static__u_symptom_Symptom 471,4.827670636586845e-05
+7,cat__static__u_symptom_Symptom 473,0.0006798543618060648
+7,cat__static__u_symptom_Symptom 491,0.007059052120894194
+7,cat__static__u_symptom_Symptom 494,4.830018588108942e-05
+7,cat__static__u_symptom_Symptom 5,0.0
+7,cat__static__u_symptom_Symptom 506,0.0
+7,cat__static__u_symptom_Symptom 509,0.0003921867173630744
+7,cat__static__u_symptom_Symptom 517,0.008809901773929596
+7,cat__static__u_symptom_Symptom 532,0.0007511393632739782
+7,cat__static__u_symptom_Symptom 534,0.021365322172641754
+7,cat__static__u_symptom_Symptom 54,0.0005083966534584761
+7,cat__static__u_symptom_Symptom 571,0.0015713368775323033
+7,cat__static__u_symptom_Symptom 573,0.0011668514925986528
+7,cat__static__u_symptom_Symptom 580,0.0007613798952661455
+7,cat__static__u_symptom_Symptom 592,0.00011811615695478395
+7,cat__static__u_symptom_Symptom 6,0.000632386130746454
+7,cat__static__u_symptom_Symptom 607,7.13058325345628e-05
+7,cat__static__u_symptom_Symptom 65,0.0
+7,cat__static__u_symptom_Symptom 70,0.0002178551076212898
+7,cat__static__u_symptom_Symptom 8,9.745189890963957e-05
+7,cat__static__u_symptom_Symptom 86,0.0
+7,cat__static__u_symptom_Symptom 87,0.0011708277743309736
+7,cat__static__u_symptom_Symptom 9,0.0023116255179047585
+7,cat__static__u_symptom___MISSING__,0.015606225468218327
+7,cat__static__u_symptom_infrequent_sklearn,0.026807092130184174
+7,cat__static__contact_type_Email,0.0
+7,cat__static__contact_type_Phone,0.0
+7,cat__static__location_Location 108,0.00368123478256166
+7,cat__static__location_Location 111,0.0015719749499112368
+7,cat__static__location_Location 113,8.106154564302415e-05
+7,cat__static__location_Location 125,8.009166776901111e-06
+7,cat__static__location_Location 128,0.0014973622746765614
+7,cat__static__location_Location 135,0.001996207283809781
+7,cat__static__location_Location 136,0.0012752915499731898
+7,cat__static__location_Location 143,0.005002566147595644
+7,cat__static__location_Location 15,3.958963861805387e-05
+7,cat__static__location_Location 161,0.024922804906964302
+7,cat__static__location_Location 165,0.0
+7,cat__static__location_Location 173,0.005522773135453463
+7,cat__static__location_Location 179,0.002707165200263262
+7,cat__static__location_Location 18,0.000596944650169462
+7,cat__static__location_Location 188,0.00018575582362245768
+7,cat__static__location_Location 197,9.303749720857013e-06
+7,cat__static__location_Location 199,0.0
+7,cat__static__location_Location 204,0.014700408093631268
+7,cat__static__location_Location 209,0.0
+7,cat__static__location_Location 210,0.00011004677071468905
+7,cat__static__location_Location 229,0.0
+7,cat__static__location_Location 242,0.0
+7,cat__static__location_Location 245,7.82246861490421e-05
+7,cat__static__location_Location 34,0.0008372427546419203
+7,cat__static__location_Location 35,0.0001944222894962877
+7,cat__static__location_Location 36,0.00034708459861576557
+7,cat__static__location_Location 37,0.002249722834676504
+7,cat__static__location_Location 38,0.0003896363195963204
+7,cat__static__location_Location 39,0.0
+7,cat__static__location_Location 40,0.0
+7,cat__static__location_Location 41,0.0004448872059583664
+7,cat__static__location_Location 42,0.003632611595094204
+7,cat__static__location_Location 43,0.00027601976762525737
+7,cat__static__location_Location 44,0.0
+7,cat__static__location_Location 45,1.3946342733106576e-05
+7,cat__static__location_Location 46,0.000695416412781924
+7,cat__static__location_Location 47,0.0
+7,cat__static__location_Location 51,0.00216661230660975
+7,cat__static__location_Location 54,0.0005059620598331094
+7,cat__static__location_Location 55,0.00023095235519576818
+7,cat__static__location_Location 56,0.0
+7,cat__static__location_Location 69,0.0019105274695903063
+7,cat__static__location_Location 70,0.000980521086603403
+7,cat__static__location_Location 71,0.0002896566584240645
+7,cat__static__location_Location 82,0.0004940779181197286
+7,cat__static__location_Location 91,0.00033204868668690324
+7,cat__static__location_Location 93,0.015911437571048737
+7,cat__static__location_Location 96,0.0014387131668627262
+7,cat__static__location_Location 97,0.0006870480137877166
+7,cat__static__location_infrequent_sklearn,0.01415744423866272
+7,cat__static__impact_1 - High,0.002177497372031212
+7,cat__static__impact_2 - Medium,0.004894176963716745
+7,cat__static__impact_3 - Low,0.008043630048632622
+7,cat__static__urgency_1 - High,0.00477644195780158
+7,cat__static__urgency_2 - Medium,0.0020521553233265877
+7,cat__static__urgency_3 - Low,0.006723338272422552
+7,cat__static__caller_id_Caller 1062,0.00014950284094084054
+7,cat__static__caller_id_Caller 1129,0.0014255064306780696
+7,cat__static__caller_id_Caller 1182,0.0010255876695737243
+7,cat__static__caller_id_Caller 1270,0.0
+7,cat__static__caller_id_Caller 1441,0.0002137781266355887
+7,cat__static__caller_id_Caller 1517,0.00012477749260142446
+7,cat__static__caller_id_Caller 1519,0.0
+7,cat__static__caller_id_Caller 1531,0.0
+7,cat__static__caller_id_Caller 1546,0.000724631710909307
+7,cat__static__caller_id_Caller 156,0.0
+7,cat__static__caller_id_Caller 1904,0.009443838149309158
+7,cat__static__caller_id_Caller 203,0.0011407987913116813
+7,cat__static__caller_id_Caller 225,0.00014336599269881845
+7,cat__static__caller_id_Caller 2377,0.0029465665575116873
+7,cat__static__caller_id_Caller 2416,1.2747636901622172e-05
+7,cat__static__caller_id_Caller 2435,0.0
+7,cat__static__caller_id_Caller 2471,7.732458470854908e-05
+7,cat__static__caller_id_Caller 2691,5.4536969400942326e-05
+7,cat__static__caller_id_Caller 298,0.0
+7,cat__static__caller_id_Caller 3038,0.0
+7,cat__static__caller_id_Caller 3081,0.0015689401188865304
+7,cat__static__caller_id_Caller 3136,0.0
+7,cat__static__caller_id_Caller 3160,0.0003371833299752325
+7,cat__static__caller_id_Caller 318,0.001233886112459004
+7,cat__static__caller_id_Caller 3329,0.00038025484536774457
+7,cat__static__caller_id_Caller 337,0.0006837202818132937
+7,cat__static__caller_id_Caller 3388,0.0
+7,cat__static__caller_id_Caller 3479,0.0001268633350264281
+7,cat__static__caller_id_Caller 3763,0.0008626675116829574
+7,cat__static__caller_id_Caller 3933,0.0
+7,cat__static__caller_id_Caller 3986,0.00038487411802634597
+7,cat__static__caller_id_Caller 4316,0.0
+7,cat__static__caller_id_Caller 4414,0.0
+7,cat__static__caller_id_Caller 4475,0.00036809779703617096
+7,cat__static__caller_id_Caller 4514,4.5991717342985794e-05
+7,cat__static__caller_id_Caller 4710,0.000499010260682553
+7,cat__static__caller_id_Caller 4893,0.002909439615905285
+7,cat__static__caller_id_Caller 501,0.0
+7,cat__static__caller_id_Caller 5093,0.0
+7,cat__static__caller_id_Caller 512,0.0
+7,cat__static__caller_id_Caller 5368,0.0
+7,cat__static__caller_id_Caller 671,0.0
+7,cat__static__caller_id_Caller 68,0.0002368316490901634
+7,cat__static__caller_id_Caller 685,4.397707380121574e-05
+7,cat__static__caller_id_Caller 723,0.00024785203277133405
+7,cat__static__caller_id_Caller 92,0.0
+7,cat__static__caller_id_Caller 920,0.0
+7,cat__static__caller_id_Caller 93,0.0018000182462856174
+7,cat__static__caller_id_Caller 944,0.0007901319768279791
+7,cat__static__caller_id_infrequent_sklearn,0.002330636139959097
+7,cat__static__opened_by_Opened by  108,0.0006069554947316647
+7,cat__static__opened_by_Opened by  131,0.019811498001217842
+7,cat__static__opened_by_Opened by  168,0.0012992966221645474
+7,cat__static__opened_by_Opened by  17,0.03070940263569355
+7,cat__static__opened_by_Opened by  174,0.0
+7,cat__static__opened_by_Opened by  180,0.003098664805293083
+7,cat__static__opened_by_Opened by  20,0.00014318666944745928
+7,cat__static__opened_by_Opened by  221,0.002729269675910473
+7,cat__static__opened_by_Opened by  228,0.0
+7,cat__static__opened_by_Opened by  239,0.0012799197575077415
+7,cat__static__opened_by_Opened by  24,0.0071017444133758545
+7,cat__static__opened_by_Opened by  240,0.0
+7,cat__static__opened_by_Opened by  242,0.0
+7,cat__static__opened_by_Opened by  247,0.002552083693444729
+7,cat__static__opened_by_Opened by  257,0.0
+7,cat__static__opened_by_Opened by  267,0.0
+7,cat__static__opened_by_Opened by  301,0.0014849952422082424
+7,cat__static__opened_by_Opened by  305,0.0007784645422361791
+7,cat__static__opened_by_Opened by  325,0.0006221048533916473
+7,cat__static__opened_by_Opened by  360,0.0011849238071590662
+7,cat__static__opened_by_Opened by  381,0.0
+7,cat__static__opened_by_Opened by  386,0.00216529774479568
+7,cat__static__opened_by_Opened by  390,0.00645612133666873
+7,cat__static__opened_by_Opened by  397,0.04126562923192978
+7,cat__static__opened_by_Opened by  40,0.001530305715277791
+7,cat__static__opened_by_Opened by  402,0.00011352047295076773
+7,cat__static__opened_by_Opened by  433,2.1558360458584502e-05
+7,cat__static__opened_by_Opened by  44,0.0002653941628523171
+7,cat__static__opened_by_Opened by  443,0.00031529110856354237
+7,cat__static__opened_by_Opened by  444,0.0
+7,cat__static__opened_by_Opened by  460,8.861606329446658e-05
+7,cat__static__opened_by_Opened by  463,0.00048598204739391804
+7,cat__static__opened_by_Opened by  468,0.0
+7,cat__static__opened_by_Opened by  47,8.569518831791356e-05
+7,cat__static__opened_by_Opened by  500,0.0005654491251334548
+7,cat__static__opened_by_Opened by  501,0.0010311350924894214
+7,cat__static__opened_by_Opened by  512,0.0005783725064247847
+7,cat__static__opened_by_Opened by  536,0.0009039763826876879
+7,cat__static__opened_by_Opened by  55,0.003691271645948291
+7,cat__static__opened_by_Opened by  58,0.0010617438238114119
+7,cat__static__opened_by_Opened by  59,0.003294619033113122
+7,cat__static__opened_by_Opened by  62,0.012518675066530704
+7,cat__static__opened_by_Opened by  70,7.85881929914467e-05
+7,cat__static__opened_by_Opened by  8,0.001457379898056388
+7,cat__static__opened_by_Opened by  9,0.0004567927971947938
+7,cat__static__opened_by_Opened by  94,0.0
+7,cat__static__opened_by___MISSING__,0.00212901271879673
+7,cat__static__opened_by_infrequent_sklearn,0.0019988457206636667
+7,cat__static__sys_created_by_Created by 10,0.003837625030428171
+7,cat__static__sys_created_by_Created by 101,0.0
+7,cat__static__sys_created_by_Created by 107,0.004731359425932169
+7,cat__static__sys_created_by_Created by 108,0.0
+7,cat__static__sys_created_by_Created by 109,0.0006964936619624496
+7,cat__static__sys_created_by_Created by 113,0.0
+7,cat__static__sys_created_by_Created by 114,0.0
+7,cat__static__sys_created_by_Created by 12,0.0
+7,cat__static__sys_created_by_Created by 120,0.0022475598379969597
+7,cat__static__sys_created_by_Created by 129,0.0021818384993821383
+7,cat__static__sys_created_by_Created by 13,0.010807955637574196
+7,cat__static__sys_created_by_Created by 130,0.005341387819498777
+7,cat__static__sys_created_by_Created by 140,0.00010803007171489298
+7,cat__static__sys_created_by_Created by 158,0.0
+7,cat__static__sys_created_by_Created by 167,0.0005443039699457586
+7,cat__static__sys_created_by_Created by 169,1.1301362064841669e-05
+7,cat__static__sys_created_by_Created by 171,0.000623450381681323
+7,cat__static__sys_created_by_Created by 172,0.00011912373156519607
+7,cat__static__sys_created_by_Created by 18,0.0005696855369023979
+7,cat__static__sys_created_by_Created by 188,0.0
+7,cat__static__sys_created_by_Created by 190,0.0
+7,cat__static__sys_created_by_Created by 192,6.52014568913728e-05
+7,cat__static__sys_created_by_Created by 193,0.0
+7,cat__static__sys_created_by_Created by 199,0.0
+7,cat__static__sys_created_by_Created by 20,0.001045261975377798
+7,cat__static__sys_created_by_Created by 202,0.0
+7,cat__static__sys_created_by_Created by 216,0.004762317985296249
+7,cat__static__sys_created_by_Created by 217,2.4055603716988117e-05
+7,cat__static__sys_created_by_Created by 221,0.0
+7,cat__static__sys_created_by_Created by 23,0.0
+7,cat__static__sys_created_by_Created by 233,7.801531319273636e-05
+7,cat__static__sys_created_by_Created by 25,0.0
+7,cat__static__sys_created_by_Created by 30,0.000925680622458458
+7,cat__static__sys_created_by_Created by 31,3.996674422523938e-05
+7,cat__static__sys_created_by_Created by 33,0.007070599589496851
+7,cat__static__sys_created_by_Created by 34,0.00040074175922200084
+7,cat__static__sys_created_by_Created by 45,0.0018536553252488375
+7,cat__static__sys_created_by_Created by 47,0.0
+7,cat__static__sys_created_by_Created by 5,0.0
+7,cat__static__sys_created_by_Created by 52,0.0021025475580245256
+7,cat__static__sys_created_by_Created by 6,0.0013449309626594186
+7,cat__static__sys_created_by_Created by 62,0.015924014151096344
+7,cat__static__sys_created_by_Created by 79,0.0
+7,cat__static__sys_created_by_Created by 81,0.0019983919337391853
+7,cat__static__sys_created_by_Created by 89,0.0013960100477561355
+7,cat__static__sys_created_by_Created by 98,0.004178234376013279
+7,cat__static__sys_created_by___MISSING__,0.026254795491695404
+7,cat__static__sys_created_by_infrequent_sklearn,0.0007474206504411995
+7,cat__static__notify_Do Not Notify,0.0
+7,cat__static__notify_Send Email,0.0
+7,cat__dyn_cat__activity_Active,0.027692830190062523
+7,cat__dyn_cat__activity_Awaiting Problem,0.0
+7,cat__dyn_cat__activity_Awaiting User Info,0.07641265541315079
+7,cat__dyn_cat__activity_New,0.0020923903211951256
+7,cat__dyn_cat__activity_infrequent_sklearn,0.0
+7,cat__dyn_cat__activity_prev_Active,0.001547030988149345
+7,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+7,cat__dyn_cat__activity_prev_Awaiting User Info,0.01390065997838974
+7,cat__dyn_cat__activity_prev_New,0.0012399776605889201
+7,cat__dyn_cat__activity_prev___MISSING__,0.0
+7,cat__dyn_cat__resource_Group 10,0.008315286599099636
+7,cat__dyn_cat__resource_Group 12,0.011729449033737183
+7,cat__dyn_cat__resource_Group 15,0.001366654527373612
+7,cat__dyn_cat__resource_Group 19,0.00026831007562577724
+7,cat__dyn_cat__resource_Group 20,0.022505812346935272
+7,cat__dyn_cat__resource_Group 21,0.0
+7,cat__dyn_cat__resource_Group 22,0.003762612584978342
+7,cat__dyn_cat__resource_Group 23,0.04719278961420059
+7,cat__dyn_cat__resource_Group 24,0.0388055294752121
+7,cat__dyn_cat__resource_Group 25,0.004286398179829121
+7,cat__dyn_cat__resource_Group 27,0.011790255084633827
+7,cat__dyn_cat__resource_Group 28,0.016803117468953133
+7,cat__dyn_cat__resource_Group 29,0.006314290687441826
+7,cat__dyn_cat__resource_Group 3,0.00019962286751251668
+7,cat__dyn_cat__resource_Group 30,0.0038431023713201284
+7,cat__dyn_cat__resource_Group 31,0.0006007300107739866
+7,cat__dyn_cat__resource_Group 33,0.0006810349295847118
+7,cat__dyn_cat__resource_Group 34,0.0006297391373664141
+7,cat__dyn_cat__resource_Group 37,0.011239451356232166
+7,cat__dyn_cat__resource_Group 39,0.022887445986270905
+7,cat__dyn_cat__resource_Group 46,0.0004374271957203746
+7,cat__dyn_cat__resource_Group 47,0.0
+7,cat__dyn_cat__resource_Group 48,0.0011212690733373165
+7,cat__dyn_cat__resource_Group 49,0.0
+7,cat__dyn_cat__resource_Group 5,0.0
+7,cat__dyn_cat__resource_Group 50,0.0
+7,cat__dyn_cat__resource_Group 51,0.00047245685709640384
+7,cat__dyn_cat__resource_Group 53,0.0
+7,cat__dyn_cat__resource_Group 54,0.00418469263240695
+7,cat__dyn_cat__resource_Group 55,0.00031223284895531833
+7,cat__dyn_cat__resource_Group 56,0.0
+7,cat__dyn_cat__resource_Group 57,0.005949541460722685
+7,cat__dyn_cat__resource_Group 58,0.003394783241674304
+7,cat__dyn_cat__resource_Group 6,0.0008422231767326593
+7,cat__dyn_cat__resource_Group 62,0.0017945069121196866
+7,cat__dyn_cat__resource_Group 64,0.00028714383370243013
+7,cat__dyn_cat__resource_Group 65,0.00015998058370314538
+7,cat__dyn_cat__resource_Group 66,0.0025107068940997124
+7,cat__dyn_cat__resource_Group 69,4.894902303931303e-05
+7,cat__dyn_cat__resource_Group 70,0.028907375410199165
+7,cat__dyn_cat__resource_Group 72,0.02723592519760132
+7,cat__dyn_cat__resource_Group 73,0.00606780219823122
+7,cat__dyn_cat__resource_Group 74,0.0005689625977538526
+7,cat__dyn_cat__resource_Group 75,0.002563242334872484
+7,cat__dyn_cat__resource_Group 76,0.00972544401884079
+7,cat__dyn_cat__resource_Group 77,0.0
+7,cat__dyn_cat__resource_Group 81,0.0
+7,cat__dyn_cat__resource_Group 9,0.016106901690363884
+7,cat__dyn_cat__resource___MISSING__,0.04312833771109581
+7,cat__dyn_cat__resource_infrequent_sklearn,0.0004596243379637599
+8,num__num__k,0.0031852521933615208
+8,num__num__n_distinct_activities,0.017323045060038567
+8,num__num__n_distinct_resources,0.03485722094774246
+8,num__num__n_resource_changes,0.024367522448301315
+8,num__num__n_activity_repeats,0.012345220893621445
+8,num__num__n_waiting_events,0.007278056815266609
+8,num__num__frac_waiting,0.005181055516004562
+8,num__num__last_gap_h,0.00814787670969963
+8,num__num__max_gap_h,0.6039897799491882
+8,num__num__elapsed_h,1.9388227462768555
+8,num__num__log_elapsed_h,0.38002222776412964
+8,num__num__mean_gap_h,0.08778936415910721
+8,num__num__hour_of_k,0.0335337296128273
+8,num__num__dow_of_k,0.04084393009543419
+8,num__num__arrivals_24h,0.1518479883670807
+8,num__num__arrivals_7d,0.6088145971298218
+8,num__static__opened_hour,0.0619526132941246
+8,num__static__opened_dow,0.18858656287193298
+8,num__static__opened_is_offhours,0.004585819318890572
+8,num__dyn_num__reassignment_count,0.0372268483042717
+8,num__dyn_num__reopen_count,0.0019287675386294723
+8,num__dyn_num__sys_mod_count,0.0063451738096773624
+8,num__dyn_cat__assigned_to_known,0.04794011637568474
+8,num__static__knowledge,0.18931657075881958
+8,num__static__u_priority_confirmation,0.0
+8,num__static__cmdb_ci_known,7.636340887984261e-05
+8,cat__dyn_cat__priority_1 - Critical,0.07649064809083939
+8,cat__dyn_cat__priority_2 - High,0.14247147738933563
+8,cat__dyn_cat__priority_3 - Moderate,0.08729168772697449
+8,cat__dyn_cat__priority_4 - Low,0.16387659311294556
+8,cat__static__category_Category 13,0.0012845908058807254
+8,cat__static__category_Category 17,2.1445914171636105e-05
+8,cat__static__category_Category 19,7.676929817534983e-05
+8,cat__static__category_Category 20,0.005123543087393045
+8,cat__static__category_Category 22,0.0
+8,cat__static__category_Category 23,0.0035196540411561728
+8,cat__static__category_Category 24,0.01446977723389864
+8,cat__static__category_Category 26,0.010894674807786942
+8,cat__static__category_Category 28,0.0013807277427986264
+8,cat__static__category_Category 32,0.0030120268929749727
+8,cat__static__category_Category 34,0.001566862571053207
+8,cat__static__category_Category 35,6.738449155818671e-05
+8,cat__static__category_Category 37,0.0032554594799876213
+8,cat__static__category_Category 38,1.2616285857802723e-05
+8,cat__static__category_Category 40,0.0016959201311692595
+8,cat__static__category_Category 41,0.0
+8,cat__static__category_Category 42,0.005064048338681459
+8,cat__static__category_Category 43,0.005219270009547472
+8,cat__static__category_Category 44,0.0013922969810664654
+8,cat__static__category_Category 45,0.005025537218898535
+8,cat__static__category_Category 46,0.02804204262793064
+8,cat__static__category_Category 51,0.0017356181051582098
+8,cat__static__category_Category 53,0.001621474977582693
+8,cat__static__category_Category 55,0.00018364173592999578
+8,cat__static__category_Category 57,0.01780996285378933
+8,cat__static__category_Category 61,0.004448071587830782
+8,cat__static__category_Category 63,0.0
+8,cat__static__category_Category 7,0.0
+8,cat__static__category_Category 8,0.0002654081617947668
+8,cat__static__category_Category 9,0.007648459170013666
+8,cat__static__category_infrequent_sklearn,0.0028983198571950197
+8,cat__static__subcategory_Subcategory 103,0.0034849431831389666
+8,cat__static__subcategory_Subcategory 107,0.0
+8,cat__static__subcategory_Subcategory 114,0.000952258356846869
+8,cat__static__subcategory_Subcategory 117,0.0018091448582708836
+8,cat__static__subcategory_Subcategory 123,0.000685040489770472
+8,cat__static__subcategory_Subcategory 125,0.00013344483159016818
+8,cat__static__subcategory_Subcategory 130,6.170324923004955e-05
+8,cat__static__subcategory_Subcategory 134,8.720743790036067e-05
+8,cat__static__subcategory_Subcategory 135,0.0012541473843157291
+8,cat__static__subcategory_Subcategory 150,0.004867776297032833
+8,cat__static__subcategory_Subcategory 154,4.863999492954463e-05
+8,cat__static__subcategory_Subcategory 16,0.00014901612303219736
+8,cat__static__subcategory_Subcategory 163,0.00459334859624505
+8,cat__static__subcategory_Subcategory 164,0.0015022330917418003
+8,cat__static__subcategory_Subcategory 168,0.00016458789468742907
+8,cat__static__subcategory_Subcategory 170,0.0027458053082227707
+8,cat__static__subcategory_Subcategory 174,0.014171414077281952
+8,cat__static__subcategory_Subcategory 175,0.027589740231633186
+8,cat__static__subcategory_Subcategory 183,0.002003848785534501
+8,cat__static__subcategory_Subcategory 185,0.003852743888273835
+8,cat__static__subcategory_Subcategory 200,0.001931220991536975
+8,cat__static__subcategory_Subcategory 202,7.543902756879106e-05
+8,cat__static__subcategory_Subcategory 215,0.0
+8,cat__static__subcategory_Subcategory 220,0.0028168444987386465
+8,cat__static__subcategory_Subcategory 223,0.005528718698769808
+8,cat__static__subcategory_Subcategory 224,0.00022267618624027818
+8,cat__static__subcategory_Subcategory 229,0.0016391708049923182
+8,cat__static__subcategory_Subcategory 251,0.0009768373565748334
+8,cat__static__subcategory_Subcategory 271,0.0001168645394500345
+8,cat__static__subcategory_Subcategory 275,0.000710089283529669
+8,cat__static__subcategory_Subcategory 28,0.001170455478131771
+8,cat__static__subcategory_Subcategory 289,0.00017348981054965407
+8,cat__static__subcategory_Subcategory 29,0.0001345718774246052
+8,cat__static__subcategory_Subcategory 3,0.0037719935644418
+8,cat__static__subcategory_Subcategory 300,0.007950765080749989
+8,cat__static__subcategory_Subcategory 302,0.0
+8,cat__static__subcategory_Subcategory 303,0.0020337430760264397
+8,cat__static__subcategory_Subcategory 31,4.7681809519417584e-05
+8,cat__static__subcategory_Subcategory 36,0.001113541191443801
+8,cat__static__subcategory_Subcategory 43,0.0011701092589646578
+8,cat__static__subcategory_Subcategory 44,0.0059002661146223545
+8,cat__static__subcategory_Subcategory 54,0.00019040226470679045
+8,cat__static__subcategory_Subcategory 60,0.00010687371104722843
+8,cat__static__subcategory_Subcategory 69,0.004825038835406303
+8,cat__static__subcategory_Subcategory 75,0.0037885629571974277
+8,cat__static__subcategory_Subcategory 80,0.00506195705384016
+8,cat__static__subcategory_Subcategory 82,0.0012507507344707847
+8,cat__static__subcategory_Subcategory 9,0.004663207568228245
+8,cat__static__subcategory_Subcategory 94,9.943725308403373e-05
+8,cat__static__subcategory_infrequent_sklearn,0.005040445830672979
+8,cat__static__u_symptom_Symptom 10,0.007038144860416651
+8,cat__static__u_symptom_Symptom 102,0.0
+8,cat__static__u_symptom_Symptom 105,0.0
+8,cat__static__u_symptom_Symptom 114,9.078862058231607e-05
+8,cat__static__u_symptom_Symptom 115,0.0027612384874373674
+8,cat__static__u_symptom_Symptom 116,0.006286201532930136
+8,cat__static__u_symptom_Symptom 117,0.0005263112252578139
+8,cat__static__u_symptom_Symptom 118,0.00020314818539191037
+8,cat__static__u_symptom_Symptom 119,0.003443857654929161
+8,cat__static__u_symptom_Symptom 120,0.0011628289939835668
+8,cat__static__u_symptom_Symptom 127,0.0013082362711429596
+8,cat__static__u_symptom_Symptom 13,0.0
+8,cat__static__u_symptom_Symptom 134,0.0006349132745526731
+8,cat__static__u_symptom_Symptom 208,0.0015199001645669341
+8,cat__static__u_symptom_Symptom 232,0.0008644154877401888
+8,cat__static__u_symptom_Symptom 296,0.003493466880172491
+8,cat__static__u_symptom_Symptom 382,0.00011808984709205106
+8,cat__static__u_symptom_Symptom 387,0.0001538665237603709
+8,cat__static__u_symptom_Symptom 4,0.0007037752075120807
+8,cat__static__u_symptom_Symptom 444,0.0
+8,cat__static__u_symptom_Symptom 454,0.0009035090915858746
+8,cat__static__u_symptom_Symptom 455,0.00041328140650875866
+8,cat__static__u_symptom_Symptom 458,0.0074517070315778255
+8,cat__static__u_symptom_Symptom 462,4.777878348249942e-05
+8,cat__static__u_symptom_Symptom 470,0.0005850590532645583
+8,cat__static__u_symptom_Symptom 471,4.711882502306253e-05
+8,cat__static__u_symptom_Symptom 473,0.0006803407450206578
+8,cat__static__u_symptom_Symptom 491,0.007733854465186596
+8,cat__static__u_symptom_Symptom 494,5.100266935187392e-05
+8,cat__static__u_symptom_Symptom 5,0.0
+8,cat__static__u_symptom_Symptom 506,0.0
+8,cat__static__u_symptom_Symptom 509,0.0003649723657872528
+8,cat__static__u_symptom_Symptom 517,0.005702763795852661
+8,cat__static__u_symptom_Symptom 532,0.0006413563969545066
+8,cat__static__u_symptom_Symptom 534,0.018427079543471336
+8,cat__static__u_symptom_Symptom 54,0.0006086861249059439
+8,cat__static__u_symptom_Symptom 571,0.0014350840356200933
+8,cat__static__u_symptom_Symptom 573,0.0010869360994547606
+8,cat__static__u_symptom_Symptom 580,0.0007471127319149673
+8,cat__static__u_symptom_Symptom 592,0.00014484376879408956
+8,cat__static__u_symptom_Symptom 6,0.0006558546447195113
+8,cat__static__u_symptom_Symptom 607,8.154341048793867e-05
+8,cat__static__u_symptom_Symptom 65,0.0
+8,cat__static__u_symptom_Symptom 70,0.0003249861183576286
+8,cat__static__u_symptom_Symptom 8,7.296821422642097e-05
+8,cat__static__u_symptom_Symptom 86,0.0
+8,cat__static__u_symptom_Symptom 87,0.0006435733521357179
+8,cat__static__u_symptom_Symptom 9,0.001545123290270567
+8,cat__static__u_symptom___MISSING__,0.01669256016612053
+8,cat__static__u_symptom_infrequent_sklearn,0.027291204780340195
+8,cat__static__contact_type_Email,0.0
+8,cat__static__contact_type_Phone,0.0
+8,cat__static__location_Location 108,0.0034672508481889963
+8,cat__static__location_Location 111,0.0018423446454107761
+8,cat__static__location_Location 113,8.124975283863023e-05
+8,cat__static__location_Location 125,8.009164957911707e-06
+8,cat__static__location_Location 128,0.0013675997033715248
+8,cat__static__location_Location 135,0.0015173278516158462
+8,cat__static__location_Location 136,0.0016564272809773684
+8,cat__static__location_Location 143,0.005574754439294338
+8,cat__static__location_Location 15,2.9511449611163698e-05
+8,cat__static__location_Location 161,0.02410617657005787
+8,cat__static__location_Location 165,0.0
+8,cat__static__location_Location 173,0.005995705723762512
+8,cat__static__location_Location 179,0.0037539517506957054
+8,cat__static__location_Location 18,0.00032702297903597355
+8,cat__static__location_Location 188,0.00018297202768735588
+8,cat__static__location_Location 197,6.3258894442697056e-06
+8,cat__static__location_Location 199,0.0
+8,cat__static__location_Location 204,0.014495841227471828
+8,cat__static__location_Location 209,0.0
+8,cat__static__location_Location 210,0.0002111481298925355
+8,cat__static__location_Location 229,0.0
+8,cat__static__location_Location 242,0.0
+8,cat__static__location_Location 245,0.00018702798115555197
+8,cat__static__location_Location 34,0.0009457397391088307
+8,cat__static__location_Location 35,0.0003187694528605789
+8,cat__static__location_Location 36,0.00032904939143918455
+8,cat__static__location_Location 37,0.0014829551801085472
+8,cat__static__location_Location 38,0.0003864794271066785
+8,cat__static__location_Location 39,0.0
+8,cat__static__location_Location 40,0.0
+8,cat__static__location_Location 41,0.00022151751909404993
+8,cat__static__location_Location 42,0.00350555800832808
+8,cat__static__location_Location 43,0.0002496014640200883
+8,cat__static__location_Location 44,0.0
+8,cat__static__location_Location 45,8.120049642457161e-06
+8,cat__static__location_Location 46,0.0006627535913139582
+8,cat__static__location_Location 47,0.0
+8,cat__static__location_Location 51,0.0027699852362275124
+8,cat__static__location_Location 54,0.0006147552048787475
+8,cat__static__location_Location 55,0.00021844338334631175
+8,cat__static__location_Location 56,0.0
+8,cat__static__location_Location 69,0.003204982029274106
+8,cat__static__location_Location 70,0.0009431548533029854
+8,cat__static__location_Location 71,0.0007737973355688155
+8,cat__static__location_Location 82,0.0006385043961927295
+8,cat__static__location_Location 91,0.00023950179456733167
+8,cat__static__location_Location 93,0.012866033241152763
+8,cat__static__location_Location 96,0.0014144483720883727
+8,cat__static__location_Location 97,0.0010192563058808446
+8,cat__static__location_infrequent_sklearn,0.016123799607157707
+8,cat__static__impact_1 - High,0.002058411482721567
+8,cat__static__impact_2 - Medium,0.004815073683857918
+8,cat__static__impact_3 - Low,0.009497973136603832
+8,cat__static__urgency_1 - High,0.0041970000602304935
+8,cat__static__urgency_2 - Medium,0.001931836479343474
+8,cat__static__urgency_3 - Low,0.006558033172041178
+8,cat__static__caller_id_Caller 1062,0.00014983199071139097
+8,cat__static__caller_id_Caller 1129,0.0013748834608122706
+8,cat__static__caller_id_Caller 1182,0.001010798616334796
+8,cat__static__caller_id_Caller 1270,0.0
+8,cat__static__caller_id_Caller 1441,0.00021399643446784467
+8,cat__static__caller_id_Caller 1517,0.0001257496769540012
+8,cat__static__caller_id_Caller 1519,0.0
+8,cat__static__caller_id_Caller 1531,0.0
+8,cat__static__caller_id_Caller 1546,0.0007545440457761288
+8,cat__static__caller_id_Caller 156,0.0
+8,cat__static__caller_id_Caller 1904,0.009434616193175316
+8,cat__static__caller_id_Caller 203,0.001123067457228899
+8,cat__static__caller_id_Caller 225,0.0001425766822649166
+8,cat__static__caller_id_Caller 2377,0.0009809479815885425
+8,cat__static__caller_id_Caller 2416,1.4176932381815277e-05
+8,cat__static__caller_id_Caller 2435,0.0
+8,cat__static__caller_id_Caller 2471,7.075377652654424e-05
+8,cat__static__caller_id_Caller 2691,5.6361095630563796e-05
+8,cat__static__caller_id_Caller 298,0.0
+8,cat__static__caller_id_Caller 3038,0.0
+8,cat__static__caller_id_Caller 3081,0.0015928030479699373
+8,cat__static__caller_id_Caller 3136,0.0
+8,cat__static__caller_id_Caller 3160,0.00033747885026969016
+8,cat__static__caller_id_Caller 318,0.001295920112170279
+8,cat__static__caller_id_Caller 3329,0.0003796472738031298
+8,cat__static__caller_id_Caller 337,0.0006721836398355663
+8,cat__static__caller_id_Caller 3388,0.0
+8,cat__static__caller_id_Caller 3479,0.00012671187869273126
+8,cat__static__caller_id_Caller 3763,0.000239608867559582
+8,cat__static__caller_id_Caller 3933,0.0
+8,cat__static__caller_id_Caller 3986,0.0003842378791887313
+8,cat__static__caller_id_Caller 4316,0.0
+8,cat__static__caller_id_Caller 4414,0.0
+8,cat__static__caller_id_Caller 4475,0.0003990291152149439
+8,cat__static__caller_id_Caller 4514,4.4923257519258186e-05
+8,cat__static__caller_id_Caller 4710,0.0004958640784025192
+8,cat__static__caller_id_Caller 4893,0.0035183795262128115
+8,cat__static__caller_id_Caller 501,0.0
+8,cat__static__caller_id_Caller 5093,0.0
+8,cat__static__caller_id_Caller 512,0.0
+8,cat__static__caller_id_Caller 5368,0.0
+8,cat__static__caller_id_Caller 671,0.0
+8,cat__static__caller_id_Caller 68,0.00023736389994155616
+8,cat__static__caller_id_Caller 685,4.407509550219402e-05
+8,cat__static__caller_id_Caller 723,0.0002415193448541686
+8,cat__static__caller_id_Caller 92,0.0
+8,cat__static__caller_id_Caller 920,0.0
+8,cat__static__caller_id_Caller 93,0.0019177197245880961
+8,cat__static__caller_id_Caller 944,0.0007872438291087747
+8,cat__static__caller_id_infrequent_sklearn,0.0020359198097139597
+8,cat__static__opened_by_Opened by  108,0.0005486299633048475
+8,cat__static__opened_by_Opened by  131,0.01892019994556904
+8,cat__static__opened_by_Opened by  168,0.0004157067451160401
+8,cat__static__opened_by_Opened by  17,0.032889727503061295
+8,cat__static__opened_by_Opened by  174,0.0
+8,cat__static__opened_by_Opened by  180,0.003160943277180195
+8,cat__static__opened_by_Opened by  20,0.00014327149256132543
+8,cat__static__opened_by_Opened by  221,0.0025338761042803526
+8,cat__static__opened_by_Opened by  228,0.0
+8,cat__static__opened_by_Opened by  239,0.0007740585715509951
+8,cat__static__opened_by_Opened by  24,0.007609310559928417
+8,cat__static__opened_by_Opened by  240,0.0
+8,cat__static__opened_by_Opened by  242,0.0
+8,cat__static__opened_by_Opened by  247,0.001259682816453278
+8,cat__static__opened_by_Opened by  257,0.0
+8,cat__static__opened_by_Opened by  267,0.0
+8,cat__static__opened_by_Opened by  301,0.000983863603323698
+8,cat__static__opened_by_Opened by  305,0.0009175951709039509
+8,cat__static__opened_by_Opened by  325,0.0015624510124325752
+8,cat__static__opened_by_Opened by  360,0.00039565510815009475
+8,cat__static__opened_by_Opened by  381,0.0
+8,cat__static__opened_by_Opened by  386,0.0024771105963736773
+8,cat__static__opened_by_Opened by  390,0.006534880958497524
+8,cat__static__opened_by_Opened by  397,0.03629377484321594
+8,cat__static__opened_by_Opened by  40,0.0012972227996215224
+8,cat__static__opened_by_Opened by  402,0.00014032787294127047
+8,cat__static__opened_by_Opened by  433,2.2056146917748265e-05
+8,cat__static__opened_by_Opened by  44,0.00025486451340839267
+8,cat__static__opened_by_Opened by  443,0.0002982516889460385
+8,cat__static__opened_by_Opened by  444,0.0
+8,cat__static__opened_by_Opened by  460,8.473934576613829e-05
+8,cat__static__opened_by_Opened by  463,0.0006046517519280314
+8,cat__static__opened_by_Opened by  468,0.0
+8,cat__static__opened_by_Opened by  47,7.84219810157083e-05
+8,cat__static__opened_by_Opened by  500,0.0006586057716049254
+8,cat__static__opened_by_Opened by  501,0.000925801636185497
+8,cat__static__opened_by_Opened by  512,0.0005780771607533097
+8,cat__static__opened_by_Opened by  536,0.0009046199847944081
+8,cat__static__opened_by_Opened by  55,0.0038561660330742598
+8,cat__static__opened_by_Opened by  58,0.0008121806895360351
+8,cat__static__opened_by_Opened by  59,0.0029295654967427254
+8,cat__static__opened_by_Opened by  62,0.012681500986218452
+8,cat__static__opened_by_Opened by  70,6.395998207153752e-05
+8,cat__static__opened_by_Opened by  8,0.0016459738835692406
+8,cat__static__opened_by_Opened by  9,0.0004533210885711014
+8,cat__static__opened_by_Opened by  94,0.0
+8,cat__static__opened_by___MISSING__,0.002084976527839899
+8,cat__static__opened_by_infrequent_sklearn,0.0010760495206341147
+8,cat__static__sys_created_by_Created by 10,0.004385988228023052
+8,cat__static__sys_created_by_Created by 101,0.0
+8,cat__static__sys_created_by_Created by 107,0.002083278028294444
+8,cat__static__sys_created_by_Created by 108,0.0
+8,cat__static__sys_created_by_Created by 109,0.0006898848223499954
+8,cat__static__sys_created_by_Created by 113,0.0
+8,cat__static__sys_created_by_Created by 114,0.0
+8,cat__static__sys_created_by_Created by 12,0.0
+8,cat__static__sys_created_by_Created by 120,0.0008196716080419719
+8,cat__static__sys_created_by_Created by 129,0.0012703626416623592
+8,cat__static__sys_created_by_Created by 13,0.010818920098245144
+8,cat__static__sys_created_by_Created by 130,0.0028747855685651302
+8,cat__static__sys_created_by_Created by 140,0.00018355640349909663
+8,cat__static__sys_created_by_Created by 158,0.0
+8,cat__static__sys_created_by_Created by 167,0.0005226534558460116
+8,cat__static__sys_created_by_Created by 169,1.1323989383527078e-05
+8,cat__static__sys_created_by_Created by 171,0.000637983379419893
+8,cat__static__sys_created_by_Created by 172,0.00011923469719476998
+8,cat__static__sys_created_by_Created by 18,0.0005557512631639838
+8,cat__static__sys_created_by_Created by 188,0.0
+8,cat__static__sys_created_by_Created by 190,0.0
+8,cat__static__sys_created_by_Created by 192,6.981613842071965e-05
+8,cat__static__sys_created_by_Created by 193,0.0
+8,cat__static__sys_created_by_Created by 199,0.0
+8,cat__static__sys_created_by_Created by 20,0.0010628951713442802
+8,cat__static__sys_created_by_Created by 202,0.0
+8,cat__static__sys_created_by_Created by 216,0.004990370944142342
+8,cat__static__sys_created_by_Created by 217,1.743532448017504e-05
+8,cat__static__sys_created_by_Created by 221,0.0
+8,cat__static__sys_created_by_Created by 23,0.0
+8,cat__static__sys_created_by_Created by 233,8.094601071206853e-05
+8,cat__static__sys_created_by_Created by 25,0.0
+8,cat__static__sys_created_by_Created by 30,0.0009959150338545442
+8,cat__static__sys_created_by_Created by 31,4.4009477278450504e-05
+8,cat__static__sys_created_by_Created by 33,0.00792442262172699
+8,cat__static__sys_created_by_Created by 34,0.0004154873313382268
+8,cat__static__sys_created_by_Created by 45,0.002031964249908924
+8,cat__static__sys_created_by_Created by 47,0.0
+8,cat__static__sys_created_by_Created by 5,0.0
+8,cat__static__sys_created_by_Created by 52,0.0024243954103440046
+8,cat__static__sys_created_by_Created by 6,0.001484730513766408
+8,cat__static__sys_created_by_Created by 62,0.013075324706733227
+8,cat__static__sys_created_by_Created by 79,0.0
+8,cat__static__sys_created_by_Created by 81,0.0020234668627381325
+8,cat__static__sys_created_by_Created by 89,0.0013738530687987804
+8,cat__static__sys_created_by_Created by 98,0.004043507389724255
+8,cat__static__sys_created_by___MISSING__,0.028651587665081024
+8,cat__static__sys_created_by_infrequent_sklearn,0.0006901964079588652
+8,cat__static__notify_Do Not Notify,0.0
+8,cat__static__notify_Send Email,0.0
+8,cat__dyn_cat__activity_Active,0.026426099240779877
+8,cat__dyn_cat__activity_Awaiting Problem,0.0
+8,cat__dyn_cat__activity_Awaiting User Info,0.0794307291507721
+8,cat__dyn_cat__activity_New,0.002318762009963393
+8,cat__dyn_cat__activity_infrequent_sklearn,0.0
+8,cat__dyn_cat__activity_prev_Active,0.001644088071770966
+8,cat__dyn_cat__activity_prev_Awaiting Problem,0.0
+8,cat__dyn_cat__activity_prev_Awaiting User Info,0.014285854063928127
+8,cat__dyn_cat__activity_prev_New,0.001332519226707518
+8,cat__dyn_cat__activity_prev___MISSING__,0.0
+8,cat__dyn_cat__resource_Group 10,0.00851232185959816
+8,cat__dyn_cat__resource_Group 12,0.005185446236282587
+8,cat__dyn_cat__resource_Group 15,0.001774721429683268
+8,cat__dyn_cat__resource_Group 19,0.0007790689123794436
+8,cat__dyn_cat__resource_Group 20,0.023055005818605423
+8,cat__dyn_cat__resource_Group 21,0.0
+8,cat__dyn_cat__resource_Group 22,0.004449046216905117
+8,cat__dyn_cat__resource_Group 23,0.042824845761060715
+8,cat__dyn_cat__resource_Group 24,0.03896518051624298
+8,cat__dyn_cat__resource_Group 25,0.004672905430197716
+8,cat__dyn_cat__resource_Group 27,0.013190182857215405
+8,cat__dyn_cat__resource_Group 28,0.014623360708355904
+8,cat__dyn_cat__resource_Group 29,0.007733297534286976
+8,cat__dyn_cat__resource_Group 3,0.0004632723575923592
+8,cat__dyn_cat__resource_Group 30,0.005362700670957565
+8,cat__dyn_cat__resource_Group 31,0.00027150585083290935
+8,cat__dyn_cat__resource_Group 33,0.0007454956066794693
+8,cat__dyn_cat__resource_Group 34,0.0005930230836383998
+8,cat__dyn_cat__resource_Group 37,0.00944532547146082
+8,cat__dyn_cat__resource_Group 39,0.01835576258599758
+8,cat__dyn_cat__resource_Group 46,0.00044322063331492245
+8,cat__dyn_cat__resource_Group 47,0.0
+8,cat__dyn_cat__resource_Group 48,0.0019171582534909248
+8,cat__dyn_cat__resource_Group 49,0.0
+8,cat__dyn_cat__resource_Group 5,0.0
+8,cat__dyn_cat__resource_Group 50,0.0
+8,cat__dyn_cat__resource_Group 51,0.00038858631160110235
+8,cat__dyn_cat__resource_Group 53,0.0
+8,cat__dyn_cat__resource_Group 54,0.004783155396580696
+8,cat__dyn_cat__resource_Group 55,0.00017700032913126051
+8,cat__dyn_cat__resource_Group 56,0.0
+8,cat__dyn_cat__resource_Group 57,0.009160575456917286
+8,cat__dyn_cat__resource_Group 58,0.0024647668469697237
+8,cat__dyn_cat__resource_Group 6,0.0008418001234531403
+8,cat__dyn_cat__resource_Group 62,0.0024841255508363247
+8,cat__dyn_cat__resource_Group 64,0.0002864131238311529
+8,cat__dyn_cat__resource_Group 65,0.00013118785864207894
+8,cat__dyn_cat__resource_Group 66,0.0021766857244074345
+8,cat__dyn_cat__resource_Group 69,4.359336162451655e-05
+8,cat__dyn_cat__resource_Group 70,0.02844332531094551
+8,cat__dyn_cat__resource_Group 72,0.024842247366905212
+8,cat__dyn_cat__resource_Group 73,0.005139548797160387
+8,cat__dyn_cat__resource_Group 74,0.0005311166751198471
+8,cat__dyn_cat__resource_Group 75,0.004161601420491934
+8,cat__dyn_cat__resource_Group 76,0.012271260842680931
+8,cat__dyn_cat__resource_Group 77,0.0
+8,cat__dyn_cat__resource_Group 81,0.0
+8,cat__dyn_cat__resource_Group 9,0.012005074881017208
+8,cat__dyn_cat__resource___MISSING__,0.042423781007528305
+8,cat__dyn_cat__resource_infrequent_sklearn,0.00015426325262524188
