@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   KAIROS design tokens
+
+   Colour is assigned to ROLES, not picked as swatches (method: happyhues.co).
+   The six chart series below are not chosen by eye -- they are the output of
+   the data-viz validator and pass all six computable checks in both modes:
+
+     node scripts/validate_palette.js \
+       "#2f9fd0,#d55181,#c97a22,#199e70,#8478e0,#e05c58" \
+       --mode dark --surface "#0b1016"
+
+     [PASS] lightness band · chroma floor · CVD separation (worst adjacent
+            dE 8.8 protan) · normal-vision floor (16.4) · contrast (all >= 3:1)
+
+   Tritan separation is 6.4, inside the 6-8 floor band, which is permitted ONLY
+   with secondary encoding. Every series therefore carries a direct label or a
+   distinct dash pattern -- see components/charts. That is a binding constraint.
+
+   Status colours are RESERVED for risk semantics and never reused as a series.
+--------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+
+  /* surfaces -- off-white with a cool cast, never pure #fff */
+  --ground: #f7f9fb;
+  --surface-1: #ffffff;
+  --surface-2: #eef2f6;
+  --hairline: #dfe6ec;
+
+  /* ink */
+  --text-1: #0d1319;
+  --text-2: #4a5967;
+  --text-3: #77869440;
+
+  /* one accent for the entire site */
+  --accent: #1c7fb5;
+  --accent-ink: #ffffff;
+
+  /* chart series -- fixed order, never cycled */
+  --series-1: #1c7fb5;
+  --series-2: #c43c6f;
+  --series-3: #a85e10;
+  --series-4: #12855e;
+  --series-5: #6355c9;
+  --series-6: #cc4340;
+
+  /* reserved status palette -- risk bands only */
+  --status-good: #12855e;
+  --status-warn: #a85e10;
+  --status-critical: #cc4340;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --ground: #0b1016;
+    --surface-1: #131b24;
+    --surface-2: #18222d;
+    --hairline: #1e2a36;
+
+    --text-1: #e9eef3;
+    --text-2: #9aa9b7;
+    --text-3: #9aa9b733;
+
+    --accent: #2f9fd0;
+    --accent-ink: #06101a;
+
+    --series-1: #2f9fd0;
+    --series-2: #d55181;
+    --series-3: #c97a22;
+    --series-4: #199e70;
+    --series-5: #8478e0;
+    --series-6: #e05c58;
+
+    --status-good: #199e70;
+    --status-warn: #c97a22;
+    --status-critical: #e05c58;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #0b1016;
+  --surface-1: #131b24;
+  --surface-2: #18222d;
+  --hairline: #1e2a36;
+  --text-1: #e9eef3;
+  --text-2: #9aa9b7;
+  --text-3: #9aa9b733;
+  --accent: #2f9fd0;
+  --accent-ink: #06101a;
+  --series-1: #2f9fd0;
+  --series-2: #d55181;
+  --series-3: #c97a22;
+  --series-4: #199e70;
+  --series-5: #8478e0;
+  --series-6: #e05c58;
+  --status-good: #199e70;
+  --status-warn: #c97a22;
+  --status-critical: #e05c58;
+}
+
+@theme inline {
+  --color-ground: var(--ground);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-hairline: var(--hairline);
+  --color-text-1: var(--text-1);
+  --color-text-2: var(--text-2);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-jetbrains);
+  --font-display: var(--font-instrument);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ground);
+  color: var(--text-1);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Tabular figures everywhere a metric appears, so digits align in columns. */
+.num {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.display {
+  font-family: var(--font-instrument), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+/* Depth without texture.
+   The previous version tiled a 140x140 feTurbulence noise here. At 2.8% opacity
+   that sounds invisible, but a 140px tile repeats about ten times across a
+   1440px hero, and the eye reads the repeat as a regular field of specks
+   sitting on the type. It was coloured noise too, so it read as dirt rather
+   than film grain.
+   A single large-scale gradient solves the banding the noise was added for,
+   with nothing to repeat. */
+.depth {
+  position: relative;
+}
+.depth::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 15% 0%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 60%),
+    radial-gradient(90% 70% at 100% 100%, color-mix(in srgb, var(--series-5) 5%, transparent), transparent 65%);
+}
+
+/* Fallback ground for the 3D field, on small screens and reduced motion.
+   Also gradient rather than a 48px grid: at the sizes this actually renders,
+   the grid's line crossings read as the same speckle the noise did. */
+.fieldfallback {
+  background:
+    radial-gradient(80% 120% at 78% 50%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%),
+    linear-gradient(100deg, transparent 40%, color-mix(in srgb, var(--series-1) 6%, transparent) 100%);
+}
+
+/* The opening sequence. Each beat rises and fades once, on its own delay.
+   `backwards` holds the start state during the delay, so nothing flashes at
+   full opacity before its turn. */
+/* `both`, not `backwards`: `backwards` covers the delay but hands the element
+   back to its own style when the animation ends, which with a base opacity of 0
+   means the beat plays and then disappears. No base opacity here either, so the
+   copy is visible if the animation never applies at all. */
+.kairos-beat {
+  animation: kairos-rise 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes kairos-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kairos-beat { opacity: 1; animation: none; }
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Nothing above a hover state survives a reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

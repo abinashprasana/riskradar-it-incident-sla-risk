@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kairos-study.vercel.app/sitemap.xml
