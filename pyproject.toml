@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "riskradar"
+version = "2.0.0.dev0"
+description = "Leakage-aware prefix-based predictive process monitoring for ITSM incident logs"
+readme = "README.md"
+# The research pipeline runs on 3.11-3.13. `runtime.txt` pins 3.11 for Streamlit
+# Community Cloud; that binds the (currently deferred) deployment only. Nothing
+# here ships a pickled model, so results move between interpreters as CSV and
+# JSON and no cross-version unpickling is involved. `run_config.json` records
+# the interpreter each run actually used.
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "pandas==2.3.2",
+    "numpy==2.3.2",
+    "scikit-learn==1.7.1",
+    "scipy==1.16.1",
+    "xgboost==3.1.1",
+    "matplotlib==3.10.5",
+    "joblib==1.5.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+
+[tool.setuptools]
+packages = ["riskradar", "riskradar.adapters"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = [
+    "ignore::FutureWarning",
+    "ignore::UserWarning",
+]

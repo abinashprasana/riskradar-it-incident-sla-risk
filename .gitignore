@@ -12,5 +12,16 @@ __pycache__/
 *.csv
 !incident_event_log.csv
 
+# Research outputs are results, not datasets -- keep them tracked
+!artifacts/**/*.csv
+!reports/**/*.csv
+
 # Streamlit config / secrets
 .streamlit/secrets.toml
+
+# Editor / agent tooling
+.claude/
+
+# Raw dataset distribution -- the adapters read csv_files/ instead
+BPI Challenge 2013, incidents_1_all/
+
