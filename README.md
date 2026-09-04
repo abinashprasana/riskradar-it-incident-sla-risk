@@ -1,303 +1,390 @@
 <div align="center">
 
-# 🚦 RiskRadar — IT Incident SLA Breach Risk
+# 🕰️ KAIROS — Incident SLA Breach Risk, Scored Early
 
-**A machine learning decision support tool that predicts SLA breach risk across an entire incident backlog, built from scratch on real ITSM event data.**
+**Ranking a live IT incident queue by SLA-breach risk from partial information, and measuring how early that call can be trusted.**
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.11--3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
-[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
-[![Accuracy](https://img.shields.io/badge/Accuracy-92%25-2ea44f?style=for-the-badge)](.)
-[![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.9674-1d6fa5?style=for-the-badge)](.)
-[![Live App](https://img.shields.io/badge/Live%20App-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://abinashprasana-riskradar-it-incident-sla-risk-app-bvwccq.streamlit.app/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-GRU%20control-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org)
+[![Tests](https://img.shields.io/badge/tests-77%20passing-2ea44f?style=for-the-badge)](tests/)
+[![AUC](https://img.shields.io/badge/held--out%20AUC-0.619%20→%200.887-1d6fa5?style=for-the-badge)](reports/)
 
 <br/>
 
-*UCI ML Repository · 141,713 Event Rows · 24,918 Incidents · Random Forest · Built on CPU*
+*UCI ServiceNow · BPI Challenge 2013 (Volvo IT) · prefix-based · out-of-time evaluation · CPU only*
 
 </div>
 
 ---
 
-## 🌐 Live App
+## 📖 What this project is
 
-[![🚀 Launch Live App](https://img.shields.io/badge/🚀%20Launch%20Live%20App-Open%20Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://abinashprasana-riskradar-it-incident-sla-risk-app-bvwccq.streamlit.app/)
+A service desk lead looking at an open queue has a question that no accuracy figure answers: *which of these is going to miss its SLA, and do I know that yet?* KAIROS is my attempt to answer both halves properly.
 
-The app is deployed on Streamlit Cloud. It loads the full 24,918-incident dataset and trains the model automatically on startup. No account or setup needed.
+Most tabular write-ups of this problem score one row per **finished** ticket. That is a post-mortem. It uses columns like total event count and resolution time, which only exist once the case is already closed, so the model is reading the answer rather than predicting it. KAIROS instead treats every incident as a sequence and produces one row for each point along it — after the first event, after the first two, and so on. Each row carries only what the service desk could actually see at that moment. Counters hold their running values. Time is time elapsed so far.
 
-On first load the model trains in the background, which takes about a minute. After that the dashboard is fully interactive. There is also a sidebar option to score a different event log if needed.
+The output is a curve: prediction quality as a function of how much of an incident you have observed. On the UCI ServiceNow log, held out over time, the model ranks at **0.619** with a single event visible and **0.887** by the eighth. Somewhere around the fifth or sixth event it crosses into territory where acting on the score beats guessing, and that crossing point is the useful output.
 
----
+The name is the Greek word for the opportune moment, as distinct from *chronos*, clock time. The whole study is about which of the two you are actually measuring.
 
-## 📖 What This Project Is
-
-When an IT team is staring down 25,000 open tickets, the real challenge is not resolving them. It is knowing which ones to look at first. RiskRadar was built to answer that question. It takes a raw incident event log, aggregates it into incident-level features, and uses a trained Random Forest classifier to assign each ticket an SLA breach probability between 0 and 1. That probability is then mapped to a risk band with a plain-English recommended action so even a non-technical manager can act on it immediately.
-
-The model was trained on the UCI Machine Learning Repository's incident management event log from a real organisation, covering 141,713 event records across 24,918 unique tickets. Everything runs locally with no external APIs required, and the optional LLM explanation layer only summarises facts that are already computed. It cannot invent details.
-
-The project ships with a four-tab Streamlit dashboard where you can filter the full incident list by risk band, drill into any single ticket, explore patterns by assignment group and category, and tune the classification threshold interactively to see how precision and recall trade off.
+Everything runs on CPU in about fifteen minutes, from raw event log to figures.
 
 ---
 
-## ⚡ Quick Stats
+## 🖥️ Front end
+
+The `web/` directory holds **KAIROS**, a Next.js 16 static site that presents the study: the earliness curve drawn against scroll with its bootstrap intervals, a WebGL trace field, and an explorer where you drag a slider for `k` and watch 478 real held-out incidents re-rank on their actual model scores.
+
+Every figure it shows is read from `web/public/data/*.json`, which `scripts/export_web_data.py` writes straight out of `artifacts/`. Nothing on the site is typed by hand, so a pipeline re-run propagates and the page cannot drift from what the experiments reported.
+
+```bash
+cd web && npm install && npm run build && npx serve out
+```
+
+It is not deployed yet. The build is static, so it will drop onto any host when it is.
+
+---
+
+## ⚡ Quick stats
 
 <div align="center">
 
-| | 🎯 Accuracy | 📈 AUC-ROC | ⚡ F1 (Breach) | 🔢 Incidents | 🌲 Trees |
+|  | 📉 Fixed-cohort AUC, k=1 | 📈 Fixed-cohort AUC, k=8 | 🎫 Incidents | 🔢 Scored moments | 🧪 Tests |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **Score** | **92.0%** | **0.9674** | **0.886** | **24,918** | **100** |
+| **UCI ServiceNow** | **0.619** | **0.887** | **23,102** | **81,449** | **77** |
 
 </div>
 
 ---
 
-## 🗃️ Dataset
+## 🗃️ Datasets
 
 <div align="center">
 
-| Detail | Value |
-|:---|:---|
-| 📚 Name | Incident Management Process Enriched Event Log |
-| 🌐 Source | UCI Machine Learning Repository |
-| 📦 Raw event rows | 141,713 |
-| 🎫 Unique incidents | 24,918 |
-| 🎯 Target variable | `sla_breached` (derived from `made_sla`) |
-| ✂️ Train / Test split | 80% / 20% stratified, seed 42 |
-| 🧪 Test set size | 4,984 incidents |
+| | UCI ServiceNow | BPI Challenge 2013 (Volvo IT) |
+|:---|:---|:---|
+| 📚 Cases / events | 24,918 / 141,712 | 7,554 / 65,533 |
+| ✂️ Cases used | 23,102 | 7,545 |
+| 🏷️ Label | native `made_sla` flag | constructed: duration > 240 h |
+| 📊 Breach rate | 0.382 | 0.310 |
+| 🔀 Split | out-of-time, straddlers dropped | random at case level |
+| 🪟 k_max | 8 | 12 |
+| 📅 Period | March–May 2016 | 2010–2012 |
 
 </div>
 
-The raw data is event-level, meaning each row represents a state change on an incident rather than the incident itself. The pipeline aggregates these into one row per ticket, computing counts, durations, and reassignment signals before any modelling happens.
+The UCI split holds out everything after **2016-05-05 15:00:15**: 9,602 training cases, 2,881 validation, 1,920 calibration, 5,707 test. Another 2,718 cases straddled the boundary and were dropped, because a case still running when the test period opens has already leaked part of its future into training.
 
-> **Citation:** Amaral, C., Fantinato, M., & Peres, S. (2018). *Incident management process enriched event log* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C57S4H
+**BPI 2013 arrives in a burst and runs long, which is why it is split differently.** Its event timestamps span 2010 to 2012, but the middle half of its cases *start* inside a six-day window (2012-04-27 to 2012-05-03) while the median case runs 181 hours. Arrivals that tight against durations that long mean any chronological boundary cuts through a large share of open cases: applying the same split function used for UCI discards **1,456 of 5,658** modelling cases as straddlers, against **2,718 of 17,121** on UCI. So BPI uses a documented random case-level split, still keeping a case's prefixes inside one fold, and makes no out-of-time claim.
+
+Its 240-hour deadline is a stated policy constant rather than a fitted quantile, and it should never be presented as though the dataset shipped an SLA field. A constant also matches how service targets actually work: an SLA is a policy someone wrote down, not a percentile of last quarter.
+
+> Amaral, C., Fantinato, M., & Peres, S. (2018). *Incident management process enriched event log* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C57S4H
+>
+> Steeman, W. (2013). *BPI Challenge 2013, incidents* [Dataset]. 4TU.ResearchData. https://doi.org/10.4121/500573e6-accc-4b0c-9576-aa5468b10cee
 
 ---
 
-## 🧠 System Architecture
+## 🧠 How it works
 
 ```mermaid
 flowchart TD
-    classDef io      fill:#1d4ed8,color:#fff,stroke:#1e40af,rx:8
-    classDef proc    fill:#4f46e5,color:#fff,stroke:#4338ca,rx:8
-    classDef feat    fill:#7c3aed,color:#fff,stroke:#6d28d9,rx:8
-    classDef model   fill:#065f46,color:#fff,stroke:#064e3b,rx:8
-    classDef ui      fill:#b45309,color:#fff,stroke:#92400e,rx:8
-    classDef llm     fill:#be185d,color:#fff,stroke:#9d174d,rx:8
+    classDef io    fill:#1d4ed8,color:#fff,stroke:#1e40af,rx:8
+    classDef prep  fill:#4f46e5,color:#fff,stroke:#4338ca,rx:8
+    classDef guard fill:#b45309,color:#fff,stroke:#92400e,rx:8
+    classDef model fill:#7c3aed,color:#fff,stroke:#6d28d9,rx:8
+    classDef eval  fill:#065f46,color:#fff,stroke:#064e3b,rx:8
 
-    A["📄 Raw Event Log\n141,713 rows · 36 columns"]:::io
-    B["Data Processing\nparse dates · normalise booleans"]:::proc
-    C["Feature Engineering\naggregate to 24,918 incidents\ncount · duration · reassignment signals"]:::feat
-    D["Preprocessing Pipeline\nmedian impute · mode impute · one-hot encode"]:::feat
-    E["🌲 Random Forest Classifier\n100 trees · balanced_subsample · all CPU cores"]:::model
-    F["Breach Probability\n0.0 → 1.0 per incident"]:::model
-    G["Risk Band + Action\nLow · Medium · High"]:::model
-    H["📊 Streamlit Dashboard\n4 tabs · charts · calibration · CSV export"]:::ui
-    I["💬 LLM Explainer\nfact-grounded · offline fallback"]:::llm
+    A["📄  Raw event log<br/>ServiceNow CSV · VINST CSV"]:::io
+    B["Adapter<br/>canonical case / activity / timestamp<br/>+ declared feature whitelist"]:::prep
+    C["Prefix log<br/>one row per k = 1..K per case<br/>features from the first k events only"]:::prep
+    D["🔒  Leakage screen<br/>constant-rate · future-reference · k=1 AUC<br/>assert_no_leakage raises, it does not warn"]:::guard
+    E["Out-of-time split<br/>train · val · calib · test<br/>straddling cases removed"]:::guard
+    F["Encoding<br/>aggregation, single bucket<br/>(index encoding runs as a control)"]:::prep
 
     A --> B --> C --> D --> E --> F --> G
-    G --> H
-    G --> I
+
+    subgraph G["🧮  Model and decision layer"]
+        direction TB
+        M1["Candidate learners<br/>logreg · random forest · XGBoost<br/>chosen on validation, never on test"]:::model
+        M2["Random search, 60 configs<br/>fit on train · scored on val"]:::model
+        M3["Calibration on its own fold<br/>Platt · isotonic · beta · prior shift"]:::model
+        M4["Mondrian split conformal<br/>label sets at 80 / 90 / 95%"]:::model
+        M5["Cost-sensitive alarm<br/>one alarm per incident, threshold tuned on val"]:::model
+        M1 --> M2 --> M3 --> M4 --> M5
+    end
+
+    G --> H["📊  Per-k evaluation<br/>fixed and variable cohorts<br/>1000-resample bootstrap intervals"]:::eval
+    H --> I["📈  Figures · artifacts · KAIROS web export"]:::io
 ```
 
----
-
-## ⚙️ Model Details
-
-<div align="center">
-
-| Component | Value |
-|:---|:---|
-| 🏗️ Model type | Random Forest Classifier |
-| 🌲 Number of trees | 100 |
-| ⚖️ Class balancing | `balanced_subsample` (per-tree rebalancing) |
-| 📊 Baseline compared | Logistic Regression (accuracy 90.0%, AUC 0.9589) |
-| ✅ Selection criterion | Highest AUC-ROC on held-out test set |
-
-</div>
-
-The pipeline computes five numeric signals per incident (event count, reassignment count, reopen count, resolution hours, and modification count) plus six categorical fields (category, subcategory, priority, assignment group, caller, and location). Missing values are filled before encoding so the model always receives a complete feature vector.
+Features are **whitelisted, never blacklisted**. A model sees a column only when an adapter has handed it over on purpose, because the leaks in this log are not the ones you would think to exclude. More on that below.
 
 ---
 
-## 📊 Evaluation Results
+## 📊 Evaluation results
 
-<div align="center">
+![earliness curve](reports/earliness_curve_uci.png)
 
-| Metric | Logistic Regression | Random Forest |
-|:---|:---:|:---:|
-| 🎯 Accuracy | 90.0% | **92.0%** |
-| 📈 AUC-ROC | 0.9589 | **0.9674** |
-| ⚡ F1-Score (SLA Breached) | 0.865 | **0.886** |
-| ✅ F1-Score (SLA Met) | — | **0.938** |
-| 🔍 Precision (Breach) | — | **92.2%** |
-| 🔔 Recall (Breach) | — | **85.3%** |
+| Log | Arm | ROC-AUC |
+|:--|:--|--:|
+| UCI | As shipped: whole-trace features, random split, model picked on test | 0.9674 |
+| UCI | Prefix-based, out-of-time, one decision per ticket at k=1 | 0.7482 |
+| UCI | Prefix-based, out-of-time, **fixed cohort k=1** | **0.6185** |
+| UCI | Prefix-based, out-of-time, **fixed cohort k=8** | **0.8874** |
+| UCI | Tuned, 60 configs on validation, fixed cohort k=1 → k=8 | 0.6245 → 0.8883 |
+| UCI | Random case split *(ablation)*, fixed cohort k=1 → k=8 | 0.7437 → 0.9362 |
+| BPI 2013 | Random split, fixed cohort k=1 → k=12 | 0.9124 → 0.8983 |
 
-</div>
+**Two cohorts are reported and only one of them answers the question.** The *variable* cohort uses every prefix available at each `k`, which is what a real queue looks like — but its base rate climbs from 0.232 to 0.730 across k=1..8 as short cases close and leave, so that curve rises even for a model that learned nothing. The *fixed* cohort restricts to the 478 cases long enough to reach `k_max` and holds the population constant, so a change in AUC there is a change in what the model knows. Both are on the chart because the distinction has to be visible for either curve to mean anything.
 
-**Confusion Matrix — Random Forest** (test set: 4,984 incidents)
-
-<div align="center">
-
-| | Predicted Met | Predicted Breached |
-|:---:|:---:|:---:|
-| **Actual Met** | 3,030 ✅ | 131 ❌ |
-| **Actual Breached** | 268 ❌ | 1,555 ✅ |
-
-</div>
-
-The model caught **1,555 out of 1,823 actual SLA breaches**, which works out to an **85% breach recall rate** on unseen data. Only 131 non-breaching incidents were falsely flagged, keeping the false alarm rate low enough to be operationally useful.
+**What honest evaluation costs.** Switching UCI to a random case split inflates fixed-cohort AUC by **+0.125 at k=1** and **+0.049 at k=8**. That is what the out-of-time protocol costs, as a number you can point at.
 
 ---
 
-## 🚦 Risk Band Logic
+## 🔍 What the audit found
 
-The model outputs a continuous probability score that gets mapped to three actionable bands. The thresholds were chosen to reflect operational priority levels rather than to maximise any single metric.
+**The UCI log is a snapshot export of closed tickets, not an event stream.** Closure fields are back-filled onto every row of a trace. At the *first* event of each case:
 
-<div align="center">
+| Column | Populated at k=1 | Equals the case-final value |
+|:--|--:|--:|
+| `closed_at` | 100.0% | 100% |
+| `closed_code` | 99.6% | 100% |
+| `resolved_by` | 99.6% | 100% |
+| `resolved_at` | 93.8% | 100% |
 
-| Risk Band | Probability Range | Recommended Action |
-|:---:|:---:|:---|
-| 🟢 Low | p < 0.30 | Normal queue. Keep updates clean and avoid unnecessary reassignment. |
-| 🟡 Medium | 0.30 ≤ p < 0.60 | Monitor closely. Check for missing details and confirm ownership early. |
-| 🔴 High | p ≥ 0.60 | Escalate now. Assign to the right team, reduce reassignment loops, request a senior review. |
+Knowing `closed_code` at event 1 splits the breach rate from 0.000 (code 12) to 0.814 (code 15). Those two extremes are thin, at 2 and 43 cases, so here is the same thing without the tails: across every code with at least 100 cases the rate still runs 0.253 to 0.637 against a population rate of 0.382. A field that is 99.6% populated at the first event and already holds its final value is a worse leak than the SLA flag itself, and it survives casual inspection. Hence the whitelist.
 
-</div>
+**There is heavy concept drift.** Monthly breach rate runs **0.642 in March, 0.243 in April, 0.234 in May**. Case start time alone separates the outcome at AUC 0.708 under in-sample target encoding, and a random split hands that to the model for free.
 
----
-
-## 💻 Dashboard Features
-
-The Streamlit app organises everything into four tabs so different team members can go straight to what they need.
-
-**Tab 1 — Overview (📊)**
-
-Six charts load automatically when the data is ready: a histogram of the full probability distribution, a bar chart and donut showing Low/Medium/High counts and share, a heatmap of priority versus risk band, bar charts of the top 10 riskiest assignment groups and categories by average predicted probability, and a calibration plot comparing predicted probabilities against actual breach rates to verify model reliability. A one-click CSV download exports the full scored incident list.
-
-**Tab 2 — Incident List (📋)**
-
-A filterable and sortable table of all 24,918 incidents. You can filter by risk band, set a minimum probability threshold, search by incident number, sort by probability or reassignment count or reopen count, and control how many rows to show. Every row links through to the detail view.
-
-**Tab 3 — Incident Detail (🧾)**
-
-Select any incident by number and see its breach probability, risk band, recommended action, and up to six computed risk drivers compared against the dataset median and 75th percentile. The optional LLM panel generates a short plain-English explanation using only the facts that are already computed. It cannot invent anything that is not in the row.
-
-**Tab 4 — Model Evaluation (✅)**
-
-An interactive threshold slider from 0.05 to 0.95 recalculates precision, recall, F1, and AUC-ROC live. The confusion matrix updates in step with the slider so you can see exactly what the trade-off looks like at any operating point.
+**Dropping terminal-only cases costs something.** 1,816 cases (7.3%) consist solely of `Resolved` / `Closed` events and leave the study. Their breach rate is 0.163 against 0.382 for the cases retained, which is a selection effect large enough to belong in the write-up.
 
 ---
 
-## 📁 Project Structure
+## 🔬 Beyond the curve
+
+Four questions an AUC leaves open. Each was measured, and two of the four came back against the interesting answer.
+
+<details>
+<summary><b>📐 Calibration — a held-out fold has to resemble the period you deploy into</b></summary>
+
+<br/>
+
+Post-hoc calibration is supposed to be free. On UCI it makes things **worse**, and one pair of numbers explains why: the calibration fold breaches at **0.583** while the test period breaches at **0.396**. A calibrator fitted on the first learns a correction the second does not need.
+
+| Variable cohort, ECE | UCI (drifting) | BPI (stable) |
+|:--|--:|--:|
+| uncalibrated | 0.053 | 0.059 |
+| Platt | 0.080 | 0.042 |
+| isotonic | 0.097 | 0.041 |
+| beta | 0.092 | 0.038 |
+
+Same code, same calibrators, opposite outcomes. BPI is split at random so its calibration fold matches deployment, and there every calibrator behaves as the textbook says. Even a prior shift using the **true** test prior leaves UCI at ECE 0.104, so the residual was never a prior problem. The Saerens–Latinne–Decaestecker EM estimate puts the test prior at 0.220 against an actual 0.396, which is its own quiet result about EM under this much drift.
+
+</details>
+
+<details>
+<summary><b>🔤 Does event order carry signal? Measured before building a model for it</b></summary>
+
+<br/>
+
+Aggregation encoding throws away the order of events, and the usual next move is to reach for a sequence model. Before writing any PyTorch I target-encoded the ordered activity sequence against the same activities **sorted**, cross-fitted so a rare sequence cannot memorise its own label. The gap between them is what an order-aware model could buy.
+
+| Log | Cross-fitted Δ | In-sample Δ |
+|:--|--:|--:|
+| UCI | **+0.0001** | +0.0112 |
+| BPI 2013 | +0.0058 | +0.0616 |
+
+UCI's activity vocabulary is six symbols and the median case uses one of them across three events. There is no order to learn. The in-sample column is the same test without cross-fitting. The distance between the two columns is why the question needed an experiment and not an opinion.
+
+A 31,526-parameter GRU over the raw event stream, five seeds, confirms it at the model level: test AUC **0.788 ± 0.008**, which is **−0.035** against the tuned gradient-boosted baseline. The seed spread is four times smaller than the gap, so the sequence model is genuinely losing on this log.
+
+</details>
+
+<details>
+<summary><b>🎯 Conformal coverage puts a number on how far the log has moved</b></summary>
+
+<br/>
+
+Mondrian split conformal turns a score into a label set that should contain the truth at a stated rate. Its guarantee assumes exchangeability, which an out-of-time split deliberately breaks.
+
+| Nominal | Actual | Shortfall |
+|--:|--:|--:|
+| 95.0% | 89.9% | −5.1 pp |
+| 90.0% | 84.0% | −6.0 pp |
+| 80.0% | 68.5% | −11.5 pp |
+
+Coverage falls short at every level and the shortfall widens as the bar drops. The implementation is doing what it says; the assumption underneath it is what the split removes, so the gap reads directly as distance between the calibration fold and the test period. Prefix lengths 6 to 8 share one calibration bin: taken separately they hold 141, 73 and 46 negatives, too few to estimate a 90% quantile from.
+
+</details>
+
+<details>
+<summary><b>💰 The cost assumption moves the answer more than the model does</b></summary>
+
+<br/>
+
+An AUC does not tell a team lead what to do. The alarm layer fires once per incident, at the first prefix crossing a threshold tuned on the validation fold, under a stated cost model.
+
+| At c_i/c_b = 0.1, effectiveness = 0.5 | Value |
+|:--|--:|
+| threshold τ* | 0.50 |
+| mean cost per case | **1.661** |
+| never alarm | 2.320 |
+| always alarm at k=1 | 2.160 |
+| mean alarm prefix | k = 2.69 |
+| recall / precision | 0.823 / 0.646 |
+
+Across 24 combinations of escalation cost and intervention effectiveness the model beats the better trivial policy in **17**, and loses in the other seven — all of them where escalation costs nearly as much as the breach it prevents. The chosen threshold ranges **0.10 to 0.98** across those assumptions. That range is the honest headline: what you believe escalation costs drives this decision more than the classifier does.
+
+</details>
+
+---
+
+## 🧪 Encoding comparison
+
+![encoding](reports/encoding_comparison.png)
+
+Both Teinemaa et al. combinations are implemented: **aggregation encoding with a single bucket**, and **index encoding with prefix-length bucketing**, one model per `k` with each event position given its own columns so ordering survives. Learner held fixed at logistic regression, fixed-cohort AUC:
+
+| Log | Encoding | k=1 | k_max |
+|:--|:--|--:|--:|
+| UCI | aggregation | 0.589 | 0.870 |
+| UCI | index | 0.592 | 0.828 |
+| BPI 2013 | aggregation | 0.884 | 0.860 |
+| BPI 2013 | index | 0.580 | 0.729 |
+
+On UCI the two track each other until the right-hand end, where aggregation pulls ahead by 0.038. On BPI index encoding loses heavily at every `k`, and the cause is concrete: pure index encoding carries static plus per-position attributes and discards the running aggregates. UCI has 13 static case attributes that both arms share, so losing the aggregates costs little. BPI has two, so they are most of its signal.
+
+This replicates the benchmark finding that aggregation encoding with a single bucket is a strong baseline that more elaborate schemes do not reliably beat, which is why the headline arm uses it.
+
+---
+
+## 📁 Project structure
 
 ```
 riskradar/
-├── 📄 app.py                    Streamlit dashboard — all four tabs and sidebar controls
-├── 📄 data_processing.py        Loads the event log CSV, parses dates, normalises boolean fields
-├── 📄 feature_engineering.py    Aggregates event-level rows to one row per incident, builds train/test split
-├── 📄 model_training.py         Trains Logistic Regression and Random Forest, computes all metrics
-├── 📄 run_train.py              Single entry point — runs the full training pipeline end to end
-├── 📄 decision_logic.py         Maps probability to risk band and recommended action text
-├── 📄 llm_explainer.py          Generates fact-grounded explanation via OpenAI, with offline fallback
-├── 📄 requirements.txt          Python dependencies
-├── 📄 runtime.txt               Pins Python 3.11 for Streamlit Cloud deployment
-├── 📄 RiskRadar_Report.ipynb    Notebook with design rationale and architecture walkthrough
-└── 📦 incident_event_log.csv    Raw event log from UCI repository (45 MB, 141,713 rows)
+├── 📄 logspec.py              LogSpec + the feature whitelist (single source of truth)
+├── 📂 adapters/
+│   ├── uci_servicenow.py      ServiceNow log → canonical event frame; native SLA label
+│   └── bpi2013.py             VINST CSV → canonical event frame; constructed 240h label
+├── 🧩 prefix_log.py           prefix construction, leakage_screen, assert_no_leakage
+├── ✂️ splitting.py            out-of-time split, straddle removal, random-case fallback
+├── 🔠 encoding.py             aggregation + index encoding, preprocessing pipeline
+├── 🤖 models.py               candidates, single-bucket and per-prefix-length training
+├── 🎛️ tuning.py               random search: fit on train, score on val
+├── 📐 calibration.py          Platt · isotonic · beta · EM prior estimation
+├── 🎯 conformal.py            Mondrian split conformal, pooled bins for sparse k
+├── 🚨 alarm.py                cost model, first-alarm policy, threshold sweep
+├── 🔥 torch_seq.py            PrefixGRU, the sequence-model control
+└── 📊 evaluation.py           per-k metrics, bootstrap CIs, fixed/variable cohorts
+
+scripts/
+├── 🚀 run_all.py              21 steps, every arm in order (~15 min on CPU)
+├── run_leaky_baseline.py      reproduces the as-shipped 0.9674 from the original modules
+├── run_experiment.py          one arm: --log / --encoding / --split-mode / --learner / --tune
+├── run_calibration.py         calibration under label shift
+├── run_order_ablation.py      cross-fitted order-signal test
+├── run_gru.py                 sequence-model control, 5 seeds
+├── run_conformal.py           coverage report
+├── run_error_analysis.py      error groups + SHAP by prefix length
+├── run_alarm.py               cost sweep, 24 cells
+├── make_figures.py            figures + headline table
+└── export_web_data.py         artifacts → web/public/data/*.json
+
+web/                           KAIROS, the Next.js presentation layer
+tests/                         77 tests: leakage, folds, encoding, cohorts, CIs, calibration
+docs/MODEL_CARD.md             intended use, limitations, what these numbers cannot claim
+artifacts/                     per-run metrics.json, per_k.csv, run_config.json
+reports/                       figures and headline_comparison.csv
 ```
+
+`app.py` was version 1 of this project and is now retired: it retrained a leaky model at startup and reported in-sample metrics as though they were held out. It prints an explanation and exits. The original implementation is preserved at `app_v1_legacy.py.bak`, and `run_leaky_baseline.py` imports the untouched original modules directly, so the 0.9674 baseline is the real prior result and not a strawman built to lose.
 
 ---
 
-## ⚙️ How to Run
+## ⚙️ How to run
 
-**1. Clone the repository**
+**1. Clone and install**
 ```bash
 git clone https://github.com/abinashprasana/riskradar-it-incident-sla-risk.git
 cd riskradar-it-incident-sla-risk
+python -m venv .venv && .venv\Scripts\Activate.ps1   # Windows
+pip install -e ".[dev]"
 ```
 
-**2. Create a virtual environment**
+**2. Get the data**
+
+Place `incident_event_log.csv` (UCI) in the repository root and the BPI Challenge 2013 incidents CSV in `BPI Challenge 2013, incidents_1_all/`. Both citations are above.
+
+**3. Run everything**
 ```bash
-python -m venv .venv
+python scripts/run_all.py
 ```
 
-Windows:
+Twenty-one steps, roughly fifteen minutes on CPU. Afterwards `reports/` holds the figures and `headline_comparison.csv`, `artifacts/` holds one directory per arm, and `web/public/data/` is refreshed.
+
+**4. Run the tests**
 ```bash
-.venv\Scripts\Activate.ps1
+python -m pytest tests/ -q
 ```
 
-Mac / Linux:
-```bash
-source .venv/bin/activate
-```
-
-**3. Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-**4. Launch the dashboard**
-```bash
-streamlit run app.py
-```
-
-Open `http://localhost:8501` in your browser. The dataset loads automatically and the model trains on first launch (takes about a minute). Subsequent visits are instant.
-
-There is also a sidebar option to upload a different event log CSV if you want to score your own dataset.
+The suite is a guard rail, not decoration. It asserts that no forbidden column reaches the feature matrix, that the leakage screen catches the back-filled timestamps, that train/val/calib/test are disjoint at both case and prefix level, that no training case is still running when the test period begins, and that the fixed cohort really does hold its population constant.
 
 <details>
-<summary>⚙️ Retrain the model from scratch</summary>
-
-To reproduce the full training run or experiment with different hyperparameters:
+<summary>⚙️ Run individual steps</summary>
 
 ```bash
-python run_train.py
+# One arm, any combination
+python scripts/run_experiment.py --log uci_servicenow --encoding agg --tune 60
+
+# The as-shipped baseline, from the original v1 modules
+python scripts/run_leaky_baseline.py
+
+# Calibration, conformal, alarm
+python scripts/run_calibration.py --log uci_servicenow
+python scripts/run_conformal.py   --log uci_servicenow
+python scripts/run_alarm.py       --log uci_servicenow
+
+# The sequence-model control (not part of run_all.py; needs torch)
+python scripts/run_gru.py --log uci_servicenow --seeds 5
+
+# Figures and the web export
+python scripts/make_figures.py
+python scripts/export_web_data.py
 ```
-
-This loads the event log, runs feature engineering, trains both Logistic Regression and Random Forest, evaluates both, and saves the better model to `best_model.joblib`.
-
 </details>
-
-<details>
-<summary>🔑 Enable LLM explanations</summary>
-
-By default the Incident Detail tab shows a template-based explanation that works without any API key. To enable the GPT-powered version:
-
-```bash
-# Windows
-setx OPENAI_API_KEY "your_key_here"
-
-# Mac / Linux
-export OPENAI_API_KEY="your_key_here"
-```
-
-Then restart the terminal and run `streamlit run app.py` again. The LLM only summarises facts already in the incident row. It cannot hallucinate incident details.
-
-</details>
-
----
-
-## 🎥 Demo
-
-https://github.com/user-attachments/assets/b49adc74-d1b8-49e3-b63d-4d563a4166a0
 
 ---
 
 ## ⚠️ Limitations
 
-This is a prototype decision support tool, not a production-hardened system. A few things are worth knowing before drawing conclusions from the outputs.
+This is a study on two public logs, not a product. A few things to know before drawing conclusions from the numbers.
 
-The model was trained on data from a single organisation, so predictions on a different organisation's incidents would require retraining on that environment's history. The features rely on specific column names from the UCI dataset schema, so adapting the pipeline to a different ITSM export means updating the feature engineering step. Retraining will produce slightly different results because of random splits and tree construction, though AUC-ROC should remain in a similar range. A real deployment would also need access controls, audit logging, and ongoing monitoring to catch data drift.
+**One organisation per log.** Nothing here transfers to another service desk without refitting, and the two logs disagree about enough that I would not assume a third behaves like either.
 
-<div align="center">
+**The fixed cohort is small.** 478 UCI test cases reach k=8, so the right-hand end of the curve is noisier than the left. Several comparisons on this page are narrower than their own bootstrap intervals and are reported as ties.
 
-| 🔧 Possible Improvement | 📈 Expected Effect |
-|:---|:---|
-| Gradient boosting (XGBoost or LightGBM) | Typically gains 1 to 2 percentage points on AUC over Random Forest |
-| Hyperparameter search (GridSearchCV) | Better optimised tree depth and feature count |
-| Time-aware train/test split | More realistic evaluation that respects temporal order |
-| Feature importance explanations in UI | Shows which features drove each individual prediction |
-| REST API wrapper | Enables real-time scoring from a ServiceNow webhook |
+**Scores below k=4 rank better than they calibrate.** Use them to order a queue. Reading them as literal probabilities that early is a mistake the calibration section explains at length.
 
-</div>
+**`num__elapsed_h` is doing something other than what its name suggests.** At k=1 its median is 0.0 hours yet it scores AUC 0.654 on its own, which is almost certainly creation channel rather than urgency — a ticket raised by a self-service portal and one raised by phone differ in more than elapsed time. It is legally as-of-k so it stays, but it should not be read causally.
+
+**BPI's numbers answer a narrower question.** Random split, constructed deadline. It is a control for the method, not a second headline. The straddle rate that motivated the random split is 25.7% against UCI's 15.9% — a real difference, but not a decisive one, so that choice is worth re-examining.
+
+**Survival analysis was considered and rejected, not overlooked.** Every UCI incident reaches `Closed` with zero null `closed_at`. The 1,556 missing `resolved_at` values are a data-quality artefact of a back-filled field. Censoring needs cases in flight at the cutoff, and there are none.
+
+**These numbers may not be used to claim a benchmark win.** No comparison against a published result on either log is made, and the honest figures are lower than the original 0.9674 by design.
+
+Full detail, including governance and intended use, is in [`docs/MODEL_CARD.md`](docs/MODEL_CARD.md).
+
+---
+
+## 📚 Method references
+
+- Teinemaa, Dumas, La Rosa & Maggi (2019). Outcome-Oriented Predictive Process Monitoring: Review and Benchmark. *ACM TKDD* 13(2). https://doi.org/10.1145/3301300
+- Weytjens & De Weerdt (2021). Creating Unbiased Public Benchmark Datasets with Data Leakage Prevention for Predictive Process Monitoring. *BPM Workshops*, LNBIP 436, 18–29. https://doi.org/10.1007/978-3-030-94343-1_2
+- Saerens, Latinne & Decaestecker (2002). Adjusting the Outputs of a Classifier to New a Priori Probabilities. *Neural Computation* 14(1), 21–41. https://doi.org/10.1162/089976602753284446
+- Fahrenkrog-Petersen, Tax, Teinemaa, Dumas, de Leoni, Maggi & Weidlich (2022). Fire Now, Fire Later: Alarm-Based Systems for Prescriptive Process Monitoring. *KAIS* 64, 559–587. https://doi.org/10.1007/s10115-021-01633-w
 
 ---
 
@@ -305,4 +392,4 @@ The model was trained on data from a single organisation, so predictions on a di
 
 **Abinash Prasana Selvanathan**
 
-*If you found this useful, feel free to star the repo.*
+*If this was useful, a ⭐ on the repo is welcome.*
