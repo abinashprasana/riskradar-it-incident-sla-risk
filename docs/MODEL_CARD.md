@@ -1,4 +1,4 @@
-# Model card — RiskRadar 2.0
+# Model card — KAIROS
 
 Prefix-based SLA-breach risk scoring for IT incident management, evaluated as
 outcome-oriented predictive process monitoring.
