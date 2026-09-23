@@ -29,31 +29,13 @@ The output is a curve: prediction quality as a function of how much of an incide
 
 The name is the Greek word for the opportune moment, as distinct from *chronos*, clock time. The whole study is about which of the two you are actually measuring.
 
-### In short
-
-**The problem.** SLA breaches are usually spotted once the ticket is already late, and by then escalating does little.
-
-**Who it's for.** Whoever triages the open queue and has to decide, this morning, which tickets get a senior engineer.
-
-**What people do today.** SLA timers show how much time is left, not how likely the ticket is to miss. The usual ML write-up trains on closed tickets. The first version of this project did exactly that and scored 0.967 AUC, but it was reading columns like total event count and resolution time that don't exist until the ticket is finished.
-
-**What I found.** The log fills in closing fields on every row, so `closed_code` is already there at the first event and on its own moves the breach rate between 0.25 and 0.64 across the common codes. Take that away and score honestly, and the real answer is a curve: 0.619 at one event, 0.887 at eight, worth acting on from about the fifth.
-
-**What I built.** A model that scores every incident after every event using only what was visible at that moment, tested on a later period than it trained on, with calibration, conformal sets and a cost-based alarm on top so the score turns into a decision.
-
-**See it.** The [live explorer](https://web-azx5.vercel.app/) re-ranks 478 real held-out incidents as you drag through time. `python scripts/run_all.py` rebuilds every number from the raw logs.
-
-One command takes it from raw event log to figures, on CPU, with no GPU anywhere in the pipeline.
+Everything runs on CPU in about fifteen minutes, from raw event log to figures.
 
 ---
 
-## 🎬 Live demo
+## 🖥️ Front end
 
-[![Open the live site](https://img.shields.io/badge/Open%20the%20live%20site%20%F0%9F%9A%80-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://web-azx5.vercel.app/)
-
-**https://web-azx5.vercel.app/**
-
-No setup needed. The earliness curve draws against scroll with its bootstrap intervals, a WebGL field runs behind the hero, and the explorer lets you drag a slider for `k` and watch 478 real held-out incidents re-rank on their actual model scores.
+The `web/` directory holds **KAIROS**, a Next.js 16 static site that presents the study: the earliness curve drawn against scroll with its bootstrap intervals, a WebGL trace field, and an explorer where you drag a slider for `k` and watch 478 real held-out incidents re-rank on their actual model scores.
 
 The site lives in `web/`, a Next.js 16 static export. Every figure it shows is read from `web/public/data/*.json`, which `scripts/export_web_data.py` writes straight out of `artifacts/`. Nothing on the page is typed by hand, so a pipeline re-run propagates and the site cannot drift from what the experiments reported.
 
