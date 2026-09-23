@@ -55,8 +55,9 @@ DEFAULT_PATHS = {
 # a thin, differently-behaved tail that would otherwise dominate the test
 # window's calendar span while contributing almost none of its mass.
 DENSE_WINDOW = {"uci_servicenow": ("2016-02-01", "2016-06-01")}
-# BPI 2013's cases all arrive inside a ten-day window while running a median of
-# 7.5 days, so every chronological boundary is straddled by almost every case.
+# BPI 2013's arrivals are bunched (the middle 50% of case starts fall inside six
+# days) against a 181h median duration, so a chronological boundary costs 25.7%
+# of the modelling pool to straddle removal, against 15.9% on UCI.
 # See riskradar/adapters/bpi2013.py for the measurements behind this.
 DEFAULT_SPLIT_MODE = {"uci_servicenow": "temporal", "bpi2013": "random_case"}
 

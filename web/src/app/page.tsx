@@ -154,7 +154,10 @@ export default function Page() {
               Every incident is scored at each moment of its life
             </h2>
             <p className="mt-5 leading-relaxed" style={{ color: "var(--text-2)" }}>
-              Most models treat a ticket as one finished record. This one treats
+              Most models treat a ticket as one finished record. The first
+              version of this project did that and scored{" "}
+              <span className="num">{summary.leaky.auc.toFixed(3)}</span>, on
+              columns that only exist after a ticket closes. This one treats
               it as a sequence and produces a row for every point along the way:
               after the first event, after the first two, and so on. Each row
               carries what the service desk could see at that point. Counters
@@ -300,7 +303,7 @@ function Opening() {
           className="mt-6 max-w-lg text-lg leading-relaxed"
           style={{ color: "var(--text-2)" }}
         >
-          KAIROS ranks a live incident queue by SLA-breach risk, using only what
+          KAIROS ranks a live incident queue by SLA-breach risk for whoever is triaging it, using only what
           is known at the moment you look. It also measures how early that call
           can be trusted, which turns out to be the harder question.
         </p>

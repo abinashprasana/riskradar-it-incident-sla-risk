@@ -4,6 +4,7 @@
 
 **Ranking a live IT incident queue by SLA-breach risk from partial information, and measuring how early that call can be trusted.**
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://web-azx5.vercel.app/)
 [![Python](https://img.shields.io/badge/Python-3.11--3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-GRU%20control-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org)
@@ -22,27 +23,45 @@
 
 A service desk lead looking at an open queue has a question that no accuracy figure answers: *which of these is going to miss its SLA, and do I know that yet?* KAIROS is my attempt to answer both halves properly.
 
-Most tabular write-ups of this problem score one row per **finished** ticket. That is a post-mortem. It uses columns like total event count and resolution time, which only exist once the case is already closed, so the model is reading the answer rather than predicting it. KAIROS instead treats every incident as a sequence and produces one row for each point along it — after the first event, after the first two, and so on. Each row carries only what the service desk could actually see at that moment. Counters hold their running values. Time is time elapsed so far.
+Most tabular write-ups of this problem score one row per **finished** ticket. That is a post-mortem. It uses columns like total event count and resolution time, which only exist once the case is already closed, so the model is reading the answer rather than predicting it. KAIROS instead treats every incident as a sequence and produces one row for each point along it: after the first event, after the first two, and so on. Each row carries only what the service desk could actually see at that moment. Counters hold their running values. Time is time elapsed so far.
 
 The output is a curve: prediction quality as a function of how much of an incident you have observed. On the UCI ServiceNow log, held out over time, the model ranks at **0.619** with a single event visible and **0.887** by the eighth. Somewhere around the fifth or sixth event it crosses into territory where acting on the score beats guessing, and that crossing point is the useful output.
 
 The name is the Greek word for the opportune moment, as distinct from *chronos*, clock time. The whole study is about which of the two you are actually measuring.
 
-Everything runs on CPU in about fifteen minutes, from raw event log to figures.
+### In short
+
+**The problem.** SLA breaches are usually spotted once the ticket is already late, and by then escalating does little.
+
+**Who it's for.** Whoever triages the open queue and has to decide, this morning, which tickets get a senior engineer.
+
+**What people do today.** SLA timers show how much time is left, not how likely the ticket is to miss. The usual ML write-up trains on closed tickets. The first version of this project did exactly that and scored 0.967 AUC, but it was reading columns like total event count and resolution time that don't exist until the ticket is finished.
+
+**What I found.** The log fills in closing fields on every row, so `closed_code` is already there at the first event and on its own moves the breach rate between 0.25 and 0.64 across the common codes. Take that away and score honestly, and the real answer is a curve: 0.619 at one event, 0.887 at eight, worth acting on from about the fifth.
+
+**What I built.** A model that scores every incident after every event using only what was visible at that moment, tested on a later period than it trained on, with calibration, conformal sets and a cost-based alarm on top so the score turns into a decision.
+
+**See it.** The [live explorer](https://web-azx5.vercel.app/) re-ranks 478 real held-out incidents as you drag through time. `python scripts/run_all.py` rebuilds every number from the raw logs.
+
+One command takes it from raw event log to figures, on CPU, with no GPU anywhere in the pipeline.
 
 ---
 
-## 🖥️ Front end
+## 🎬 Live demo
 
-The `web/` directory holds **KAIROS**, a Next.js 16 static site that presents the study: the earliness curve drawn against scroll with its bootstrap intervals, a WebGL trace field, and an explorer where you drag a slider for `k` and watch 478 real held-out incidents re-rank on their actual model scores.
+[![Open the live site](https://img.shields.io/badge/Open%20the%20live%20site%20%F0%9F%9A%80-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://web-azx5.vercel.app/)
 
-Every figure it shows is read from `web/public/data/*.json`, which `scripts/export_web_data.py` writes straight out of `artifacts/`. Nothing on the site is typed by hand, so a pipeline re-run propagates and the page cannot drift from what the experiments reported.
+**https://web-azx5.vercel.app/**
+
+No setup needed. The earliness curve draws against scroll with its bootstrap intervals, a WebGL field runs behind the hero, and the explorer lets you drag a slider for `k` and watch 478 real held-out incidents re-rank on their actual model scores.
+
+The site lives in `web/`, a Next.js 16 static export. Every figure it shows is read from `web/public/data/*.json`, which `scripts/export_web_data.py` writes straight out of `artifacts/`. Nothing on the page is typed by hand, so a pipeline re-run propagates and the site cannot drift from what the experiments reported.
+
+To run it locally:
 
 ```bash
 cd web && npm install && npm run build && npx serve out
 ```
-
-It is not deployed yet. The build is static, so it will drop onto any host when it is.
 
 ---
 
@@ -137,7 +156,7 @@ Features are **whitelisted, never blacklisted**. A model sees a column only when
 | UCI | Random case split *(ablation)*, fixed cohort k=1 → k=8 | 0.7437 → 0.9362 |
 | BPI 2013 | Random split, fixed cohort k=1 → k=12 | 0.9124 → 0.8983 |
 
-**Two cohorts are reported and only one of them answers the question.** The *variable* cohort uses every prefix available at each `k`, which is what a real queue looks like — but its base rate climbs from 0.232 to 0.730 across k=1..8 as short cases close and leave, so that curve rises even for a model that learned nothing. The *fixed* cohort restricts to the 478 cases long enough to reach `k_max` and holds the population constant, so a change in AUC there is a change in what the model knows. Both are on the chart because the distinction has to be visible for either curve to mean anything.
+**Two cohorts are reported and only one of them answers the question.** The *variable* cohort uses every prefix available at each `k`, which is what a real queue looks like. But its base rate climbs from 0.232 to 0.730 across k=1..8 as short cases close and leave, so that curve rises even for a model that learned nothing. The *fixed* cohort restricts to the 478 cases long enough to reach `k_max` and holds the population constant, so a change in AUC there is a change in what the model knows. Both are on the chart because the distinction has to be visible for either curve to mean anything.
 
 **What honest evaluation costs.** Switching UCI to a random case split inflates fixed-cohort AUC by **+0.125 at k=1** and **+0.049 at k=8**. That is what the out-of-time protocol costs, as a number you can point at.
 
@@ -167,7 +186,7 @@ Knowing `closed_code` at event 1 splits the breach rate from 0.000 (code 12) to 
 Four questions an AUC leaves open. Each was measured, and two of the four came back against the interesting answer.
 
 <details>
-<summary><b>📐 Calibration — a held-out fold has to resemble the period you deploy into</b></summary>
+<summary><b>📐 Calibration: a held-out fold has to resemble the period you deploy into</b></summary>
 
 <br/>
 
@@ -235,7 +254,7 @@ An AUC does not tell a team lead what to do. The alarm layer fires once per inci
 | mean alarm prefix | k = 2.69 |
 | recall / precision | 0.823 / 0.646 |
 
-Across 24 combinations of escalation cost and intervention effectiveness the model beats the better trivial policy in **17**, and loses in the other seven — all of them where escalation costs nearly as much as the breach it prevents. The chosen threshold ranges **0.10 to 0.98** across those assumptions. That range is the honest headline: what you believe escalation costs drives this decision more than the classifier does.
+Across 24 combinations of escalation cost and intervention effectiveness the model beats the better trivial policy in **17**, and loses in the other seven, all of them where escalation costs nearly as much as the breach it prevents. The chosen threshold ranges **0.10 to 0.98** across those assumptions. That range is the honest headline: what you believe escalation costs drives this decision more than the classifier does.
 
 </details>
 
@@ -280,7 +299,7 @@ riskradar/
 └── 📊 evaluation.py           per-k metrics, bootstrap CIs, fixed/variable cohorts
 
 scripts/
-├── 🚀 run_all.py              21 steps, every arm in order (~15 min on CPU)
+├── 🚀 run_all.py              21 steps, every arm in order, CPU only
 ├── run_leaky_baseline.py      reproduces the as-shipped 0.9674 from the original modules
 ├── run_experiment.py          one arm: --log / --encoding / --split-mode / --learner / --tune
 ├── run_calibration.py         calibration under label shift
@@ -309,20 +328,21 @@ reports/                       figures and headline_comparison.csv
 ```bash
 git clone https://github.com/abinashprasana/riskradar-it-incident-sla-risk.git
 cd riskradar-it-incident-sla-risk
-python -m venv .venv && .venv\Scripts\Activate.ps1   # Windows
+python -m venv .venv
+.venv\Scripts\Activate.ps1        # Windows PowerShell; use source .venv/bin/activate elsewhere
 pip install -e ".[dev]"
 ```
 
 **2. Get the data**
 
-Place `incident_event_log.csv` (UCI) in the repository root and the BPI Challenge 2013 incidents CSV in `BPI Challenge 2013, incidents_1_all/`. Both citations are above.
+Put `incident_event_log.csv` (UCI) in the repository root, and the BPI Challenge 2013 CSV export at `csv_files/VINST cases incidents.csv`. Both citations are above. Paths are set in `DEFAULT_PATHS` at the top of `scripts/run_experiment.py` if you keep the files elsewhere.
 
 **3. Run everything**
 ```bash
 python scripts/run_all.py
 ```
 
-Twenty-one steps, roughly fifteen minutes on CPU. Afterwards `reports/` holds the figures and `headline_comparison.csv`, `artifacts/` holds one directory per arm, and `web/public/data/` is refreshed.
+Twenty-one steps on CPU, the two 60-config tuning arms being much the slowest. Afterwards `reports/` holds the figures and `headline_comparison.csv`, `artifacts/` holds one directory per arm, and `web/public/data/` is refreshed.
 
 **4. Run the tests**
 ```bash
@@ -365,11 +385,11 @@ This is a study on two public logs, not a product. A few things to know before d
 
 **The fixed cohort is small.** 478 UCI test cases reach k=8, so the right-hand end of the curve is noisier than the left. Several comparisons on this page are narrower than their own bootstrap intervals and are reported as ties.
 
-**Scores below k=4 rank better than they calibrate.** Use them to order a queue. Reading them as literal probabilities that early is a mistake the calibration section explains at length.
+**Early scores rank far better than they calibrate.** On the fixed cohort the expected calibration error is 0.425 at k=1, still 0.253 at k=4, and only reaches 0.067 by k=8. The bias runs the same way, from −0.41 to −0.01. Use these scores to order a queue. They do not become usable as literal probabilities until the right-hand end of the curve.
 
-**`num__elapsed_h` is doing something other than what its name suggests.** At k=1 its median is 0.0 hours yet it scores AUC 0.654 on its own, which is almost certainly creation channel rather than urgency — a ticket raised by a self-service portal and one raised by phone differ in more than elapsed time. It is legally as-of-k so it stays, but it should not be read causally.
+**`num__elapsed_h` is doing something other than what its name suggests.** At k=1 its median is 0.0 hours yet it scores AUC 0.654 on its own, which is almost certainly creation channel rather than urgency. A ticket raised by a self-service portal and one raised by phone differ in more than elapsed time. It is legally as-of-k so it stays, but it should not be read causally.
 
-**BPI's numbers answer a narrower question.** Random split, constructed deadline. It is a control for the method, not a second headline. The straddle rate that motivated the random split is 25.7% against UCI's 15.9% — a real difference, but not a decisive one, so that choice is worth re-examining.
+**BPI's numbers answer a narrower question.** Random split, constructed deadline. It is a control for the method, not a second headline. The straddle rate that motivated the random split is 25.7% against UCI's 15.9%, a real difference but not a decisive one, so that choice is worth re-examining.
 
 **Survival analysis was considered and rejected, not overlooked.** Every UCI incident reaches `Closed` with zero null `closed_at`. The 1,556 missing `resolved_at` values are a data-quality artefact of a back-filled field. Censoring needs cases in flight at the cutoff, and there are none.
 

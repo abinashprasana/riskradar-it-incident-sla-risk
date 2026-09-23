@@ -15,7 +15,7 @@ const s = summaryJson as unknown as Summary;
 const CRAFT = [
   {
     h: "Features are whitelisted",
-    p: "A model sees a column only when an adapter has handed it over on purpose. Closure fields, resolution times and whole-trace totals never reach it, because none of them exist at the moment you are asking.",
+    p: "A model sees a column only when an adapter has handed it over on purpose. The leaks in this log are not the obvious ones: the close code is already filled in at the first event, and on its own it moves the breach rate from 0.25 to 0.64. Closure fields, resolution times and whole-trace totals never reach it, because none of them exist at the moment you are asking.",
   },
   {
     h: "Evaluation runs forward in time",
